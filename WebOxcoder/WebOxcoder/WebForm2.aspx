@@ -13,6 +13,9 @@
     
         <asp:Button ID="Button1" runat="server" Text="Button" />
     
+        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+        </asp:DropDownList>
+    
     </div>
     </form>
 </body>

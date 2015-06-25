@@ -1,0 +1,7 @@
+E:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\IDAL.dll
+E:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\IDAL.pdb
+E:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\Model.dll
+E:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\Model.pdb
+E:\YouDianErTian\WebOxcoder\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
+E:\YouDianErTian\WebOxcoder\IDAL\obj\Debug\IDAL.dll
+E:\YouDianErTian\WebOxcoder\IDAL\obj\Debug\IDAL.pdb

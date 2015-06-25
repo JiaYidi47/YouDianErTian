@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Reflection;
 using System.Configuration;
 
 namespace BLLFactory
 {
-    public class BLLAccess
+    public sealed class BLAccess
     {
         private static readonly string path = ConfigurationManager.AppSettings["BLL"];
-        private BLLAccess() { }
+
+	private BLAccess() { }
 
         public static IBLL.IChallenge CreateChallenge(){
             string className = path + ".Challenge";
@@ -19,5 +22,10 @@ namespace BLLFactory
         }
 
 
+        public static IBLL.IQuestion CreateQuestion()
+        {
+            string className = path + ".Question";
+            return (IBLL.IQuestion)Assembly.Load(path).CreateInstance(className);
+        }
     }
 }

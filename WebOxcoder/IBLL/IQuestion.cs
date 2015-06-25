@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model;
 using System.Threading.Tasks;
 
 namespace IBLL
 {
-    interface IUser
+
+
+    public interface IQuestion
     {
-        interface IUser
-        {
-            void login();
-        }
+        bool addQuestion(question questionItem);
     }
 }

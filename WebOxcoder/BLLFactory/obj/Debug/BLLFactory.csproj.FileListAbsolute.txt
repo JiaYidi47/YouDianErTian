@@ -1,0 +1,9 @@
+E:\YouDianErTian\WebOxcoder\BLLFactory\obj\Debug\BLLFactory.csprojResolveAssemblyReference.cache
+E:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\BLLFactory.dll
+E:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\BLLFactory.pdb
+E:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\IBLL.dll
+E:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\Model.dll
+E:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\IBLL.pdb
+E:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\Model.pdb
+E:\YouDianErTian\WebOxcoder\BLLFactory\obj\Debug\BLLFactory.dll
+E:\YouDianErTian\WebOxcoder\BLLFactory\obj\Debug\BLLFactory.pdb

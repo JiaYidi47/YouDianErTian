@@ -1,0 +1,13 @@
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\BLL.dll
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\BLL.pdb
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\DALFactory.dll
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\IBLL.dll
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\IDAL.dll
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\Model.dll
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\DALFactory.pdb
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\IBLL.pdb
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\IDAL.pdb
+E:\YouDianErTian\WebOxcoder\BLL\bin\Debug\Model.pdb
+E:\YouDianErTian\WebOxcoder\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\YouDianErTian\WebOxcoder\BLL\obj\Debug\BLL.dll
+E:\YouDianErTian\WebOxcoder\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,11 @@
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DALFactory.dll
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DALFactory.pdb
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DAL.dll
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\IDAL.dll
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\Model.dll
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DAL.pdb
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\IDAL.pdb
+E:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\Model.pdb
+E:\YouDianErTian\WebOxcoder\DALFactory\obj\Debug\DALFactory.csprojResolveAssemblyReference.cache
+E:\YouDianErTian\WebOxcoder\DALFactory\obj\Debug\DALFactory.dll
+E:\YouDianErTian\WebOxcoder\DALFactory\obj\Debug\DALFactory.pdb

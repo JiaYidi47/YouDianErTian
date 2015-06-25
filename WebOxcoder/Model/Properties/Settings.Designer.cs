@@ -26,7 +26,11 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+<<<<<<< HEAD
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHENRN-PC;Initial Catalog=oxcoder;Integrated Security=True")]
+=======
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DELL;Initial Catalog=oxcoder;Integrated Security=True")]
+>>>>>>> origin/master
         public string oxcoderConnectionString {
             get {
                 return ((string)(this["oxcoderConnectionString"]));

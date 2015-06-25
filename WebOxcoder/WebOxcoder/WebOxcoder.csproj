@@ -1496,6 +1496,7 @@
     <Content Include="css\libs\bootstrapvalidator.css" />
     <Content Include="css\libs\summernote-bs3.css" />
     <Content Include="css\libs\summernote.css" />
+    <Content Include="css\styler\ace.css" />
     <Content Include="css\styler\backup\style_enterprise_info.css" />
     <Content Include="css\styler\backup\style_enterprise_info_change.css" />
     <Content Include="css\styler\backup\style_enterprise_info_change_step2.css" />
@@ -1516,9 +1517,13 @@
     <Content Include="css\styler\backup\style_user_task_detail.css" />
     <Content Include="css\styler\backup\style_user_task_history.css" />
     <Content Include="css\styler\carousel.css" />
+    <Content Include="css\styler\code.css" />
+    <Content Include="css\styler\max.css" />
     <Content Include="css\styler\signin.css" />
     <Content Include="css\styler\style.css" />
     <Content Include="css\styler\style_new.css" />
+    <Content Include="css\styler\tourist.css" />
+    <Content Include="css\styler\video-js.css" />
     <Content Include="enterpriseChangePwd.aspx" />
     <Content Include="enterpriseInfo.aspx" />
     <Content Include="enterpriseInfoChange1.aspx" />
@@ -1581,6 +1586,16 @@
     <Content Include="index.aspx" />
     <Content Include="index2.aspx" />
     <Content Include="js\Chart.js" />
+    <Content Include="js\code\ace.js" />
+    <Content Include="js\code\avalon.js" />
+    <Content Include="js\code\codingConstant.js" />
+    <Content Include="js\code\codingProjectInfo.js" />
+    <Content Include="js\code\codingStatistics.js" />
+    <Content Include="js\code\codingUI.js" />
+    <Content Include="js\code\ext-language_tools.js" />
+    <Content Include="js\code\mode-php.js" />
+    <Content Include="js\code\theme-idle_fingers.js" />
+    <Content Include="js\code\video.js" />
     <Content Include="js\index.js" />
     <Content Include="js\libs\bootstrap-filestyle.js" />
     <Content Include="js\libs\bootstrap-select.min.js" />
@@ -1955,7 +1970,36 @@
       <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BLLFactory\BLLFactory.csproj">
+      <Project>{97cc85f2-3540-48c4-9677-b197fe20b0df}</Project>
+      <Name>BLLFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{5bd715d4-0658-40ba-ba4d-05507afea298}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Project>{c02ddec3-7b71-45f7-ada8-756970b8c52b}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{21dbb0ee-4125-428d-ada6-a2ab14a24c1a}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IBLL\IBLL.csproj">
+      <Project>{fc34b31c-0a45-454c-993f-36e60c86df69}</Project>
+      <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{a8e6c93d-55af-4ecb-abeb-ec59c82fa87a}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{c88487f4-0c77-47e8-8db0-1997de6b62d6}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
