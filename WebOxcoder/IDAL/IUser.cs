@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IDAL
 {
-    public class IUser
+    public interface IUser
     {
     }
 }

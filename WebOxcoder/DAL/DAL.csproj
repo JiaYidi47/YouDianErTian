@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,8 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="Challenge.cs" />
+    <Compile Include="ChallengeRecord.cs" />
+    <Compile Include="Coder.cs" />
+    <Compile Include="Enterprise.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="QuestionType.cs" />
+    <Compile Include="Statistics.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{a8e6c93d-55af-4ecb-abeb-ec59c82fa87a}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

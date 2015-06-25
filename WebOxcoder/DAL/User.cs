@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class User
+    class User : IDAL.IUser
     {
+        private static readonly string connection = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"];
     }
 }

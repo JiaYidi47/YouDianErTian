@@ -39,8 +39,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="Challenge.cs" />
+    <Compile Include="ChallengeRecord.cs" />
+    <Compile Include="Coder.cs" />
+    <Compile Include="Enterprise.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="QuestionType.cs" />
+    <Compile Include="Statistics.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Project>{c02ddec3-7b71-45f7-ada8-756970b8c52b}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IBLL\IBLL.csproj">
+      <Project>{fc34b31c-0a45-454c-993f-36e60c86df69}</Project>
+      <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{a8e6c93d-55af-4ecb-abeb-ec59c82fa87a}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
