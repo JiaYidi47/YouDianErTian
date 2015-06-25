@@ -134,3 +134,17 @@ D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\zh-Hans\Microsoft.AspNet.Membership.O
 D:\YouDianErTian\WebOxcoder\WebOxcoder\obj\Debug\WebOxcoder.csprojResolveAssemblyReference.cache
 D:\YouDianErTian\WebOxcoder\WebOxcoder\obj\Debug\WebOxcoder.dll
 D:\YouDianErTian\WebOxcoder\WebOxcoder\obj\Debug\WebOxcoder.pdb
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\BLL.dll
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\BLLFactory.dll
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\DAL.dll
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\DALFactory.dll
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\IBLL.dll
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\IDAL.dll
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\Model.dll
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\BLLFactory.pdb
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\BLL.pdb
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\DALFactory.pdb
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\DAL.pdb
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\IBLL.pdb
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\IDAL.pdb
+D:\YouDianErTian\WebOxcoder\WebOxcoder\bin\Model.pdb

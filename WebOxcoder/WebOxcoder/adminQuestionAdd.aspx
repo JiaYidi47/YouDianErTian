@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head runat="server">
     <meta charset="UTF-8">
     <title>猿圈</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -148,36 +148,36 @@
                                 <h3 class="box-title">题目信息</h3>
                             </div>
                             <!-- /.box-header -->
-                            <div class="box-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
+                            <form id="form1" class="form-horizontal" runat="server">
+                              <div class="box-body">
+                                <div class="form-group">
                                         <label class="col-sm-3 control-label">题目名称&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目名称" value="计时器">
+                                            <asp:TextBox type="text" class="form-control" ID="questionName" placeholder="请输入题目名称" runat="server"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目简介&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目简介">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
+                                            <asp:TextBox class="form-control" TextMode="MultiLine" ID="questionIntr" runat="server" placeholder="请输入题目简介"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目知识点&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目知识点" value="安卓计时器">
+                                            <asp:TextBox type="text" class="form-control" placeholder="请输入题目知识点" ID="questionKnow" runat="server"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目开发能力&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目开发能力" value="额额喂喂喂">
+                                            <asp:TextBox type="text" class="form-control" placeholder="请输入题目开发能力" runat="server" ID="questionAbility"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目难度&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control">
+                                            <select class="form-control" name="questionLevel">
                                                 <option>★★★★★</option>
                                                 <option>★★★★</option>
                                                 <option>★★★</option>
@@ -189,13 +189,13 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目内容&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目内容">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
+                                            <asp:TextBox class="form-control" type="file" runat="server" ID="questionContent"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目答案&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目答案">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
+                                            <asp:TextBox class="form-control" type="file" runat="server" ID="questionAnswer"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -211,13 +211,13 @@
                                         </div>
 
                                     </div>
-                                </form>
-                            </div>
+                               </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-info btn-flat pull-right">确认</button>
+                                <asp:Button type="submit" ID="questionAddSubmit" runat="server" class="btn btn-info btn-flat pull-right" Text="确认" OnClick="questionAddSubmit_Click"/>
                             </div>
                             <!-- /.box-footer -->
+                          </form>
                         </div>
                         <!-- /.box -->
                     </div>

@@ -1,0 +1,10 @@
+WebOxcoder/DAL/DAL.csproj
+*.csproj
+WebOxcoder/IDAL/IDAL.csproj
+*.config
+*.cache
+WebOxcoder/Model/Properties/Settings.Designer.cs
+WebOxcoder/WebOxcoder.v11.suo
+WebOxcoder/WebOxcoder/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+WebOxcoder/Model/Properties/Settings.Designer.cs
+WebOxcoder/Model/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

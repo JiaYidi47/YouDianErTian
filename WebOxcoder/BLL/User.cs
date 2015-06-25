@@ -9,5 +9,7 @@ namespace BLL
     public class User : IBLL.IUser
     {
         private static readonly IDAL.IUser dal = DALFactory.DataAccess.CreateUser();
+
+        public void login() { }
     }
 }

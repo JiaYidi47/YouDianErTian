@@ -1,0 +1,5 @@
+D:\YouDianErTian\WebOxcoder\Tools\bin\Debug\Tools.dll
+D:\YouDianErTian\WebOxcoder\Tools\bin\Debug\Tools.pdb
+D:\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.csprojResolveAssemblyReference.cache
+D:\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.dll
+D:\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.pdb
