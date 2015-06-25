@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model;
 using System.Threading.Tasks;
 
 namespace IBLL
 {
-    interface IUser
+    interface IChallenge
     {
-        interface IUser
-        {
-            void login();
-        }
+        IList<challenge> searchBytec(int tec);
     }
 }

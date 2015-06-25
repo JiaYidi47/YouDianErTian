@@ -151,9 +151,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-no-left-padding col-md-offset-2">
+               
                 <section class="middle">
+                     <form id="Form1" runat="server">
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
-                        <select id="select-retype" class="form-control">
+                        <select id="select-retype" class="form-control" runat="server">
                             <option selected value="0">技术方向</option>
                             <option value="1">Java</option>
                             <option value="2">Android</option>
@@ -166,7 +168,7 @@
                         </select>
                     </div>
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
-                        <select id="select-salary" class="form-control">
+                        <select id="select-salary" class="form-control" runat="server">
                             <option selected value="0">起始薪资</option>
                             <option value="1">2k~5k</option>
                             <option value="2">5k~8k</option>
@@ -177,7 +179,7 @@
                         </select>
                     </div>
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
-                        <select id="province" class="form-control">
+                        <select id="province" class="form-control" runat="server">
                             <option value="0">全部地区</option>
                             <option value="北京">北京</option>
                             <option value="天津">天津</option>
@@ -216,6 +218,7 @@
                             <option value="海外">海外</option>
                         </select>
                     </div>
+                     </form>
                     <div style="col-md-6">
                         <form class="input-group">
                             <input name="salary" id="input-salary" type="hidden" value="0" />
@@ -229,6 +232,7 @@
                         </form>
                     </div>
                 </section>
+                
             </div>
             <div class="col-md-4 col-no-left-padding col-md-offset-8" style="margin-top: 20px;">
                 <section id="middle" style="margin-bottom: 20px;">

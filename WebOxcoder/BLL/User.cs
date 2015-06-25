@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class User
+    public class User : IBLL.IUser 
     {
+        public void login() { }
     }
 }
