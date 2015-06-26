@@ -1,0 +1,121 @@
+--user数据
+insert into dbo.users(email,password,type) values ('12301060@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301067@bjtu.edu.cn','12345678',2)
+insert into dbo.users(email,password,type) values ('12301068@bjtu.edu.cn','12345678',0)
+insert into dbo.users(email,password,type) values ('12301059@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301063@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301064@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301065@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301066@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301069@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301070@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301071@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301072@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301073@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301074@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301076@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301077@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301078@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301079@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301081@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301082@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301083@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301084@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301085@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301086@bjtu.edu.cn','12345678',1)
+insert into dbo.users(email,password,type) values ('12301087@bjtu.edu.cn','12345678',1)
+
+
+--coder数据
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301060@bjtu.edu.cn','戴兴',21,1,'18811439791',7000,7.1,7.2,7.3,7.4,7.5,'1010101')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301059@bjtu.edu.cn','陈俊骏',21,1,'18811442523',7000,5.1,2.2,3.3,4.4,5.5,'1100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301063@bjtu.edu.cn','高晓旭',21,1,'18811442491',6900,5.2,2.3,3.4,4.5,5.6,'0100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301064@bjtu.edu.cn','胡腾',22,1,'18586720160',6800,5.3,2.4,3.5,4.6,5.7,'1000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301065@bjtu.edu.cn','胡琪乐',20,0,'18811442477',6700,5.4,2.5,3.6,4.7,5.8,'0000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301066@bjtu.edu.cn','黄志武',21,1,'13810197836',6600,5.5,2.6,3.7,4.8,5.9,'0100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301069@bjtu.edu.cn','李逸峰',21,1,'18811442522',6500,5.6,2.7,3.8,4.9,6,'0100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301070@bjtu.edu.cn','梁振伟',21,1,'18811439810',6400,5.7,2.8,3.9,5,6.1,'1100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301071@bjtu.edu.cn','林静露',21,0,'18811439863',6300,5.8,2.9,4,5.1,6.2,'0000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301072@bjtu.edu.cn','刘芳',22,0,'18811442468',6200,5.9,3,4.1,5.2,6.3,'0000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301073@bjtu.edu.cn','刘寒',21,1,'18811442445',6100,6,3.1,4.2,5.3,6.4,'1100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301074@bjtu.edu.cn','刘沐坤',21,0,'18811439818',6000,6.1,3.2,4.3,5.4,6.5,'1000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301076@bjtu.edu.cn','罗君晖',21,0,'18811442482',5900,6.2,3.3,4.4,5.5,6.6,'1100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301077@bjtu.edu.cn','倪垚',23,1,'15110160756',5800,6.3,3.4,4.5,5.6,6.7,'0100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301078@bjtu.edu.cn','施嘉乐',22,1,'18811439796',5700,6.4,3.5,4.6,5.7,6.8,'0000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301079@bjtu.edu.cn','舒倩雯',21,0,'18685438751',5600,6.5,3.6,4.7,5.8,6.9,'1100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301081@bjtu.edu.cn','王文浩',21,1,'18811442448',5500,6.6,3.7,4.8,5.9,7,'1000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301082@bjtu.edu.cn','徐非凡',21,1,'18811439842',5400,6.7,3.8,4.9,6,7.1,'0000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301083@bjtu.edu.cn','詹伟',21,1,'18811439873',5300,6.8,3.9,5,6.1,7.2,'1000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301084@bjtu.edu.cn','张德昕',21,1,'18811439844',5200,6.9,4,5.1,6.2,7.3,'0100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301085@bjtu.edu.cn','张楠凌',21,0,'18811442529',5100,7,4.1,5.2,6.3,7.4,'1100000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301086@bjtu.edu.cn','郑松涛',22,1,'18811442484',5000,7.1,4.2,5.3,6.4,7.5,'1000000')
+insert into dbo.coder(email,name,age,sex,phone,price,performance0,performance1,performance2,performance3,performance4,bindinginfo) values ('12301087@bjtu.edu.cn','闫鹏',22,1,'18813092012',4900,7.2,4.3,5.4,6.5,7.6,'1100000')
+
+--enterprise数据
+insert into dbo.enterprise values ('12301067@bjtu.edu.cn','有点儿甜','北京交通大学有点儿甜','北京市海淀区','这是一个刷夜小分队!','小规模','www.bjtu.edu.cn','No Logo','不懂……',1,10,10)
+
+--type数据
+set IDENTITY_INSERT dbo.type ON
+insert into dbo.type(id,name,[content]) values (1,'C','C语言编程')
+insert into dbo.type(id,name,[content]) values (2,'C++','C++语言编程')
+insert into dbo.type(id,name,[content]) values (3,'java','java语言编程')
+set IDENTITY_INSERT dbo.type OFF
+
+--question数据
+set IDENTITY_INSERT dbo.question ON
+insert into dbo.question(id,name,intro,knowledge,tecnology,questionLevel,questionContent,answer,typeId) values (1,'递归运算','递归运算的介绍','递归运算的知识','递归运算的技术',1,'递归运算的题目内容','递归运算的答案',1)
+insert into dbo.question(id,name,intro,knowledge,tecnology,questionLevel,questionContent,answer,typeId) values (2,'大小写转换','大小写转换的介绍','大小写转换的知识','大小写转换的技术',2,'大小写转换的题目内容','大小写转换的答案',1)
+insert into dbo.question(id,name,intro,knowledge,tecnology,questionLevel,questionContent,answer,typeId) values (3,'选择排序','选择排序的介绍','选择排序的知识','选择排序的技术',3,'选择排序的题目内容','选择排序的答案',1)
+insert into dbo.question(id,name,intro,knowledge,tecnology,questionLevel,questionContent,answer,typeId) values (4,'快速排序','快速排序的介绍','快速排序的知识','快速排序的技术',2,'快速排序的题目内容','快速排序的答案',2)
+insert into dbo.question(id,name,intro,knowledge,tecnology,questionLevel,questionContent,answer,typeId) values (5,'冒泡排序','冒泡排序的介绍','冒泡排序的知识','冒泡排序的技术',1,'冒泡排序的题目内容','冒泡排序的答案',2)
+insert into dbo.question(id,name,intro,knowledge,tecnology,questionLevel,questionContent,answer,typeId) values (6,'汉诺塔','汉诺塔的介绍','汉诺塔的知识','汉诺塔的技术',3,'汉诺塔的题目内容','汉诺塔的答案',2)
+set IDENTITY_INSERT dbo.question OFF
+
+--challenge数据
+set IDENTITY_INSERT dbo.challenge ON
+insert into dbo.challenge(id,type,challengeLevel,isPhoto,isPublished,question1ID,question2ID,question3ID,companyEmail,state) values (1,1,3,0,0,1,2,3,'12301067@bjtu.edu.cn',1);
+insert into dbo.challenge(id,type,challengeLevel,isPhoto,isPublished,question1ID,question2ID,question3ID,companyEmail,state) values (2,2,5,0,0,4,5,6,'12301067@bjtu.edu.cn',0);
+set IDENTITY_INSERT dbo.challenge OFF
+
+--challengeRecord数据
+set IDENTITY_INSERT dbo.challengeRecord ON
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (1,1,'12301060@bjtu.edu.cn','整体通过','通过;通过;失败;',GETDATE(),300,350,400,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (2,2,'12301060@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),250,300,350,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (3,1,'12301059@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),300,350,400,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (4,2,'12301063@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),301,351,401,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (5,1,'12301064@bjtu.edu.cn','整体失败','失败;失败;通过;',GETDATE(),302,352,402,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (6,2,'12301065@bjtu.edu.cn','整体失败','失败;失败;失败;',GETDATE(),303,353,403,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (7,1,'12301066@bjtu.edu.cn','整体失败','通过;失败;失败;',GETDATE(),304,354,404,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (8,2,'12301069@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),305,355,405,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (9,1,'12301070@bjtu.edu.cn','整体失败','失败;失败;通过;',GETDATE(),306,356,406,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (10,2,'12301071@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),307,357,407,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (11,1,'12301072@bjtu.edu.cn','整体失败','失败;失败;通过;',GETDATE(),308,358,408,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (12,2,'12301073@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),309,359,409,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (13,1,'12301074@bjtu.edu.cn','整体失败','通过;失败;失败;',GETDATE(),310,360,410,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (14,2,'12301076@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),311,361,411,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (15,1,'12301077@bjtu.edu.cn','整体失败','失败;失败;失败;',GETDATE(),312,362,412,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (16,2,'12301078@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),313,363,413,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (17,1,'12301079@bjtu.edu.cn','整体失败','失败;通过;失败;',GETDATE(),314,364,414,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (18,2,'12301081@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),315,365,415,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (19,1,'12301082@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),316,366,416,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (20,2,'12301083@bjtu.edu.cn','整体失败','失败;通过;失败;',GETDATE(),317,367,417,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (21,1,'12301084@bjtu.edu.cn','整体失败','失败;失败;通过;',GETDATE(),318,368,418,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (22,2,'12301085@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),319,369,419,1)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (23,1,'12301086@bjtu.edu.cn','整体失败','失败;失败;失败;',GETDATE(),320,370,420,0)
+insert into dbo.challengeRecord(id,challengeId,coderEmail,result,subResult,time,subTime1,subTime2,subTime3,isInvited) values (24,2,'12301087@bjtu.edu.cn','整体通过','通过;通过;通过;',GETDATE(),321,371,421,1)
+
+set IDENTITY_INSERT dbo.challengeRecord OFF
+
+--promoCode数据
+set IDENTITY_INSERT dbo.promoCode ON
+insert into dbo.promoCode(id,value,inviteCount,createCount) values (1,99.99,4,2)
+insert into dbo.promoCode(id,value,inviteCount,createCount) values (2,100,8,4)
+insert into dbo.promoCode(id,value,inviteCount,createCount) values (3,100.99,12,6)
+insert into dbo.promoCode(id,value,inviteCount,createCount) values (4,109.5,16,8)
+set IDENTITY_INSERT dbo.promoCode OFF
+
+--order数据
+set IDENTITY_INSERT dbo.orders ON
+insert into dbo.orders(id,companyEmail,type,number,money) values (1,'12301067@bjtu.edu.cn',1,10,1000)
+insert into dbo.orders(id,companyEmail,type,number,money) values (2,'12301067@bjtu.edu.cn',2,7,1400)
+set IDENTITY_INSERT dbo.orders OFF

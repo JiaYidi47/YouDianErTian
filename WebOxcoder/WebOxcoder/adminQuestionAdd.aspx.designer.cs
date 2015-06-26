@@ -58,22 +58,49 @@ namespace WebOxcoder {
         protected global::System.Web.UI.WebControls.TextBox questionAbility;
         
         /// <summary>
-        /// questionContent 控件。
+        /// questionLevel 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox questionContent;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect questionLevel;
         
         /// <summary>
-        /// questionAnswer 控件。
+        /// questionContentUploader 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox questionAnswer;
+        protected global::System.Web.UI.WebControls.FileUpload questionContentUploader;
+        
+        /// <summary>
+        /// questionAnswerUploader 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload questionAnswerUploader;
+        
+        /// <summary>
+        /// DropDownList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList;
+        
+        /// <summary>
+        /// SqlDataSource 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource;
         
         /// <summary>
         /// questionAddSubmit 控件。

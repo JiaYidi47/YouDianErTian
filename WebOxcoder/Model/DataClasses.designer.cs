@@ -45,22 +45,16 @@ namespace Model
     partial void InsertpromoCode(promoCode instance);
     partial void UpdatepromoCode(promoCode instance);
     partial void DeletepromoCode(promoCode instance);
-    partial void Insertquestion(question instance);
-    partial void Updatequestion(question instance);
-    partial void Deletequestion(question instance);
     partial void Inserttype(type instance);
     partial void Updatetype(type instance);
     partial void Deletetype(type instance);
     partial void Insertuser(user instance);
     partial void Updateuser(user instance);
     partial void Deleteuser(user instance);
+    partial void Insertquestion(question instance);
+    partial void Updatequestion(question instance);
+    partial void Deletequestion(question instance);
     #endregion
-		
-		public DataClassesDataContext() : 
-				base(global::Model.Properties.Settings.Default.oxcoderConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
 		
 		public DataClassesDataContext(string connection) : 
 				base(connection, mappingSource)
@@ -134,14 +128,6 @@ namespace Model
 			}
 		}
 		
-		public System.Data.Linq.Table<question> question
-		{
-			get
-			{
-				return this.GetTable<question>();
-			}
-		}
-		
 		public System.Data.Linq.Table<type> type
 		{
 			get
@@ -155,6 +141,14 @@ namespace Model
 			get
 			{
 				return this.GetTable<user>();
+			}
+		}
+		
+		public System.Data.Linq.Table<question> question
+		{
+			get
+			{
+				return this.GetTable<question>();
 			}
 		}
 	}
@@ -1414,260 +1408,6 @@ namespace Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.question")]
-	public partial class question : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _name;
-		
-		private string _intro;
-		
-		private string _knowledge;
-		
-		private string _tecnology;
-		
-		private System.Nullable<int> _questionLevel;
-		
-		private string _questionContent;
-		
-		private string _answer;
-		
-		private System.Nullable<int> _typeId;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnintroChanging(string value);
-    partial void OnintroChanged();
-    partial void OnknowledgeChanging(string value);
-    partial void OnknowledgeChanged();
-    partial void OntecnologyChanging(string value);
-    partial void OntecnologyChanged();
-    partial void OnquestionLevelChanging(System.Nullable<int> value);
-    partial void OnquestionLevelChanged();
-    partial void OnquestionContentChanging(string value);
-    partial void OnquestionContentChanged();
-    partial void OnanswerChanging(string value);
-    partial void OnanswerChanged();
-    partial void OntypeIdChanging(System.Nullable<int> value);
-    partial void OntypeIdChanged();
-    #endregion
-		
-		public question()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(20)")]
-		public string name
-		{
-			get
-			{
-				return this._name;
-			}
-			set
-			{
-				if ((this._name != value))
-				{
-					this.OnnameChanging(value);
-					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_intro", DbType="NVarChar(50)")]
-		public string intro
-		{
-			get
-			{
-				return this._intro;
-			}
-			set
-			{
-				if ((this._intro != value))
-				{
-					this.OnintroChanging(value);
-					this.SendPropertyChanging();
-					this._intro = value;
-					this.SendPropertyChanged("intro");
-					this.OnintroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_knowledge", DbType="NVarChar(30)")]
-		public string knowledge
-		{
-			get
-			{
-				return this._knowledge;
-			}
-			set
-			{
-				if ((this._knowledge != value))
-				{
-					this.OnknowledgeChanging(value);
-					this.SendPropertyChanging();
-					this._knowledge = value;
-					this.SendPropertyChanged("knowledge");
-					this.OnknowledgeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tecnology", DbType="NVarChar(20)")]
-		public string tecnology
-		{
-			get
-			{
-				return this._tecnology;
-			}
-			set
-			{
-				if ((this._tecnology != value))
-				{
-					this.OntecnologyChanging(value);
-					this.SendPropertyChanging();
-					this._tecnology = value;
-					this.SendPropertyChanged("tecnology");
-					this.OntecnologyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_questionLevel", DbType="Int")]
-		public System.Nullable<int> questionLevel
-		{
-			get
-			{
-				return this._questionLevel;
-			}
-			set
-			{
-				if ((this._questionLevel != value))
-				{
-					this.OnquestionLevelChanging(value);
-					this.SendPropertyChanging();
-					this._questionLevel = value;
-					this.SendPropertyChanged("questionLevel");
-					this.OnquestionLevelChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_questionContent", DbType="NVarChar(30)")]
-		public string questionContent
-		{
-			get
-			{
-				return this._questionContent;
-			}
-			set
-			{
-				if ((this._questionContent != value))
-				{
-					this.OnquestionContentChanging(value);
-					this.SendPropertyChanging();
-					this._questionContent = value;
-					this.SendPropertyChanged("questionContent");
-					this.OnquestionContentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_answer", DbType="NVarChar(30)")]
-		public string answer
-		{
-			get
-			{
-				return this._answer;
-			}
-			set
-			{
-				if ((this._answer != value))
-				{
-					this.OnanswerChanging(value);
-					this.SendPropertyChanging();
-					this._answer = value;
-					this.SendPropertyChanged("answer");
-					this.OnanswerChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_typeId", DbType="Int")]
-		public System.Nullable<int> typeId
-		{
-			get
-			{
-				return this._typeId;
-			}
-			set
-			{
-				if ((this._typeId != value))
-				{
-					this.OntypeIdChanging(value);
-					this.SendPropertyChanging();
-					this._typeId = value;
-					this.SendPropertyChanged("typeId");
-					this.OntypeIdChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.type")]
 	public partial class type : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1849,6 +1589,260 @@ namespace Model
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="Int NOT NULL")]
 		public int type
+		{
+			get
+			{
+				return this._type;
+			}
+			set
+			{
+				if ((this._type != value))
+				{
+					this.OntypeChanging(value);
+					this.SendPropertyChanging();
+					this._type = value;
+					this.SendPropertyChanged("type");
+					this.OntypeChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.question")]
+	public partial class question : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _name;
+		
+		private string _intro;
+		
+		private string _knowledge;
+		
+		private string _tecnology;
+		
+		private System.Nullable<int> _questionLevel;
+		
+		private string _questionContent;
+		
+		private string _answer;
+		
+		private string _type;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnintroChanging(string value);
+    partial void OnintroChanged();
+    partial void OnknowledgeChanging(string value);
+    partial void OnknowledgeChanged();
+    partial void OntecnologyChanging(string value);
+    partial void OntecnologyChanged();
+    partial void OnquestionLevelChanging(System.Nullable<int> value);
+    partial void OnquestionLevelChanged();
+    partial void OnquestionContentChanging(string value);
+    partial void OnquestionContentChanged();
+    partial void OnanswerChanging(string value);
+    partial void OnanswerChanged();
+    partial void OntypeChanging(string value);
+    partial void OntypeChanged();
+    #endregion
+		
+		public question()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(20)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_intro", DbType="NVarChar(50)")]
+		public string intro
+		{
+			get
+			{
+				return this._intro;
+			}
+			set
+			{
+				if ((this._intro != value))
+				{
+					this.OnintroChanging(value);
+					this.SendPropertyChanging();
+					this._intro = value;
+					this.SendPropertyChanged("intro");
+					this.OnintroChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_knowledge", DbType="NVarChar(30)")]
+		public string knowledge
+		{
+			get
+			{
+				return this._knowledge;
+			}
+			set
+			{
+				if ((this._knowledge != value))
+				{
+					this.OnknowledgeChanging(value);
+					this.SendPropertyChanging();
+					this._knowledge = value;
+					this.SendPropertyChanged("knowledge");
+					this.OnknowledgeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tecnology", DbType="NVarChar(20)")]
+		public string tecnology
+		{
+			get
+			{
+				return this._tecnology;
+			}
+			set
+			{
+				if ((this._tecnology != value))
+				{
+					this.OntecnologyChanging(value);
+					this.SendPropertyChanging();
+					this._tecnology = value;
+					this.SendPropertyChanged("tecnology");
+					this.OntecnologyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_questionLevel", DbType="Int")]
+		public System.Nullable<int> questionLevel
+		{
+			get
+			{
+				return this._questionLevel;
+			}
+			set
+			{
+				if ((this._questionLevel != value))
+				{
+					this.OnquestionLevelChanging(value);
+					this.SendPropertyChanging();
+					this._questionLevel = value;
+					this.SendPropertyChanged("questionLevel");
+					this.OnquestionLevelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_questionContent", DbType="NVarChar(100)")]
+		public string questionContent
+		{
+			get
+			{
+				return this._questionContent;
+			}
+			set
+			{
+				if ((this._questionContent != value))
+				{
+					this.OnquestionContentChanging(value);
+					this.SendPropertyChanging();
+					this._questionContent = value;
+					this.SendPropertyChanged("questionContent");
+					this.OnquestionContentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_answer", DbType="NVarChar(100)")]
+		public string answer
+		{
+			get
+			{
+				return this._answer;
+			}
+			set
+			{
+				if ((this._answer != value))
+				{
+					this.OnanswerChanging(value);
+					this.SendPropertyChanging();
+					this._answer = value;
+					this.SendPropertyChanged("answer");
+					this.OnanswerChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="NVarChar(30)")]
+		public string type
 		{
 			get
 			{

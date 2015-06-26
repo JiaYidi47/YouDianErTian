@@ -18,5 +18,11 @@ namespace BLL
                 throw new Exception();
             return dal.addQuestion(questionItem);
         }
+
+        IList<question> IQuestion.getQuestionAll()
+        {
+            return dal.getQuestionAll();
+        }
+
     }
 }

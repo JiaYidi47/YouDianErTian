@@ -11,7 +11,17 @@ namespace WebOxcoder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Show();
+            }
+        }
+        private void Show()
+        {
+            IBLL.IQuestion question = BLLFactory.BLLAccess.CreateQuestion();
+            IList<Model.question> qu = question.getQuestionAll();
+            questionInformationGridView.DataSource = qu;
+            questionInformationGridView.DataBind();
         }
     }
 }

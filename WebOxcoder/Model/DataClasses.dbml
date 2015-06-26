@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="oxcoder" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DELL;Initial Catalog=oxcoder;Integrated Security=True" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="oxcoderConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.challenge" Member="challenge">
     <Type Name="challenge">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -69,19 +68,6 @@
       <Column Name="createCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.question" Member="question">
-    <Type Name="question">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="intro" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="knowledge" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="tecnology" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="questionLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="questionContent" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="answer" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="typeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.type" Member="type">
     <Type Name="type">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -94,6 +80,19 @@
       <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.question" Member="question">
+    <Type Name="question">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="intro" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="knowledge" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="tecnology" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="questionLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="questionContent" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="answer" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

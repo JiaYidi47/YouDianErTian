@@ -28,5 +28,12 @@ namespace DAL
                 return false;
             }
         }
+
+        IList<question> IQuestion.getQuestionAll()
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<question> questionItems = ctx.GetTable<question>();
+            return questionItems.ToList<question>();
+        }
     }
 }
