@@ -40,6 +40,14 @@ namespace DAL
             {
                 return false;
             }
+        enterprise IEnterprise.getEnterpriseByEmail(String enterpriseEmail)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<enterprise> enterprises = ctx.GetTable<enterprise>();
+            IQueryable<enterprise> query = from o in enterprises
+                                           where o.email == enterpriseEmail
+                                           select o;
+            return query.FirstOrDefault<enterprise>();
         }
     }
 }

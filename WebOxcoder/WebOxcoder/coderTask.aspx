@@ -112,9 +112,6 @@
 
                         <a class="btn btn-default dropdown-toggle btn-demo-space top-search" data-toggle="dropdown" href="#"> 全部 <span class="caret"></span></a>
 
-
-
-
                         <ul class="dropdown-menu">
                             <li><a href="">全部</a>
                             </li>
@@ -129,67 +126,10 @@
 
                 </section>
 
+                    <div id="challengeItem" runat="Server">
+                        
+                    </div>
 
-
-                <div class="col-md-3">
-                    <section id="Section2">
-                        <div class="panel panel-default shadow-effect">
-                            <div class="col-xs-12 panel-header">
-                                <div class="pull-left">
-                                    <h4 class="line-control"><a href="">[初级]Java工程师 </a></h4>
-                                    <h4 class="line-control"><a href="">青麦科技</a></h4>
-                                </div>
-                                <div class="pull-right client-info">
-                                    <span class="percent text-danger">
-                                        <img class="img-circle" style="width: 60px; height: 60px" src="logo/242.jpg">
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="panel-body ">
-                                <ul class="list-unstyled">
-                                    <li>月薪： 5k~8k
-                                    </li>
-                                    <li>职位诱惑：</li>
-                                    <li>
-                                        <ul class="companyTags">
-                                            <li>五险一金</li>
-                                            <li>年底双薪</li>
-                                            <li>年度旅游</li>
-                                        </ul>
-                                    </li>
-                                    <li>挑战项目：</li>
-                                    <li>
-                                        <ul>
-
-                                            <li><a href="">递归运算阶乘</a>
-                                            </li>
-                                            <li><a href="">插入排序</a>
-                                            </li>
-                                            <li><a href="">日期比较</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>难度：
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <li><i class="fa fa-calendar"></i> 2015-03-19~2015-05-18</li>
-                                        <li><i class="fa fa-user"></i> 17人已接受挑战</li>
-                                        <li class="progress-info"><span class="ongoing"><br /></span>
-                                        </li>
-                                </ul>
-                            </div>
-                            <!-- /.panel-body -->
-                            <div class="panel-footer align-center">
-                                <a href="coderTaskDetail.aspx">
-                                    <button class="btn btn-new1">开始挑战</button>
-                                </a>
-                                <a href="" class="btn btn-new2">放弃</a>
-                            </div>
-                            <!-- /.panel-footer -->
-                        </div>
-                    </section>
-                </div>
             </div>
 
             <!-- 			<div class="col-md-3"> -->

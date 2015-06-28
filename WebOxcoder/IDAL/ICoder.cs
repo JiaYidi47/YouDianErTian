@@ -11,5 +11,8 @@ namespace IDAL
     {
         //bool checkCoder(String coderEmail);
         bool addCoder(string email);
+        coder getCoderByEmail(String coderEmail);
+        float[] getPerformanceBetterPercent(float[] performance);
+        float[] getAveragePerformance();
     }
 }

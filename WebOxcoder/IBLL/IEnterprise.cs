@@ -11,5 +11,6 @@ namespace IBLL
     {
         bool checkEnterprise(String enterpriseEmail);
         bool addEnterprise(enterprise enterpriseItem);
+        enterprise getEnterpriseByEmail(String enterpriseEmail);
     }
 }

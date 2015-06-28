@@ -28,5 +28,15 @@ namespace DAL
                 return false;
             }
         }
+
+        question IQuestion.getQuestionByID(int questionID)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<question> records = ctx.GetTable<question>();
+            IQueryable<question> query = from o in records
+                                         where o.id == questionID
+                                         select o;
+            return query.FirstOrDefault<question>();
+        }
     }
 }

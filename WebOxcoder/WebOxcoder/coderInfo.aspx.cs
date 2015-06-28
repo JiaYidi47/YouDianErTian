@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Model;
 
 namespace WebOxcoder
 {
@@ -11,6 +12,13 @@ namespace WebOxcoder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //String coderEmail = Session["coderemail"].ToString();
+            String coderEmail = "12301060@bjtu.edu.cn";
+
+            IBLL.ICoder icoder = BLLFactory.BLLAccess.CreateCoder();
+            Model.coder c = icoder.getCoderByEmail(coderEmail);
+
+            coderPrice.InnerHtml = c.price.ToString();
 
         }
     }

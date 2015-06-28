@@ -28,6 +28,11 @@ namespace BLL
             if (enterpriseItem == null)
                 throw new Exception();
             return dal.addEnterprise(enterpriseItem);
+	}
+
+        enterprise IEnterprise.getEnterpriseByEmail(String enterpriseEmail)
+        {
+            return dal.getEnterpriseByEmail(enterpriseEmail);
         }
     }
 }

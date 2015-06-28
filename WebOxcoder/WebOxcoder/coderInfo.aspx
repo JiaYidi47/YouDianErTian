@@ -225,9 +225,8 @@
                         <!-- <h3><i class="fa fa-money"></i> 我的身价</h3> -->
                         <span style="padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;">我的身价</span>
                         <div class="align-center">
-                            <h1 style="color: #3872a4; font-size: 48px;">
-								￥
-								7758
+                            <h1 id="coderPrice" runat="Server" style="color: #3872a4; font-size: 48px;">
+								￥0
 							</h1>
                         </div>
                         <span class="label label-warning">Lv.3</span>
