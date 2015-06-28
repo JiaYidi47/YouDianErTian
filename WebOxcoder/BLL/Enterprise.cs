@@ -60,5 +60,22 @@ namespace BLL
         //    return dal.deleteEnterprise(enterpriseItem);
         //}
 
+        bool IEnterprise.checkEnterprise(String enterpriseEmail)
+        {
+            if (enterpriseEmail == null)
+                throw new Exception();
+            if (dal.checkEnterprise(enterpriseEmail) == true)
+                //发送邮件
+                return true;
+            else
+                return false;
+        }
+
+        bool IEnterprise.addEnterprise(enterprise enterpriseItem)
+        {
+            if (enterpriseItem == null)
+                throw new Exception();
+            return dal.addEnterprise(enterpriseItem);
+	}
     }
 }

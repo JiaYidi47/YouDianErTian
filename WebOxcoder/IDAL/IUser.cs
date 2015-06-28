@@ -11,5 +11,7 @@ namespace IDAL
     {
         int getCount();
         IList<users> getTodayUser();
+        int signIn(String userEmail,String userPassword);
+        bool addUser(string email, string password);
     }
 }

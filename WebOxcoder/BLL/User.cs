@@ -5,6 +5,7 @@ using System.Text;
 using IBLL;
 using System.Threading.Tasks;
 using Model;
+using IBLL;
 
 namespace BLL
 {
@@ -24,6 +25,14 @@ namespace BLL
             return dal.getTodayUser();
         }
 
+        int IUser.signIn(String userEmail, String userPassword) {
+            if (userEmail == null||userPassword==null)
+                throw new Exception();
+            return dal.signIn(userEmail, userPassword);
+        }
 
+        bool IUser.signUp(string email, string pass) {
+            return dal.addUser(email, pass);
+        }
     }
 }

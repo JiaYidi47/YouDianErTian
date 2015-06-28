@@ -19,9 +19,9 @@ namespace BLL
             return dal.addQuestion(questionItem);
         }
 
-        IList<question> IQuestion.getQuestionAll()
+        question IQuestion.getQuestionByID(int questionID)
         {
-            return dal.getQuestionAll();
+            return dal.getQuestionByID(questionID);
         }
 
         IList<question> IQuestion.searchQuestion(String name)
@@ -47,6 +47,5 @@ namespace BLL
                 throw new Exception();
             return dal.modifyQuestion(questionItem);
         }
-
     }
 }

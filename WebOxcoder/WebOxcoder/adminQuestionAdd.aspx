@@ -177,25 +177,25 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目难度&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" ID="questionLevel" runat="server">
-                                                <option value="5">★★★★★</option>
-                                                <option value="4">★★★★</option>
-                                                <option value="3">★★★</option>
-                                                <option value="2">★★</option>
-                                                <option value="1">★</option>
+                                            <select class="form-control" name="questionLevel">
+                                                <option>★★★★★</option>
+                                                <option>★★★★</option>
+                                                <option>★★★</option>
+                                                <option>★★</option>
+                                                <option>★</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目内容&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <asp:FileUpload ID="questionContentUploader" runat="server" />
+                                            <asp:TextBox class="form-control" type="file" runat="server" ID="questionContent"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目答案&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <asp:FileUpload ID="questionAnswerUploader" runat="server" />
+                                            <asp:TextBox class="form-control" type="file" runat="server" ID="questionAnswer"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">

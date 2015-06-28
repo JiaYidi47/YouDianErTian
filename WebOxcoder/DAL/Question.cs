@@ -29,11 +29,14 @@ namespace DAL
             }
         }
 
-        IList<question> IQuestion.getQuestionAll()
+        question IQuestion.getQuestionByID(int questionID)
         {
             DataContext ctx = new DataContext(connection);
-            ITable<question> questionItems = ctx.GetTable<question>();
-            return questionItems.ToList<question>();
+            ITable<question> records = ctx.GetTable<question>();
+            IQueryable<question> query = from o in records
+                                         where o.id == questionID
+                                         select o;
+            return query.FirstOrDefault<question>();
         }
 
         IList<question> IQuestion.searchQuestion(String name)

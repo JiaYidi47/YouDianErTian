@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IBLL;
 using Model;
+using IBLL;
 
 namespace BLL
 {
@@ -34,9 +34,24 @@ namespace BLL
             return dal.deleteCoder(coderItem);
         }
 
-        coder ICoder.getCoderByEmail(string email)
+        bool IBLL.ICoder.AddCoder(string email)
         {
-            return dal.getCoderByEmail(email);
+            return dal.addCoder(email);
+        }
+
+        coder ICoder.getCoderByEmail(String coderEmail)
+        {
+            return dal.getCoderByEmail(coderEmail);
+        }
+
+        float[] ICoder.getPerformanceBetterPercent(float[] performance)
+        {
+            return dal.getPerformanceBetterPercent(performance);
+        }
+
+        float[] ICoder.getAveragePerformance()
+        {
+            return dal.getAveragePerformance();
         }
     }
 }

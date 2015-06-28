@@ -11,7 +11,6 @@ namespace WebOxcoder {
     
     
     public partial class adminQuestionInquire {
-        
         /// <summary>
         /// questionCondition 控件。
         /// </summary>

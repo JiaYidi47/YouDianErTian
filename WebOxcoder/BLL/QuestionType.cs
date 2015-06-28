@@ -12,6 +12,7 @@ namespace BLL
     {
         private static readonly IDAL.IQuestionType dal = DALFactory.DataAccess.CreateQuestionType();
 
+<<<<<<< HEAD
         bool IQuestionType.addQuestionType(type typeItem)
         {
             if (typeItem == null)
@@ -48,6 +49,9 @@ namespace BLL
             return dal.modifyQuestionType(typeItem);
         }
 
-
+        type IQuestionType.getChallengeType(int challengeType)
+        {
+            return dal.getChallengeType(challengeType);
+        }
     }
 }

@@ -53,7 +53,7 @@
         max-height: 70px;
     }
     .footer-log{
-        margin-bottom:20px;; text-align:center; color:#fff;
+        margin-bottom:20px; text-align:center; color:#fff;
     }
     .footer-log a{
         color:#fff;
@@ -121,7 +121,7 @@
 									<div class="panel-body col-md-6">
 										<div style="margin: 20px;">
 											<p class="align-left" style="font-size: 16px; color: #666;">
-												还没有帐号？<a href="signup.html">立即注册</a>
+												还没有帐号？<a href="signup.aspx">立即注册</a>
 											</p>
 											<img src="img/01.png" width="250px;" class="hidden-xs">
 										</div>

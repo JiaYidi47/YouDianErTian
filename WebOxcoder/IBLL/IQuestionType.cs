@@ -15,5 +15,6 @@ namespace IBLL
         type getQuestionTypeByID(int id);
         bool deleteQuestionType(type typeItem);
         bool modifyQuestionType(type typeItem);
+        type getChallengeType(int challengeType);
     }
 }

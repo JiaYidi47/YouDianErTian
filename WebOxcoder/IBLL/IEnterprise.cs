@@ -14,7 +14,9 @@ namespace IBLL
         IList<enterprise> getSuccessCheckedEnterprise();
         IList<enterprise> searchEnterprise(String name);
         bool deleteEnterprise(enterprise enterpriseItem);
-        enterprise getEnterpriseByEmail(string email);
         bool modifyEnterprise(enterprise enterpriseItem);
+        bool checkEnterprise(String enterpriseEmail);
+        bool addEnterprise(enterprise enterpriseItem);
+        enterprise getEnterpriseByEmail(String enterpriseEmail);
     }
 }

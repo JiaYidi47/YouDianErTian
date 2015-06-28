@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="BootstrapStyler">
 
-    <title>猿圈 .NET&#26377;&#28857;&#20799;&#29980;&#23567;&#32452;企业完善企业信息</title>
+    <title>猿圈 企业完善企业信息</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">

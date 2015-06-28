@@ -13,6 +13,9 @@ namespace IBLL
         IList<coder> getCoderAll();
         IList<coder> searchCoder(String name);
         bool deleteCoder(coder coderItem);
-        coder getCoderByEmail(string email);
+        bool AddCoder(string email);
+        coder getCoderByEmail(String coderEmail);
+        float[] getPerformanceBetterPercent(float[] performance);
+        float[] getAveragePerformance();
     }
 }

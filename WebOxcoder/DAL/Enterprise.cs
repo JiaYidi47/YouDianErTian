@@ -42,8 +42,6 @@ namespace DAL
             return query.ToList<enterprise>();
         }
 
-        
-
         IList<enterprise> IEnterprise.searchEnterprise(String name)
         {
             DataContext ctx = new DataContext(connection);
@@ -60,6 +58,37 @@ namespace DAL
             ITable enterpriseItems = ctx.GetTable<enterprise>();
             enterpriseItems.Attach(enterpriseItem);
             enterpriseItems.DeleteOnSubmit(enterpriseItem);
+
+            try
+            {
+                ctx.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        bool IEnterprise.checkEnterprise(String enterpriseEmail)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<enterprise> enterpriseItem = ctx.GetTable<enterprise>();
+            IQueryable<enterprise> query = from o in enterpriseItem
+                                           where o.email == enterpriseEmail
+                                           select o;
+            enterprise u = query.FirstOrDefault<enterprise>();
+            if (u != null)
+                return false;
+            else
+                return true;
+        }
+
+        bool IEnterprise.addEnterprise(enterprise enterpriseItem)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<enterprise> enterpriseItems = ctx.GetTable<enterprise>();
+            enterpriseItems.InsertOnSubmit(enterpriseItem);
+
             try
             {
                 ctx.SubmitChanges();
@@ -113,9 +142,5 @@ namespace DAL
                 return false;
             }
         }
-
-        
-        
-
     }
 }

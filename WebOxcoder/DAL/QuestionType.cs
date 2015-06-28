@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IDAL;
-using Model;
 using System.Data.Linq;
+using Model;
+using IDAL;
 
 namespace DAL
 {
@@ -94,6 +94,17 @@ namespace DAL
             {
                 return false;
             }
+        }
+
+        type IQuestionType.getChallengeType(int challengeType)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<type> searchReult = ctx.GetTable<type>();
+            IQueryable<type> query = from o in searchReult
+                                     where o.id == challengeType
+                                     select o;
+            type t = query.FirstOrDefault<type>();
+            return t;
         }
     }
 }
