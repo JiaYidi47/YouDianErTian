@@ -201,13 +201,9 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">题目类别&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control">
-                                                <option>Android</option>
-                                                <option>IOS</option>
-                                                <option>Java</option>
-                                                <option>C++</option>
-                                                <option>PHP</option>
-                                            </select>
+                                            <asp:DropDownList ID="DropDownList" runat="server" DataSourceID="SqlDataSource" DataTextField="name" DataValueField="id">
+                                            </asp:DropDownList>
+                                            <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:oxcoderConnectionString %>" SelectCommand="SELECT [id],[name] FROM [type]"></asp:SqlDataSource>
                                         </div>
 
                                     </div>

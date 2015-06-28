@@ -9,6 +9,10 @@ namespace IDAL
 {
     public interface ICoder
     {
+        int getCount();
+        IList<coder> getCoderAll();
+        IList<coder> searchCoder(String name);
+        bool deleteCoder(coder coderItem);
         //bool checkCoder(String coderEmail);
         bool addCoder(string email);
         coder getCoderByEmail(String coderEmail);

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9" name="oxcoder">
+  <DataContextMoniker Name="/oxcoderDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3e97b5c0-ee05-4472-b366-378611e67324" absoluteBounds="0.75, 0.625, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/oxcoderDataContext/challenge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2e48228-2395-4a82-ad25-4d1886678f2f" absoluteBounds="0.76500000000000012, 1.085, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9dc16ce6-98f0-4207-8c7c-7bdae9bf05f8" absoluteBounds="3.375, 0.5, 2, 2.2764815266927085">
+      <DataClassMoniker Name="/oxcoderDataContext/challengeRecord" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ac04334-0664-49f1-a7b4-f5f7db996b6b" absoluteBounds="3.3899999999999997, 0.96, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75b05afa-d69f-4ca6-8d1c-0a95cf1a1a5b" absoluteBounds="6, 0.625, 2, 2.2764815266927085">
+      <DataClassMoniker Name="/oxcoderDataContext/coder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0f934f1-3321-4359-8d1a-b52da7e1b171" absoluteBounds="6.015, 1.085, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96ff3eae-cf2d-4ddb-aea9-b5fbc148b805" absoluteBounds="0.625, 3.5, 2, 3.0156579589843751">
+      <DataClassMoniker Name="/oxcoderDataContext/enterprise" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45731652-8888-431d-bde8-e9ecf0910708" absoluteBounds="0.64000000000000012, 3.96, 1.9700000000000002, 2.455657958984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68293ad3-74b4-4372-9121-243e61bf63ce" absoluteBounds="3, 3.5, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/oxcoderDataContext/order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2f1956a-7cdc-4c45-abda-56ef65af97c3" absoluteBounds="3.0149999999999997, 3.96, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7bab8c49-db49-4f25-affb-9d1dc246d231" absoluteBounds="5.5, 3.5, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/oxcoderDataContext/promoCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="448e24af-f65a-4068-a438-382ff9b14ace" absoluteBounds="5.515, 3.96, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7955391c-47ff-46e3-82ef-d97d7508399e" absoluteBounds="3, 5.75, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/oxcoderDataContext/question" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc3e4829-a823-42f8-bb0f-bccf2c6e4cd7" absoluteBounds="3.0149999999999997, 6.21, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="174333b4-fc56-4241-81fc-20ba2acd9c08" absoluteBounds="5.75, 5.625, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/oxcoderDataContext/type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47438536-4f46-4c9c-86e8-94037c355f08" absoluteBounds="5.765, 6.085, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca0d2ab4-af22-437d-a1bc-f0f3d2e1002a" absoluteBounds="5.625, 7.375, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/oxcoderDataContext/user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1aa32b51-79f7-45e9-aec2-f7c7ce0026ff" absoluteBounds="5.64, 7.835, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

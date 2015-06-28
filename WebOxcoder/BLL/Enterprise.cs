@@ -12,6 +12,54 @@ namespace BLL
     {
         private static readonly IDAL.IEnterprise dal = DALFactory.DataAccess.CreateEnterprise();
 
+        int IEnterprise.getCount()
+        {
+            return dal.getCount();
+        }
+
+
+        IList<enterprise> IEnterprise.getNotCheckedEnterprise()
+        {
+            return dal.getNotCheckedEnterprise();
+        }
+
+        IList<enterprise> IEnterprise.getSuccessCheckedEnterprise()
+        {
+            return dal.getSuccessCheckedEnterprise();
+        }
+
+
+        IList<enterprise> IEnterprise.searchEnterprise(String name)
+        {
+            return dal.searchEnterprise(name);
+        }
+
+        bool IEnterprise.deleteEnterprise(enterprise enterpriseItem)
+        {
+            if (enterpriseItem == null)
+                throw new Exception();
+            return dal.deleteEnterprise(enterpriseItem);
+        }
+
+        enterprise IEnterprise.getEnterpriseByEmail(string email)
+        {
+            return dal.getEnterpriseByEmail(email);
+        }
+
+        bool IEnterprise.modifyEnterprise(enterprise enterpriseItem)
+        {
+            if (enterpriseItem == null)
+                throw new Exception();
+            return dal.modifyEnterprise(enterpriseItem);
+        }
+
+        //bool IEnterprise.rejectEnterprise(enterprise enterpriseItem)
+        //{
+        //    if (enterpriseItem == null)
+        //        throw new Exception();
+        //    return dal.deleteEnterprise(enterpriseItem);
+        //}
+
         bool IEnterprise.checkEnterprise(String enterpriseEmail)
         {
             if (enterpriseEmail == null)
@@ -29,10 +77,5 @@ namespace BLL
                 throw new Exception();
             return dal.addEnterprise(enterpriseItem);
 	}
-
-        enterprise IEnterprise.getEnterpriseByEmail(String enterpriseEmail)
-        {
-            return dal.getEnterpriseByEmail(enterpriseEmail);
-        }
     }
 }
