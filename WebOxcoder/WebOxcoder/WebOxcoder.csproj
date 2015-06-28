@@ -1671,9 +1671,7 @@
     <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="WebForm2.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adminCategoryAdd.aspx.cs">
@@ -2000,6 +1998,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{c88487f4-0c77-47e8-8db0-1997de6b62d6}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{6aac162d-6346-44bd-9e26-9f4d50150199}</Project>
+      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

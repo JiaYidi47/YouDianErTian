@@ -3,25 +3,38 @@
     <Type Name="challenge">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="chanllengeLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="challengeLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="isPhoto" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="isPublished" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="question" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="question1ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="question2ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="question3ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="companyEmail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="state" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="publishTime" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="duration" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="users">
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="registerTime" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.challengeRecord" Member="challengeRecord">
     <Type Name="challengeRecord">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="chanllengeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="challengeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="coderEmail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="result" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="subResult" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="time" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="subTime" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="subTime1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subTime2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subTime3" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="isInvited" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ideoneID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.coder" Member="coder">
@@ -31,8 +44,12 @@
       <Column Name="age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="sex" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="phone" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
-      <Column Name="performance" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="performanceperccent" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="performance0" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="performance1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="performance2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="performance3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="performance4" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="bindinginfo" Type="System.String" DbType="NVarChar(7) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
@@ -52,34 +69,22 @@
       <Column Name="restCreate" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[order]" Member="order">
-    <Type Name="order">
+  <Table Name="dbo.orders" Member="orders">
+    <Type Name="orders">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="company" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="companyEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="money" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="money" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.promoCode" Member="promoCode">
     <Type Name="promoCode">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="value" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="inviteCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="createCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.type" Member="type">
-    <Type Name="type">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="content" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.[user]" Member="user">
-    <Type Name="user">
-      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.question" Member="question">
@@ -92,7 +97,14 @@
       <Column Name="questionLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="questionContent" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="answer" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="type" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="typeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.type" Member="type">
+    <Type Name="type">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="content" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

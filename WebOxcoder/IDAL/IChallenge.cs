@@ -10,5 +10,7 @@ namespace IDAL
     public interface IChallenge
     {
         IList<challenge> searchChallengeByTec(int tec);
+        challenge getChallengeByID(int challengeId);
+        IList<challenge> searchChallengeByCoderEmail(String coderEmail);
     }
 }

@@ -20,3 +20,14 @@ D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.dll
 D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\DALFactory.pdb
 D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IDAL.pdb
 D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IBLL.dll
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IBLL.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\DALFactory.dll
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IDAL.dll
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.dll
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\DALFactory.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IDAL.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\obj\Debug\IBLL.dll
+D:\Temp\YouDianErTian\WebOxcoder\IBLL\obj\Debug\IBLL.pdb

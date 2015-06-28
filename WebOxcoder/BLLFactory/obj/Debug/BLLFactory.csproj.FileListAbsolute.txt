@@ -16,3 +16,12 @@ D:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\IBLL.dll
 D:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\Model.dll
 D:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\IBLL.pdb
 D:\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\BLLFactory.dll
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\BLLFactory.pdb
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\IBLL.dll
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\Model.dll
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\IBLL.pdb
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\bin\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\obj\Debug\BLLFactory.csprojResolveAssemblyReference.cache
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\obj\Debug\BLLFactory.dll
+D:\Temp\YouDianErTian\WebOxcoder\BLLFactory\obj\Debug\BLLFactory.pdb

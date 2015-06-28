@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 
-<head runat="server">
+<head>
     <meta charset="UTF-8">
     <title>猿圈</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -140,14 +140,13 @@
                 <h1>题库管理<small>查询题目</small></h1>
             </section>
             <!-- Main content -->
-            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="input-group">
                             <input type="text" name="message" placeholder="请输入题目名称/知识点..." class="form-control" />
                             <span class="input-group-btn">
-                        <asp:Button class="btn btn-primary btn-flat" Text="查询" ID="search" runat="server"></asp:Button>
+                        <button type="button" class="btn btn-primary btn-flat">查询</button>
                       </span>
                         </div>
                     </div>
@@ -177,26 +176,29 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <asp:GridView class="table table-hover" runat="server" ID="questionInformationGridView" AutoGenerateColumns="False" GridLines ="None">
-                                    <Columns>
-                                        <asp:BoundField  DataField="id" HeaderText="ID" />
-                                        <asp:BoundField  DataField="name" HeaderText="题目名称" />
-                                        <asp:BoundField  DataField="knowledge" HeaderText="知识点" />
-                                        <asp:BoundField  DataField="questionLevel" HeaderText="难度" />
-                                        <asp:BoundField  DataField="type" HeaderText="所属分类" />
-                                    
-                                        <asp:TemplateField ShowHeader="False"> 
-                                            <ItemTemplate>  
-                                               <asp:LinkButton ID="detail" runat="server" CausesValidation="False" CommandName="Detail"  
-                                                  Text ="详细" class="btn btn-xs btn-info btn-flat" data-toggle="modal" data-target="#question-info-modal"></asp:LinkButton>  
-                                               <asp:LinkButton ID="modify" runat="server" CausesValidation="False" CommandName="Modify"  
-                                                  Text ="修改" class="btn btn-xs btn-warning btn-flat" data-toggle="modal" data-target="#question-modify-modal"></asp:LinkButton>
-                                                <asp:LinkButton ID="delete" runat="server" CausesValidation="False" CommandName="Delete"  
-                                                  Text ="删除" class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#question-delete-modal"></asp:LinkButton>       
-                                           </ItemTemplate> 
-                                        </asp:TemplateField>
-                                    </Columns>
-                                </asp:GridView>
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>题目名称</th>
+                                        <th>知识点</th>
+                                        <th>难度</th>
+                                        <th>所属分类</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td>122</td>
+                                        <td>计时器</td>
+                                        <td>Android计时器控件</td>
+                                        <td>★★★★</td>
+                                        <td>Android</td>
+                                        <td>
+                                            <a class="btn btn-xs btn-info btn-flat" data-toggle="modal" data-target="#question-info-modal">详细</a>
+                                            <a class="btn btn-xs btn-warning btn-flat" data-toggle="modal" data-target="#question-modify-modal">修改</a>
+
+                                            <a class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#question-delete-modal">删除</a>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -359,10 +361,8 @@
                 </div>
             </section>
             <!-- /.content -->
-            </form>
         </div>
         <!-- /.content-wrapper -->
-        
         <footer class="main-footer">
             <strong>Copyright &copy; 2015 <a href="#">有点儿甜</a>.</strong> All rights reserved.
         </footer>

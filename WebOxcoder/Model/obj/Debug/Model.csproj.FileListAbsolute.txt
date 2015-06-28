@@ -10,3 +10,9 @@ D:\YouDianErTian\WebOxcoder\Model\bin\Debug\Model.pdb
 D:\YouDianErTian\WebOxcoder\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\YouDianErTian\WebOxcoder\Model\obj\Debug\Model.dll
 D:\YouDianErTian\WebOxcoder\Model\obj\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\Model\bin\Debug\Model.dll.config
+D:\Temp\YouDianErTian\WebOxcoder\Model\bin\Debug\Model.dll
+D:\Temp\YouDianErTian\WebOxcoder\Model\bin\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Temp\YouDianErTian\WebOxcoder\Model\obj\Debug\Model.dll
+D:\Temp\YouDianErTian\WebOxcoder\Model\obj\Debug\Model.pdb

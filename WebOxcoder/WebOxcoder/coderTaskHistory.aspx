@@ -127,11 +127,11 @@
                         </ul>
                     </div>
 
-                    <div class="alert alert-info" style="text-align: center" role="alert">没有接受任何招聘信息</div>
-
                 </section>
 
-
+                <div id="challengeItem" runat="Server">
+                    
+                </div>
 
             </div>
 

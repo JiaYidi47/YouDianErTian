@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model;
 
 namespace IDAL
 {
     public interface IChallengeRecord
     {
+        challengeRecord getChallengeRecordByChallengeIdAndCoderEmail(int challengeId, String coderEmail);
+        int getHaveAcceptCountById(int challengeId);
+        bool changeChallengeRecord(challengeRecord recordItem);
+        bool acceptChallenge(int challengeId, String coderEmail);
+        bool deleteChengeRecord(int challengeId, String coderEmail);
     }
 }

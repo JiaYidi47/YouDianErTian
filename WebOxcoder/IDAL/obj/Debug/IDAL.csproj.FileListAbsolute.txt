@@ -12,3 +12,10 @@ D:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\IDAL.dll
 D:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\IDAL.pdb
 D:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\Model.dll
 D:\YouDianErTian\WebOxcoder\IDAL\bin\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IDAL\bin\Debug\IDAL.dll
+D:\Temp\YouDianErTian\WebOxcoder\IDAL\bin\Debug\IDAL.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IDAL\bin\Debug\Model.dll
+D:\Temp\YouDianErTian\WebOxcoder\IDAL\bin\Debug\Model.pdb
+D:\Temp\YouDianErTian\WebOxcoder\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
+D:\Temp\YouDianErTian\WebOxcoder\IDAL\obj\Debug\IDAL.dll
+D:\Temp\YouDianErTian\WebOxcoder\IDAL\obj\Debug\IDAL.pdb
