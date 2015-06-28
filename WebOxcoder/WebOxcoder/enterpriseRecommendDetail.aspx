@@ -265,7 +265,7 @@
                             <h3>
 									<i class="fa fa-file"></i> 基本信息(消耗1次邀请以查看)
 								</h3>
-                            <form runat="server">
+                            <form id="Form1" runat="server">
                                
                                <asp:Button class="btn btn-new1 pull-left" style="margin-top: 20px;" runat="server" Text="去充值" id="topay" OnClick="topay_Click"/>
                                <asp:Button class="btn btn-new1 pull-left" style="margin-top: 20px;margin-left:10px;" text ="查看信息" runat="server" id="personalInfo" OnClick="personalInfo_Click"/>

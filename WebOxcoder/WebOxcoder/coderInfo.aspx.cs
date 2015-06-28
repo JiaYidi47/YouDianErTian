@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Model;
 
 namespace WebOxcoder
 {
@@ -74,27 +73,27 @@ namespace WebOxcoder
             if (bindingInfo[0] == '1')
             {
                 string address = "https://api.weibo.com/oauth2/authorize?client_id=3064453059&response_type=code&forcelogin=true&redirect_uri=http://www.oxcoder.com/auth-sina.action";
-                sinaWeibo.InnerHtml = "<a href=\"#\" id=\"sina\" title=\"新浪微博\" class=\"img-show\"> <img src=\"img/sina.png\">"+
-                                      "</a>"+
-                                      "<div class=\"img-hide\">"+
-                                      "<a target=\"_blank\" href=\""+address+"\">绑定</a>"+
-                                      "</div>"+
+                sinaWeibo.InnerHtml = "<a href=\"#\" id=\"sina\" title=\"新浪微博\" class=\"img-show\"> <img src=\"img/sina.png\">" +
+                                      "</a>" +
+                                      "<div class=\"img-hide\">" +
+                                      "<a target=\"_blank\" href=\"" + address + "\">绑定</a>" +
+                                      "</div>" +
                                       "<p class=\"text-muted\">微博</p>";
-                
+
             }
 
             if (bindingInfo[1] == '1')
             {
                 string address = "https://github.com/login/oauth/authorize?client_id=cb26d4b4731db53e8a90&redirect_uri=http://www.oxcoder.com/auth-github.action";
-                git.InnerHtml =  "<a href=\"#\" id=\"github\" title=\"github\" class=\"img-show\"><img src=\"img/github.png\">"+
-                                 "</a>"+
-                                 "<div class=\"img-hide\">"+
-                                 "<a href=\""+address+"\" target=\"_blank\">绑定</a>"+
-                                 "</div>"+
+                git.InnerHtml = "<a href=\"#\" id=\"github\" title=\"github\" class=\"img-show\"><img src=\"img/github.png\">" +
+                                 "</a>" +
+                                 "<div class=\"img-hide\">" +
+                                 "<a href=\"" + address + "\" target=\"_blank\">绑定</a>" +
+                                 "</div>" +
                                  "<p class=\"text-muted text-center\">Github</p>";
             }
 
-            int igender = c.sex;
+            int igender = (int)c.sex;
             string gender;
 
             if (igender == 0)
@@ -105,13 +104,9 @@ namespace WebOxcoder
             {
                 gender = "男";
             }
-            
-	    //String coderEmail = Session["coderemail"].ToString();
-            
-            coderPrice.InnerHtml = c.price.ToString();
 
-            string url = "coderInfoChange.aspx?name=" + c.name + "&age=" + c.age + "&gender=" + gender+ "&phone=" + c.phone;
-            personalInfo.InnerHtml = "<span style=\"padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;\" >基本资料</span>"+
+            string url = "coderInfoChange.aspx?name=" + c.name + "&age=" + c.age + "&gender=" + gender + "&phone=" + c.phone;
+            personalInfo.InnerHtml = "<span style=\"padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;\" >基本资料</span>" +
                                      "<h3>" + c.name + "</h3>" +
                                      "<p>" +
                                      "<span class=\"resume-label\">性别：" + gender + "</span>" +
@@ -126,7 +121,7 @@ namespace WebOxcoder
                                      "<span class=\"resume-label\">邮箱：" + c.email + "</span>" +
                                      "</p>" +
                                      "<p class=\"pull-right\">" +
-                                           "<a href=\""+url+"\" class=\"resume-action\">编辑</a>" +
+                                           "<a href=\"" + url + "\" class=\"resume-action\">编辑</a>" +
                                      "</p>";
         }
     }
