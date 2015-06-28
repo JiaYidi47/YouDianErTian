@@ -140,6 +140,7 @@
                 <h1>类别管理<small>增加类别</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-xs-8">
@@ -153,20 +154,22 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">类别名称&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目名称" value="计时器">
+                                            <asp:TextBox type="text" class="form-control" placeholder="请输入类别名称" runat="server" ID="questionTypeName"/>
                                         </div>
                                     </div>
+                                    <br />
+                                    <br />
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">类别描述&nbsp;&#58;</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目简介">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
+                                            <asp:TextBox class="form-control" placeholder="请输入类别描述" runat="server" ID="questionTypeContent" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-info btn-flat pull-right">确认</button>
+                                <asp:Button type="submit" class="btn btn-info btn-flat pull-right" runat="server" ID="confirm" Text="确认" OnClick="confirm_Click"></asp:Button>
                             </div>
                             <!-- /.box-footer -->
                         </div>
@@ -174,6 +177,7 @@
                     </div>
                 </div>
             </section>
+          </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

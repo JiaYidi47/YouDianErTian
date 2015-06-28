@@ -24,5 +24,29 @@ namespace BLL
             return dal.getQuestionAll();
         }
 
+        IList<question> IQuestion.searchQuestion(String name)
+        {
+            return dal.searchQuestion(name);
+        }
+
+        question IQuestion.getQuestionByID(int id)
+        {
+            return dal.getQuestionByID(id);
+        }
+
+        bool IQuestion.deleteQuestion(question questionItem)
+        {
+            if (questionItem == null)
+                throw new Exception();
+            return dal.deleteQuestion(questionItem);
+        }
+
+        bool IQuestion.modifyQuestion(question questionItem)
+        {
+            if (questionItem == null)
+                throw new Exception();
+            return dal.modifyQuestion(questionItem);
+        }
+
     }
 }

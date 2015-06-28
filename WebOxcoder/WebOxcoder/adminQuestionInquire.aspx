@@ -145,9 +145,9 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="input-group">
-                            <input type="text" name="message" placeholder="请输入题目名称/知识点..." class="form-control" />
+                            <asp:TextBox type="text" name="message" placeholder="请输入题目名称" ID="questionCondition" class="form-control" runat="server"/>
                             <span class="input-group-btn">
-                        <asp:Button class="btn btn-primary btn-flat" Text="查询" ID="search" runat="server"></asp:Button>
+                        <asp:Button class="btn btn-primary btn-flat" Text="查询" ID="search" runat="server" OnClick="search_Click"></asp:Button>
                       </span>
                         </div>
                     </div>
@@ -158,44 +158,27 @@
                         <div class="box box-info">
                             <div class="box-header">
                                 <h3 class="box-title">题目信息</h3>
-                                <div class="box-tools">
-                                    <ul class="pagination pagination-sm no-margin pull-right">
-                                        <li><a href="#">&laquo;</a>
-                                        </li>
-                                        <li><a href="#">1</a>
-                                        </li>
-                                        <li><a href="#">2</a>
-                                        </li>
-                                        <li><a href="#">3</a>
-                                        </li>
-                                        <li><a href="#">4</a>
-                                        </li>
-                                        <li><a href="#">&raquo;</a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <asp:GridView class="table table-hover" runat="server" ID="questionInformationGridView" AutoGenerateColumns="False" GridLines ="None">
+                                <asp:GridView class="table table-hover" runat="server" ID="questionInformationGridView" AutoGenerateColumns="False" GridLines ="None" AllowPaging="true" OnRowCommand="questionInformationGridView_RowCommand" OnPageIndexChanging="questionInformationGridView_PageIndexChanging" >
                                     <Columns>
                                         <asp:BoundField  DataField="id" HeaderText="ID" />
                                         <asp:BoundField  DataField="name" HeaderText="题目名称" />
                                         <asp:BoundField  DataField="knowledge" HeaderText="知识点" />
                                         <asp:BoundField  DataField="questionLevel" HeaderText="难度" />
-                                        <asp:BoundField  DataField="type" HeaderText="所属分类" />
+                                        <asp:BoundField  DataField="typeId" HeaderText="所属分类" />
                                     
                                         <asp:TemplateField ShowHeader="False"> 
-                                            <ItemTemplate>  
-                                               <asp:LinkButton ID="detail" runat="server" CausesValidation="False" CommandName="Detail"  
-                                                  Text ="详细" class="btn btn-xs btn-info btn-flat" data-toggle="modal" data-target="#question-info-modal"></asp:LinkButton>  
-                                               <asp:LinkButton ID="modify" runat="server" CausesValidation="False" CommandName="Modify"  
-                                                  Text ="修改" class="btn btn-xs btn-warning btn-flat" data-toggle="modal" data-target="#question-modify-modal"></asp:LinkButton>
-                                                <asp:LinkButton ID="delete" runat="server" CausesValidation="False" CommandName="Delete"  
-                                                  Text ="删除" class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#question-delete-modal"></asp:LinkButton>       
+                                            <ItemTemplate>
+                                               <asp:LinkButton runat="server" CausesValidation="False" CommandName="Modify"  CommandArgument='<%#Eval("id")%>' 
+                                                  Text ="修改" class="btn btn-xs btn-warning btn-flat" ></asp:LinkButton>
+                                                <asp:LinkButton runat="server" CausesValidation="False" CommandName="Del"  CommandArgument='<%#Eval("id")%>' OnClientClick="javascript:return confirm('确定删除吗?')" 
+                                                  Text ="删除" class="btn btn-xs btn-danger btn-flat" ></asp:LinkButton>       
                                            </ItemTemplate> 
                                         </asp:TemplateField>
                                     </Columns>
+                                    <PagerSettings Mode="NumericFirstLast" FirstPageText="首页" PreviousPageText ="上一页" NextPageText="下一页" LastPageText="尾页" />
                                 </asp:GridView>
                             </div>
                             <!-- /.box-body -->
@@ -203,160 +186,8 @@
                         <!-- /.box -->
                     </div>
                 </div>
-                <div class="modal modal-info fade" id="question-info-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">题目详细信息</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目名称&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">计时器</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目简介&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目知识点&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">安卓计时器</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目开发能力&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">安卓但是都是多少多少多少的</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目难度&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">★★★★</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目内容&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">是多少多少多少多少</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目答案&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">巍峨热热</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目类别&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">Android</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline" data-dismiss="modal">关闭</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <div class="modal modal-warning fade" id="question-modify-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">题目详细信息</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目名称&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目名称" value="计时器">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目简介&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目简介">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目知识点&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目知识点" value="安卓计时器">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目开发能力&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目开发能力" value="额额喂喂喂">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目难度&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control">
-                                                <option>★★★★★</option>
-                                                <option>★★★★</option>
-                                                <option>★★★</option>
-                                                <option>★★</option>
-                                                <option>★</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目内容&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目内容">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目答案&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目答案">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">题目类别&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control">
-                                                <option>Android</option>
-                                                <option>IOS</option>
-                                                <option>Java</option>
-                                                <option>C++</option>
-                                                <option>PHP</option>
-                                            </select>
-                                        </div>
+               
 
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-outline">确认</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <div class="modal modal-danger fade" id="question-delete-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">确认删除</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>是否确认删除该题目？</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-outline">确认</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
             </section>
             <!-- /.content -->
             </form>
@@ -374,9 +205,6 @@
     <!-- jQuery UI 1.11.2 -->
     <script src="admin/plugins/jQueryUI/jquery-ui-1.11.2.min.js" type="text/javascript"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button);
-    </script>
     <!-- Bootstrap 3.3.2 JS -->
     <script src="admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- jQuery Knob Chart -->
@@ -389,6 +217,8 @@
     <script src='admin/plugins/fastclick/fastclick.min.js'></script>
     <!-- AdminLTE App -->
     <script src="admin/dist/js/app.min.js" type="text/javascript"></script>
+    
+    
 </body>
 
 </html>

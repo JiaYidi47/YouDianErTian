@@ -73,5 +73,11 @@ namespace BLLFactory
             string className = path + ".Order";
             return (IBLL.IOrder)Assembly.Load(path).CreateInstance(className);
         }
+
+        public static IBLL.IPromoCode CreatePromoCode()
+        {
+            string className = path + ".PromoCode";
+            return (IBLL.IPromoCode)Assembly.Load(path).CreateInstance(className);
+        }
     }
 }

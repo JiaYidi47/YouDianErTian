@@ -31,8 +31,9 @@ namespace WebOxcoder
             }
             else
             {
-                content = upload(questionContentUploader,questionContentUploader.PostedFile.FileName);
-                answer = upload(questionAnswerUploader,questionAnswerUploader.PostedFile.FileName);
+                content = upload(questionContentUploader, questionContentUploader.PostedFile.FileName);
+                answer = upload(questionAnswerUploader, questionAnswerUploader.PostedFile.FileName);
+                
             } 
 
             IBLL.IQuestion question = BLLFactory.BLLAccess.CreateQuestion();
@@ -45,7 +46,7 @@ namespace WebOxcoder
             questionCommit.questionLevel = Int32.Parse(questionLevel.Value);
             questionCommit.questionContent = content;
             questionCommit.answer = answer;
-            questionCommit.type = DropDownList.SelectedItem.Text;
+            questionCommit.typeId = Int32.Parse(DropDownList.SelectedItem.Value);
 
             if (question.addQuestion(questionCommit))
             {

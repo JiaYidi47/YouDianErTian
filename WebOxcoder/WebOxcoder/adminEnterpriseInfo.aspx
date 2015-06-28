@@ -140,13 +140,14 @@
                 <h1>企业管理<small>企业信息</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="input-group">
-                            <input type="text" name="message" placeholder="请输入企业名称/邮箱..." class="form-control" />
+                            <asp:TextBox type="text" name="message" placeholder="请输入企业名称" runat="server" ID="enterpriseCondition" class="form-control" />
                             <span class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-flat">查询</button>
+                        <asp:Button type="button" class="btn btn-primary btn-flat" runat="server" ID="search" Text="查询" OnClick="search_Click"></asp:Button>
                       </span>
                         </div>
                     </div>
@@ -157,99 +158,33 @@
                         <div class="box box-info">
                             <div class="box-header">
                                 <h3 class="box-title">企业信息</h3>
-                                <div class="box-tools">
-                                    <ul class="pagination pagination-sm no-margin pull-right">
-                                        <li><a href="#">&laquo;</a>
-                                        </li>
-                                        <li><a href="#">1</a>
-                                        </li>
-                                        <li><a href="#">2</a>
-                                        </li>
-                                        <li><a href="#">3</a>
-                                        </li>
-                                        <li><a href="#">4</a>
-                                        </li>
-                                        <li><a href="#">&raquo;</a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <table class="table table-hover">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>企业名称</th>
-                                        <th>邮箱</th>
-                                        <th>注册日期</th>
-                                        <th>操作</th>
-                                    </tr>
-                                    <tr>
-                                        <td>122</td>
-                                        <td>有点儿甜</td>
-                                        <td>wangruiguo@outlook.com</td>
-                                        <td>2015年1月1日</td>
-                                        <td>
-                                            <a class="btn btn-xs btn-info btn-flat" data-toggle="modal" data-target="#enterprise-info-modal">详细</a>
-                                            <a class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#enterprise-delete-modal">删除</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <asp:GridView class="table table-hover" runat="server" ID="enterpriseInformationGridView" AutoGenerateColumns="False" GridLines ="None" AllowPaging="true" OnRowCommand="enterpriseInformationGridView_RowCommand" OnPageIndexChanging="enterpriseInformationGridView_PageIndexChanging">
+                                    <Columns>
+                                        <asp:BoundField  DataField="shortName" HeaderText="企业名称" />
+                                        <asp:BoundField  DataField="email" HeaderText="邮箱" />
+
+                                        <asp:TemplateField ShowHeader="False"> 
+                                            <ItemTemplate> 
+                                                <asp:LinkButton runat="server" CausesValidation="False"  CommandName="Del"  CommandArgument='<%#Eval("email")%>' OnClientClick="javascript:return confirm('确定删除吗?')"
+                                                  Text ="删除" class="btn btn-xs btn-danger btn-flat"></asp:LinkButton>       
+                                           </ItemTemplate> 
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <PagerSettings Mode="NumericFirstLast" FirstPageText="首页" PreviousPageText ="上一页" NextPageText="下一页" LastPageText="尾页" />
+                                </asp:GridView>
                             </div>
                             <!-- /.box-body -->
                         </div>
                         <!-- /.box -->
                     </div>
                 </div>
-                <div class="modal modal-info fade" id="enterprise-info-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">企业详细信息</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">企业名称&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">有点儿甜</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">注册邮箱&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">23456789@outlook.com</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline" data-dismiss="modal">关闭</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <div class="modal modal-danger fade" id="enterprise-delete-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">确认删除</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>是否确认删除该账号？</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-outline">确认</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
+                
                 </div>
             </section>
+           </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

@@ -12,5 +12,9 @@ namespace IDAL
     {
         bool addQuestion(question questionItem);
         IList<question> getQuestionAll();
+        IList<question> searchQuestion(String name);
+        question getQuestionByID(int id);
+        bool deleteQuestion(question questionItem);
+        bool modifyQuestion(question questionItem);
      }
 }
