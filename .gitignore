@@ -13,3 +13,10 @@ WebOxcoder/Model/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 WebOxcoder/Model/DataClasses.dbml
 *.dbml
 WebOxcoder/Model/DataClasses.designer.cs
+WebOxcoder/Model/Properties/Settings.settings
+WebOxcoder/Model/oxcoder.designer.cs
+WebOxcoder/Model/Data.designer.cs
+*.layout
+WebOxcoder/Model/Properties/AssemblyInfo.cs
+WebOxcoder/Model/Properties/Settings.Designer.cs
+WebOxcoder/WebOxcoder.sln
