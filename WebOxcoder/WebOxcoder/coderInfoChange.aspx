@@ -104,44 +104,30 @@
             <!--                             </div> -->
             <div class="col-md-6 col-md-push-3 col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2">
                 <section id="middle">
-                    <form id="defaultForm" class="form-vertical" action="user-info.action">
+                    <form id="defaultForm" class="form-vertical" runat="Server">
 
-                        <div class="form-group">
+                        <div class="form-group" id="name" runat="Server">
                             <label>
                                 <h3 class="grey">真实姓名</h3>
                             </label>
-                            <input type="text" id="corp-name" name="name" value="有点儿甜" class="form-control" placeholder="">
+                            <asp:TextBox type="text" id="gName" value="有点儿甜" class="form-control" placeholder="" runat="Server"/>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="age" runat="Server">
                             <label>
                                 <h3 class="grey">年龄</h3>
                             </label>
-                            <input type="text" id="corp-sname" name="age" value="22" class="form-control"> <span class="text-danger" id="error1" style="display: none;"></span> <span class="help-block" id="hint1" />
+                            <asp:TextBox type="text" id="gAge" value="22" class="form-control" runat="Server"/> <span class="text-danger" id="error1" style="display: none;"></span> <span class="help-block" id="hint1" />
                         </div>
 
-                        <div class="form-group">
-                            <label>
-                                <h3 class="grey">性别</h3>
-                            </label>
-                            <div>
-                                <label class="radio-inline" for="example-inline-radio1">
-                                    <input checked type="radio" id="example-inline-radio1" name="sex" value="1"> 男
-                                </label>
-                                <label class="radio-inline" for="example-inline-radio2">
-                                    <input type="radio" id="example-inline-radio2" name="sex" value="0"> 女
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
+                        <div class="form-group" id="phone" runat="Server">
                             <label>
                                 <h3 class="grey">手机</h3>
                             </label>
-                            <input type="text" id="" name="phone" value="12345678900" class="form-control">
+                            <asp:TextBox type="text" ID="gPhone" value="12345678900" class="form-control" runat="Server"/>
                         </div>
                         <div class="form-group form-actions pull-right">
-                            <button class="btn btn-new1 btn-lg" style="border-radius: 3px;" onclick="window.location.href='coderInfo.aspx'">保存</button>
+                            <asp:Button class="btn btn-new1 btn-lg" style="border-radius: 3px;" Text="保存" id="save" runat="Server" OnClick="save_Click"/>
                         </div>
 
                     </form>

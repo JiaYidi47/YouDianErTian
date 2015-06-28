@@ -124,27 +124,14 @@
 
                                                             <div class="row">
                                                                 <div class="col-md-4">
-                                                                    <h2>
+                                                                    <h2 id="have" runat="Server">
 																		0
 																		个邀请+
 																		0
 																		个挑战
 																	</h2>
                                                                 </div>
-                                                                <div class="col-md-3">
-                                                                    <ul class="list-unstyled" style="margin: 7px 0;">
-                                                                        <li>共使用<span class="red">3</span>个邀请
-                                                                        </li>
-                                                                        <li>共发起<span class="red">3</span>个挑战
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 7px 0;">
-                                                                        <li>您还可以使用<span class="red">0</span>个邀请
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
+                                                                
                                                                 <div class="col-md-3">
                                                                     <a href="enterprisePaymentRecharge.aspx">
                                                                         <button type="button" class="btn btn-new1" style="margin: 16px 0;">去充值</button>
@@ -182,12 +169,12 @@
                                                             <font color=green></font>
                                                             <font color=red></font>
                                                             <div class="row">
-                                                                <form id="defaultForm" class="form-horizontal">
+                                                                <form id="defaultForm" class="form-horizontal" runat="Server">
                                                                     <div class="form-group" style="width: 400px; margin-left: 20px;">
                                                                         <input type="text" name="moneycode" class="form-control" placeholder="请输入优惠码"> <span class="help-block" id="hint1" />
                                                                     </div>
                                                                     <div class="col-xs-12">
-                                                                        <button class="btn btn-new1">确认</button>
+                                                                        <asp:Button class="btn btn-new1" Text="确认" ID="useCode" runat="server" OnClick="useCode_Click"/>
                                                                     </div>
                                                                 </form>
                                                             </div>

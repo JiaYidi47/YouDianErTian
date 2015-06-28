@@ -10,5 +10,7 @@ namespace IBLL
     public interface IChallenge
     {
         IList<challenge> searchBytec(int tec);
+        challenge getEnterpriseUpToDateChallenge(String enterpriseEmail);
+        challenge getChallengeByID(int challengeId);
     }
 }

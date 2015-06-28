@@ -100,7 +100,7 @@
         <div class="row">
             <div class="col-md-12" id="print">
                 <section id="middle">
-                    <h3>戴兴的挑战报告</h3>
+                    <h3 id="reportTitle" runat="server"></h3>
                     <button class="btn btn-new1 hidden-print" style="float: right;" onclick="window.print()">
                         <i class="fa fa-print"></i>打印报告
                     </button>
@@ -109,12 +109,12 @@
 					</small>
                     <div class="panel panel-default resume-block">
                         <div class="panel-body">
-                            <h3><i class="fa fa-trophy">
+                            <h3 id="instruction" runat="server"><i class="fa fa-trophy" >
                                 </i>最近挑战结果：
                                 <span class="score-success">推荐</span>
 								&nbsp;&nbsp;技术类型：Java
                             </h3>
-                            <h4>
+                            <h4 id="codeTime" runat="server">
 								<span style="margin-left: 20px;">共用时：0分9秒
 								</span> <span style="margin-left: 20px;">战胜了3.45%的人
 								</span>
@@ -128,94 +128,16 @@
                                 <div class="col-md-2">操作</div>
                                 <div class="col-md-2"></div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="col-md-2">
-                                    大小写转换
-                                </div>
+                            <div class="col-md-12" id="questions" runat="server">
                                 
-                                <div class="col-md-2">
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="col-md-2">
-                                    0 分 9 秒
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <span class="label label-danger">编译未通过</span>
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <a href="">
-                                        <span style="margin-left: 10px" class="label label-warning">查看源码</span>
-                                    </a>
-                                </div>
-                                
-                                <div class="col-md-2">&nbsp;</div>
-                                
-                                <div class="col-md-2">
-                                    日期比较
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    0 分 0 秒
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <span class="label label-warning">未提交</span>
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <span style="margin-left: 10px" class="label label-warning">暂无</span>
-                                </div>
-
-                                <div class="col-md-2">&nbsp;</div>
-
-                                <div class="col-md-2">
-                                    递归运算阶乘
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    0 分 0 秒
-                                </div>
-
-                                <div class="col-md-2">
-                                    <span class="label label-warning">未提交</span>
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <span style="margin-left: 10px" class="label label-warning">暂无</span>
-                                </div>
-
-                                <div class="col-md-2">&nbsp;</div>
                             </div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <div class="panel panel-default resume-block">
 
-                        <div class="panel-body">
-                            <h3>
-								<i class="fa fa-puzzle-piece"></i> 欠缺的知识点技能
-							</h3>
-                            <h3></h3>
-
-
-                            <li class="btn btn-alt btn-primary" style="margin-right: 15px;">CaseSwitch</li>
-
-                            <li class="btn btn-alt btn-primary" style="margin-right: 15px;">&#22823;&#23567;&#20889;&#36716;&#25442;</li>
-
-
-
-
+                        <div class="panel-body" id="toImprove" runat="server">
+                            
                         </div>
                     </div>
 
@@ -226,12 +148,12 @@
                             <dl class="dl-horizontal">
                                 <dt>网站身价</dt>
                                 <dd style="font-size: 20px; font-weight: 600;">
-                                    <span class="text-primary">7758</span>元
+                                    <span class="text-primary" id="coderPrice" runat="server"></span>元
                                 </dd>
                             </dl>
-                            <dl class="dl-horizontal">
+                            <dl class="dl-horizontal" >
                                 <dt>职业素质评价</dt>
-                                <dd>
+                                <dd  id="performance1" runat="server">
                                     <span class="pull-center label label-primary">0.0 </span> <span style="margin-left: 10px" class="label label-primary">战胜了
 											
 																		0
@@ -242,7 +164,7 @@
                             <dl class="dl-horizontal">
                                 <dt>编程熟练度</dt>
                                 <!-- <dd>这里显示和代码敲击速度相关的数据，以及该项评价</dd> -->
-                                <dd>
+                                <dd id="performance2" runat="server">
                                     <span class="pull-middle label label-info">1.88 </span><span style="margin-left: 10px" class="label label-info">战胜了
 											 
 												33.95
@@ -253,7 +175,7 @@
                             <dl class="dl-horizontal">
                                 <dt>编程专注值</dt>
                                 <!-- <dd>这里显示和 项目耗费时长/项目跨越长度/平均学习时长 综合分析后的相关数据，以及该项评价</dd> -->
-                                <dd>
+                                <dd id="performance3" runat="server">
                                     <span class="pull-middle label label-primary">0.64 </span><span style="margin-left: 10px" class="label label-primary">战胜了
 											 
 												21.32
@@ -264,7 +186,7 @@
                             <dl class="dl-horizontal">
                                 <dt>偏差值</dt>
                                 <!-- <dd>这里显示和用户出错相关的数据（可能涉及与其他用户的出错率的比较），以及该项评价</dd> -->
-                                <dd>
+                                <dd id="performance4" runat="server">
                                     <span class="pull-middle label label-warning">4.29 </span> <span style="margin-left: 10px" class="label label-warning">战胜了
 											 
 												28.18
@@ -276,7 +198,7 @@
                             <dl class="dl-horizontal">
                                 <dt>宅指数</dt>
                                 <!-- <dd>这里显示和ip地址切换频繁程度相关的数据，以及该项的评价</dd> -->
-                                <dd>
+                                <dd id="performance5" runat="server">
                                     <span class="pull-center label label-success">0.12 </span><span style="margin-left: 10px" class="label label-success">战胜了
 											 
 												16.91
@@ -304,7 +226,7 @@
                             <p class="help-block">通过对于此用户的在网络中留下的有关足迹，让您对于该用户有了更深的理解。目前包含如下数据:
                             </p>
                             <p class="help-block">为了保护该用户的隐私，我们只提供技术方面的数据挖掘结果</p>
-                            <div class="col-md-1 center">
+                            <div class="col-md-1 center" id="sinaWeibo" runat="Server">
 
 
                                 <a href="http://www.weibo.com/" target="_blank"> <img src="img/sina2.png" class="img-responsive">
@@ -313,7 +235,7 @@
 
                                 <p class="text-muted">新浪微博</p>
                             </div>
-                            <div class="col-md-1 center">
+                            <div class="col-md-1 center" id="git" runat="Server">
 
 
                                 <a href="https://www.github.com/" target="_blank"> <img src="img/github2.png" class="img-responsive">
@@ -323,7 +245,7 @@
                             </div>
                             <div class="col-md-1 center">
                                 <img src="img/stackoverflow2.png" class="img-responsive">
-                                <p class="text-muted">StackOverflow</p>
+                                <p class="text-muted">S.O.</p>
                             </div>
                             <div class="col-md-1 center">
                                 <img src="img/zhihu2.png" class="img-responsive">
@@ -341,17 +263,21 @@
 
                         <div class="panel-body">
                             <h3>
-									<i class="fa fa-file"></i> 基本信息
+									<i class="fa fa-file"></i> 基本信息(消耗1次邀请以查看)
 								</h3>
-
-
-
-                            <p>
-                                <a href="enterprisePaymentRecharge.aspx">
-                                    <button class="btn btn-new1 pull-left" style="margin-top: 20px;">去充值</button>
-                                </a>
-                            </p>
-
+                            <form runat="server">
+                               
+                               <asp:Button class="btn btn-new1 pull-left" style="margin-top: 20px;" runat="server" Text="去充值" id="topay" OnClick="topay_Click"/>
+                               <asp:Button class="btn btn-new1 pull-left" style="margin-top: 20px;margin-left:10px;" text ="查看信息" runat="server" id="personalInfo" OnClick="personalInfo_Click"/>
+                              
+                                <div id="performanceDiagram" runat="server"></div>
+                            </form>
+                            <div style="margin-top:80px">
+                                <asp:Label ID="Lemail" runat="server" Text=""></asp:Label><br />
+                                <asp:Label ID="Lage" runat="server" Text=""></asp:Label><br />
+                                <asp:Label ID="Lgender" runat="server" Text=""></asp:Label><br />
+                                <asp:Label ID="Lphone" runat="server" Text=""></asp:Label>
+                            </div>
                         </div>
                     </div>
 
@@ -363,21 +289,13 @@
 
         </div>
 
+
+        
+
+
     </div>
     <!-- /.row -->
 
-    <!-- /.container -->
-    <form>
-        <input id="input-speed-all" type="hidden" value="9.57" />
-        <input id="input-manito-all" type="hidden" value="2.29" />
-        <input id="input-error-all" type="hidden" value="5.27" />
-        <input id="input-time-all" type="hidden" value="0.14" />
-        <input id="input-speed" type="hidden" value="1.88" />
-        <input id="input-manito" type="hidden" value="0.64" />
-        <input id="input-error" type="hidden" value="4.29" />
-        <input id="input-time" type="hidden" value="0.12" />
-        <input id="Hidden1" type="hidden" value="0.12" />
-    </form>
 
     <!-- jQuery -->
     <script src="js/libs/jquery-1.11.0.min.js"></script>

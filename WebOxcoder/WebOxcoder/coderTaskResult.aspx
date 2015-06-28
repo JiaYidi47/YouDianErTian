@@ -138,28 +138,25 @@
                                     <section>
                                         <div class="page-header">
                                             <h2>
-												[&#20013;&#32423;]php&#24037;&#31243;&#24072;
-												（
-												&#28145;&#22323;&#24066;&#21019;&#24847;&#25237;&#36164;&#38598;&#22242;&#26377;&#38480;&#20844;&#21496;
-												）挑战结果
+												挑战结果
 											</h2>
                                             <!-- 											<h1> -->
 
 
                                             <!-- 											</h1> -->
-                                            <div class="col-md-2">
+                                            <div class="col-md-2" id="passPic" runat="Server">
 
 
                                                 <img src="img/pass1.png">
 
                                             </div>
                                             <div class="col-md-10">
-                                                <h4 style="color: #3872a4;">
+                                                <h4 style="color: #3872a4;" id="price" runat="Server">
 													当前身价￥
 													7740
 													
 												</h4>
-                                                <span class="label label-warning">Lv.2</span>
+                                                <span class="label label-warning" id="currentLevel" runat="Server">Lv.2</span>
                                                 <p class="help-block">
                                                     &#22823;&#34430; &#65306;&#24320;&#22987;&#22312;&#25351;&#23548;&#19979;&#29420;&#31435;&#36127;&#36131;&#21333;&#29420;&#30340;&#27169;&#22359;&#65292;&#24320;&#22987;&#24605;&#32771;&#65292;&#21327;&#21161;&#35299;&#20915;&#37096;&#20998;&#38382;&#39064;&#65292;&#29087;&#32451;&#30340;&#20351;&#29992;&#25628;&#32034;&#24341;&#25806;&#65292;&#21162;&#21147;&#21152;&#27833;&#21606;~
                                                 </p>
@@ -206,7 +203,8 @@
                                             <hr>
 
                                             <h2>您可能尚待巩固的知识点有：</h2>
-
+                                            <div id="toImprove" runat="Server">
+                                            
                                             <li class="btn btn-alt btn-primary" style="margin-right: 15px;">&#32654;&#29492;&#29579;&#31639;&#27861;</li>
 
                                             <li class="btn btn-alt btn-primary" style="margin-right: 15px;">&#25490;&#21015;&#32452;&#21512;&#31639;&#27861;</li>
@@ -215,16 +213,13 @@
 
                                             <li class="btn btn-alt btn-primary" style="margin-right: 15px;">&#31639;&#27861;</li>
 
-
+                                            </div>
 
                                         </div>
 
                                         <h2>推荐给您的学习资料</h2>
 
                                         <div class="alert alert-info" style="text-align: center" role="alert">还没有相关资料，敬请期待~</div>
-
-
-
 
                                         </br>
                                         <a href="coderTask.aspx">

@@ -11,5 +11,6 @@ namespace IDAL
     public interface IQuestion
     {
         bool addQuestion(question questionItem);
+        question getQuestionByID(int questionID);
      }
 }

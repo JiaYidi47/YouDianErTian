@@ -17,6 +17,10 @@
         </asp:DropDownList>
     
     </div>
+        <asp:RadioButton ID="RadioButton1" runat="server" />
+        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+            <asp:ListItem Value="0">男</asp:ListItem>
+        </asp:RadioButtonList>
     </form>
 </body>
 </html>

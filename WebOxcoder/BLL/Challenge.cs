@@ -12,8 +12,19 @@ namespace BLL
     {
         private static readonly IDAL.IChallenge dal = DALFactory.DataAccess.CreateChallenge();
 
-        IList<challenge> IChallenge.searchBytec(int tec) {
+        IList<challenge> IChallenge.searchBytec(int tec) 
+        {
             return dal.searchChallengeByTec(tec);
+        }
+
+        challenge IChallenge.getEnterpriseUpToDateChallenge(String enterpriseEmail)
+        {
+            return dal.getEnterpriseUpToDateChallenge(enterpriseEmail);
+        }
+
+        challenge IChallenge.getChallengeByID(int challengeId)
+        {
+            return dal.getChallengeByID(challengeId);
         }
     }
 }
