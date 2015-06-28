@@ -105,19 +105,19 @@
                                 <div id="signin" class="panel-collapse collapse in">
                                     <div class="panel-body col-md-6">
                                         <ul class="nav nav-pills nav-justified" style="margin: 0 0 15px 20px;">
-                                            <li id="li-work" class="active"><a href="#j2-home" data-toggle="pill">开发者</a>
+                                            <li id="regCoder" class="active"><a href="#j2-home" data-toggle="pill">开发者</a>
                                             </li>
-                                            <li id="li-person"><a href="#j2-profile" data-toggle="pill">企业</a>
+                                            <li id="regEnterprise"><a href="#j2-profile" data-toggle="pill">企业</a>
                                             </li>
                                         </ul>
-                                        <form action="signup-sub.action" method="post" id="defaultForm" id="form-login" class="form-horizontal">
-                                            <input type="hidden" id="regflag" name="regflag" value="1" />
+                                        <form runat="server" ID="signUpForm" class="form-horizontal">
+                                            <asp:Textbox runat="server" type="hidden" ID="regflag" value="1" />
                                             <div class="form-group">
                                                 <div class="col-xs-12">
                                                     <div class="input-group">
                                                         <span class="input-group-addon"><i
 															class="fa fa-envelope"></i></span>
-                                                        <input type="text" id="login-email" name="email" class="form-control input-lg" placeholder="请输入常用邮箱地址">
+                                                        <asp:Textbox runat="server" type="text" ID="signUpEmail" class="form-control input-lg" placeholder="请输入常用邮箱地址" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,21 +127,21 @@
                                                     <div class="input-group">
                                                         <span class="input-group-addon"><i
 															class="fa fa-key"></i></span>
-                                                        <input type="password" id="login-password" name="pwd" class="form-control input-lg" placeholder="请输入密码">
+                                                        <asp:TextBox runat="server" type="password" ID="signUpPassword" class="form-control input-lg" placeholder="请输入密码" />
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-xs-12" style="margin-left: 20px;">
                                                 <label>
-                                                    <input type="checkbox" id="agreement" name="check"> <small>我已阅读并同意<a
+                                                    <input type="checkbox" id="check" name="check"> <small>我已阅读并同意<a
 														href="">《oxcoder用户协议》</a></small>
-                                                </label> <span class="help-block" id="hint1" style="margin-left: 20px;"></span> <span class="help-block has-error" style="margin-left: 20px;" id="hint2" style=""> <small
+                                                </label> <span class="help-block" id="hint1" style="margin-left: 20px;"></span> <span class="help-block has-error" style="margin-left: 20px;" id="hint2"> <small
 													class="help-block"></small>
 												</span>
                                             </div>
                                             <div class="col-xs-12">
-                                                <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 20px; border-radius: 3px;">注册</button>
+                                                <asp:Button ID="SignUpButton" class="btn btn-primary btn-lg" style="margin-left: 20px; border-radius: 3px;" runat="server" Text="注册" OnClick="SignUpButton_Click" />
                                             </div>
                                             <div class="col-xs-12"></div>
                                         </form>
@@ -207,17 +207,17 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#li-work").click(function () {
+            $("#regCoder").click(function () {
                 $("#regflag").val(1);
             });
-            $("#li-person").click(function () {
+            $("#regEnterprise").click(function () {
                 $("#regflag").val(2);
             });
 
-            $('#defaultForm').bootstrapValidator({
+            $('#signUpForm').bootstrapValidator({
                 message: 'This value is not valid',
                 fields: {
-                    email: {
+                    signUpEmail: {
                         container: '#hint1',
                         validators: {
                             notEmpty: {
@@ -228,7 +228,7 @@
                             }
                         }
                     },
-                    pwd: {
+                    signPassword: {
                         container: '#hint1',
                         validators: {
                             notEmpty: {
@@ -238,14 +238,6 @@
                                 min: 6,
                                 max: 30,
                                 message: '密码应大于6位，小于30位'
-                            }
-                        }
-                    },
-                    checkcode: {
-                        container: '#hint1',
-                        validators: {
-                            notEmpty: {
-                                message: '请输入邀请码'
                             }
                         }
                     },

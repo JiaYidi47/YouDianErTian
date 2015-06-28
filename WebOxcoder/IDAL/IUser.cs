@@ -8,5 +8,7 @@ namespace IDAL
 {
     public interface IUser
     {
+        int signIn(String userEmail,String userPassword);
+        bool addUser(string email, string password);
     }
 }

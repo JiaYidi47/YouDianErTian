@@ -20,3 +20,14 @@ D:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\Model.dll
 D:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DAL.pdb
 D:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\IDAL.pdb
 D:\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\Model.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DALFactory.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DALFactory.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DAL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\IDAL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\Model.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\DAL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\IDAL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\bin\Debug\Model.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\obj\Debug\DALFactory.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\obj\Debug\DALFactory.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\DALFactory\obj\Debug\DALFactory.pdb

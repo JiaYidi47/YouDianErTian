@@ -1487,6 +1487,7 @@
     <Content Include="coderHome.aspx" />
     <Content Include="coderInfo.aspx" />
     <Content Include="coderInfoChange.aspx" />
+    <Content Include="coderSignUpResult.aspx" />
     <Content Include="coderTask.aspx" />
     <Content Include="coderTaskDetail.aspx" />
     <Content Include="coderTaskHistory.aspx" />
@@ -1537,6 +1538,10 @@
     <Content Include="enterprisePaymentRecharge.aspx" />
     <Content Include="enterpriseRecommend.aspx" />
     <Content Include="enterpriseRecommendDetail.aspx" />
+    <Content Include="enterpriseSignUp1.aspx" />
+    <Content Include="enterpriseSignUp2.aspx" />
+    <Content Include="enterpriseSignUp3.aspx" />
+    <Content Include="enterpriseSignUp4.aspx" />
     <Content Include="enterpriseTask.aspx" />
     <Content Include="enterpriseTaskHistory.aspx" />
     <Content Include="enterpriseTaskSift.aspx" />
@@ -1612,6 +1617,7 @@
     <Content Include="js\libs\WdatePicker.js" />
     <Content Include="js\my.js" />
     <Content Include="js\styler\script.js" />
+    <Content Include="js\tag.js" />
     <Content Include="logo\1000.jpg" />
     <Content Include="logo\242.jpg" />
     <Content Include="logo\432.png" />
@@ -1779,6 +1785,13 @@
     <Compile Include="coderInfoChange.aspx.designer.cs">
       <DependentUpon>coderInfoChange.aspx</DependentUpon>
     </Compile>
+    <Compile Include="coderSignUpResult.aspx.cs">
+      <DependentUpon>coderSignUpResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="coderSignUpResult.aspx.designer.cs">
+      <DependentUpon>coderSignUpResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="coderTask.aspx.cs">
       <DependentUpon>coderTask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1898,6 +1911,34 @@
     <Compile Include="enterpriseRecommendDetail.aspx.designer.cs">
       <DependentUpon>enterpriseRecommendDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="enterpriseSignUp1.aspx.cs">
+      <DependentUpon>enterpriseSignUp1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enterpriseSignUp1.aspx.designer.cs">
+      <DependentUpon>enterpriseSignUp1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enterpriseSignUp2.aspx.cs">
+      <DependentUpon>enterpriseSignUp2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enterpriseSignUp2.aspx.designer.cs">
+      <DependentUpon>enterpriseSignUp2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enterpriseSignUp3.aspx.cs">
+      <DependentUpon>enterpriseSignUp3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enterpriseSignUp3.aspx.designer.cs">
+      <DependentUpon>enterpriseSignUp3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enterpriseSignUp4.aspx.cs">
+      <DependentUpon>enterpriseSignUp4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enterpriseSignUp4.aspx.designer.cs">
+      <DependentUpon>enterpriseSignUp4.aspx</DependentUpon>
+    </Compile>
     <Compile Include="enterpriseTask.aspx.cs">
       <DependentUpon>enterpriseTask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1926,6 +1967,7 @@
     <Compile Include="forgetPwd.aspx.designer.cs">
       <DependentUpon>forgetPwd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IEnterpriser.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1998,6 +2040,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{c88487f4-0c77-47e8-8db0-1997de6b62d6}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{6aac162d-6346-44bd-9e26-9f4d50150199}</Project>
+      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

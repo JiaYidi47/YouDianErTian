@@ -24,3 +24,16 @@ D:\YouDianErTian\WebOxcoder\BLL\bin\Debug\DALFactory.pdb
 D:\YouDianErTian\WebOxcoder\BLL\bin\Debug\IDAL.pdb
 D:\YouDianErTian\WebOxcoder\BLL\bin\Debug\Model.pdb
 D:\YouDianErTian\WebOxcoder\BLL\bin\Debug\IBLL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\BLL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\BLL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\DALFactory.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\IBLL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\IDAL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\Model.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\DALFactory.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\IDAL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\Model.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\bin\Debug\IBLL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\obj\Debug\BLL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\BLL\obj\Debug\BLL.pdb

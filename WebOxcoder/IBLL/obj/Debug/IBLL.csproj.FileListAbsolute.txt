@@ -20,3 +20,14 @@ D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.dll
 D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\DALFactory.pdb
 D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IDAL.pdb
 D:\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IBLL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IBLL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\DALFactory.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IDAL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\DALFactory.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\IDAL.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\bin\Debug\Model.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\obj\Debug\IBLL.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\IBLL\obj\Debug\IBLL.pdb

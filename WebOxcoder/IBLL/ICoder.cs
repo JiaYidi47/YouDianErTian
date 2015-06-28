@@ -8,5 +8,6 @@ namespace IBLL
 {
     public interface ICoder
     {
+        bool AddCoder(string email);
     }
 }

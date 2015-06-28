@@ -53,7 +53,7 @@
         max-height: 70px;
     }
     .footer-log{
-        margin-bottom:20px;; text-align:center; color:#fff;
+        margin-bottom:20px; text-align:center; color:#fff;
     }
     .footer-log a{
         color:#fff;

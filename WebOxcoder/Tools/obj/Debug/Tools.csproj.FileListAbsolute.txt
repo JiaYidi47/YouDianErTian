@@ -3,3 +3,8 @@ D:\YouDianErTian\WebOxcoder\Tools\bin\Debug\Tools.pdb
 D:\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.csprojResolveAssemblyReference.cache
 D:\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.dll
 D:\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\Tools\bin\Debug\Tools.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\Tools\bin\Debug\Tools.pdb
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.dll
+C:\Users\Matt\Documents\GitHub\YouDianErTian\WebOxcoder\Tools\obj\Debug\Tools.pdb
