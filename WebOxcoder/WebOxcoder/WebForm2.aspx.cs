@@ -11,12 +11,10 @@ namespace WebOxcoder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            String a = "a b c";
+            Label1.Text = a.Substring(0);
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

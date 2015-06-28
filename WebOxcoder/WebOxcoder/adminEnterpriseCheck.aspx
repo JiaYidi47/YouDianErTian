@@ -140,22 +140,12 @@
                 <h1>企业管理<small>企业审核</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="box box-info">
                             <div class="box-header">
-                                <li class="dropdown" style="display:inline-block;">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">审核状态<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">全部</a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">通过</a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">未通过</a>
-                                        </li>
-                                    </ul>
-                                </li>
                                 <div class="box-tools">
                                     <ul class="pagination pagination-sm no-margin pull-right">
                                         <li><a href="#">&laquo;</a>
@@ -175,79 +165,28 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <table class="table table-hover">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>企业名称</th>
-                                        <th>审核状态</th>
-                                        <th>操作</th>
-                                    </tr>
-                                    <tr>
-                                        <td>323</td>
-                                        <td>测试企业</td>
-                                        <td>正在审核</td>
-                                        <td>
-                                            <a class="btn btn-xs btn-info btn-flat" data-toggle="modal" data-target="#enterprise-info-modal">详细</a>
-                                            <a class="btn btn-xs btn-success btn-flat">通过</a>
-                                            <a class="btn btn-xs btn-danger btn-flat">拒绝</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>324</td>
-                                        <td>测试企业2</td>
-                                        <td>正在审核</td>
-                                        <td>
-                                            <a class="btn btn-xs btn-info btn-flat" data-toggle="modal" data-target="#enterprise-info-modal">详细</a>
-                                            <a class="btn btn-xs btn-success btn-flat">通过</a>
-                                            <a class="btn btn-xs btn-danger btn-flat">拒绝</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>325</td>
-                                        <td>测试企业3</td>
-                                        <td>正在审核</td>
-                                        <td>
-                                            <a class="btn btn-xs btn-info btn-flat" data-toggle="modal" data-target="#enterprise-info-modal">详细</a>
-                                            <a class="btn btn-xs btn-success btn-flat">通过</a>
-                                            <a class="btn btn-xs btn-danger btn-flat">拒绝</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <asp:GridView class="table table-hover" runat="server" ID="checkInformationGridView" AutoGenerateColumns="False" GridLines ="None" AllowPaging="true" OnRowCommand="checkInformationGridView_RowCommand1" OnPageIndexChanging="checkInformationGridView_PageIndexChanging">
+                                   <Columns>
+                                        <asp:BoundField  DataField="shortName" HeaderText="企业名称" />
+                                        <asp:BoundField  DataField="ischeck" HeaderText="审核状态" />
+
+                                       <asp:TemplateField ShowHeader="False"> 
+                                            <ItemTemplate>
+                                                <asp:LinkButton runat="server" CausesValidation="False" CommandName="Pass"  CommandArgument='<%#Eval("email")%>' Text ="通过" class="btn btn-xs btn-success btn-flat" ></asp:LinkButton> 
+                                                <asp:LinkButton runat="server" CausesValidation="False" CommandName="Reject"  CommandArgument='<%#Eval("email")%>' Text ="拒绝" class="btn btn-xs btn-danger btn-flat" ></asp:LinkButton>      
+                                           </ItemTemplate> 
+                                        </asp:TemplateField>
+                                    </Columns>
+                                     <PagerSettings Mode="NumericFirstLast" FirstPageText="首页" PreviousPageText ="上一页" NextPageText="下一页" LastPageText="尾页" />
+                                </asp:GridView>
                             </div>
                             <!-- /.box-body -->
                         </div>
                         <!-- /.box -->
                     </div>
                 </div>
-                <div class="modal modal-info fade" id="enterprise-info-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">企业详细信息</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">企业名称&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">有点儿甜</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">注册邮箱&nbsp;&#58;</label>
-                                        <label class="col-sm-9 control-label2">23456789@outlook.com</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline" data-dismiss="modal">关闭</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
             </section>
+          </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

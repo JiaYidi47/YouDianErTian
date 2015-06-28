@@ -9,9 +9,15 @@ namespace IDAL
 {
     public interface ICoder
     {
+        bool changeCoderInfo(coder c);
+        int getCount();
+        IList<coder> getCoderAll();
+        IList<coder> searchCoder(String name);
+        bool deleteCoder(coder coderItem);
+        //bool checkCoder(String coderEmail);
+        bool addCoder(string email);
         coder getCoderByEmail(String coderEmail);
         float[] getPerformanceBetterPercent(float[] performance);
         float[] getAveragePerformance();
-        bool changeCoderInfo(coder c);
     }
 }

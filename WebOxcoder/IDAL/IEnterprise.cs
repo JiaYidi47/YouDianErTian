@@ -9,7 +9,16 @@ namespace IDAL
 {
     public interface IEnterprise
     {
-        enterprise getEnterpriseByEmail(String enterpriseEmail);
         bool changeEnterpriseInfo(enterprise thisEnterprise);
+        int getCount();
+        IList<enterprise> getNotCheckedEnterprise();
+        IList<enterprise> getSuccessCheckedEnterprise();
+        IList<enterprise> searchEnterprise(String name);
+        bool deleteEnterprise(enterprise enterpriseItem);
+        bool modifyEnterprise(enterprise enterpriseItem);
+        //bool rejectEnterprise(enterprise enterpriseItem);
+        bool checkEnterprise(String enterpriseEmail);
+        bool addEnterprise(enterprise enterpriseItem);
+        enterprise getEnterpriseByEmail(String enterpriseEmail);
     }
 }

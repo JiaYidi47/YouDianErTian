@@ -174,7 +174,9 @@
                                                                         <input type="text" name="moneycode" class="form-control" placeholder="请输入优惠码"> <span class="help-block" id="hint1" />
                                                                     </div>
                                                                     <div class="col-xs-12">
-                                                                        <asp:Button class="btn btn-new1" Text="确认" ID="useCode" runat="server" OnClick="useCode_Click"/>
+                                                     <asp:Button class="btn btn-new1" Text="确认" ID="useCode" runat="server" OnClick="useCode_Click"/>
+
+
                                                                     </div>
                                                                 </form>
                                                             </div>
@@ -393,3 +395,4 @@
 </body>
 
 </html>
+

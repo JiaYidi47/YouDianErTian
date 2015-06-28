@@ -30,6 +30,7 @@ namespace DAL
                                      where o.companyEmail == enterpriseEmail
                                      orderby o.id descending
                                      select o;
+
             challenge c = query.FirstOrDefault<challenge>();
             return c;
         }
@@ -43,6 +44,21 @@ namespace DAL
                                           select o;
             challenge c = query.FirstOrDefault<challenge>();
             return c;
+        }
+
+        IList<challenge> IChallenge.searchChallengeByCoderEmail(String coderEmail)
+        {
+            
+            DataContext ctx = new DataContext(connection);
+            ITable<challenge> challenge = ctx.GetTable<challenge>();
+            ITable<challengeRecord> challengeRecord = ctx.GetTable<challengeRecord>();
+
+            IQueryable<challenge> query = from a in challenge 
+                                          join b in challengeRecord
+                                          on a.id equals b.challengeId
+                                          where b.coderEmail == coderEmail
+                                          select a;
+            return query.ToList<challenge>();
         }
     }
 }

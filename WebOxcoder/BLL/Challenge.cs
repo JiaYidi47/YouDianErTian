@@ -22,9 +22,16 @@ namespace BLL
             return dal.getEnterpriseUpToDateChallenge(enterpriseEmail);
         }
 
+        
         challenge IChallenge.getChallengeByID(int challengeId)
         {
             return dal.getChallengeByID(challengeId);
+        }
+
+
+        IList<challenge> IChallenge.searchByCoderEmail(String coderEmail)
+        {
+            return dal.searchChallengeByCoderEmail(coderEmail);
         }
     }
 }

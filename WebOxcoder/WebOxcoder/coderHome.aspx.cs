@@ -11,7 +11,11 @@ namespace WebOxcoder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["userEmail"] == null)
+            {
+                Response.Redirect("/signin.aspx");
+            }
+            LabelName.Text = Request.Cookies["userEmail"].Value;
         }
     }
 }

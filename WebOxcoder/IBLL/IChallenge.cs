@@ -12,5 +12,6 @@ namespace IBLL
         IList<challenge> searchBytec(int tec);
         challenge getEnterpriseUpToDateChallenge(String enterpriseEmail);
         challenge getChallengeByID(int challengeId);
+        IList<challenge> searchByCoderEmail(String coderEmail);
     }
 }

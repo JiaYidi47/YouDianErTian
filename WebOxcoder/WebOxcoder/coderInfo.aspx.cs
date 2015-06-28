@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Model;
 
 namespace WebOxcoder
 {
@@ -104,6 +105,10 @@ namespace WebOxcoder
             {
                 gender = "男";
             }
+            
+	    //String coderEmail = Session["coderemail"].ToString();
+            
+            coderPrice.InnerHtml = c.price.ToString();
 
             string url = "coderInfoChange.aspx?name=" + c.name + "&age=" + c.age + "&gender=" + gender+ "&phone=" + c.phone;
             personalInfo.InnerHtml = "<span style=\"padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;\" >基本资料</span>"+
