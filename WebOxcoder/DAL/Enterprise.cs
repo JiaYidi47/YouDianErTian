@@ -27,7 +27,8 @@ namespace DAL
                 return true;
         }
 
-        bool IEnterprise.addEnterprise(enterprise enterpriseItem) {
+        bool IEnterprise.addEnterprise(enterprise enterpriseItem)
+        {
             DataContext ctx = new DataContext(connection);
             ITable<enterprise> enterpriseItems = ctx.GetTable<enterprise>();
             enterpriseItems.InsertOnSubmit(enterpriseItem);
@@ -40,6 +41,8 @@ namespace DAL
             {
                 return false;
             }
+        }
+
         enterprise IEnterprise.getEnterpriseByEmail(String enterpriseEmail)
         {
             DataContext ctx = new DataContext(connection);

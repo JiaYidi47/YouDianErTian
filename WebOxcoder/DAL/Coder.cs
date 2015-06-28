@@ -5,8 +5,6 @@ using System.Text;
 using System.Data.Linq;
 using Model;
 using System.Threading.Tasks;
-using System.Data.Linq;
-using Model;
 using IDAL;
 
 namespace DAL

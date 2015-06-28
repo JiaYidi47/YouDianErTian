@@ -12,8 +12,10 @@ namespace BLL
     {
         private static readonly IDAL.ICoder dal = DALFactory.DataAccess.CreateCoder();
 
-        bool IBLL.ICoder.AddCoder(string email) {
+        bool IBLL.ICoder.AddCoder(string email)
+        {
             return dal.addCoder(email);
+        }
 
         coder ICoder.getCoderByEmail(String coderEmail)
         {

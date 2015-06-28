@@ -26,7 +26,7 @@ namespace DAL
             if (u != null)
             {
                 if (u.password == userPassword)
-                    return u.type;
+                    return (int)u.type;
                 else
                     return Config.PasswordFailed;
 
