@@ -5,8 +5,6 @@ using System.Text;
 using Model;
 using IBLL;
 using System.Threading.Tasks;
-using IBLL;
-using Model;
 
 namespace BLL
 {

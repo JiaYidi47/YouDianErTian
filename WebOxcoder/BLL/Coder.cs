@@ -12,10 +12,6 @@ namespace BLL
     {
         private static readonly IDAL.ICoder dal = DALFactory.DataAccess.CreateCoder();
 
-        Model.coder IBLL.ICoder.getCoderByEmail(string email) {
-            return dal.getCoderById(email);
-        }
-
         int ICoder.getCount()
         {
             return dal.getCount();

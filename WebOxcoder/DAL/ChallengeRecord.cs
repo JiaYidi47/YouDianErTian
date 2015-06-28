@@ -6,9 +6,6 @@ using Model;
 using IDAL;
 using System.Data.Linq;
 using System.Threading.Tasks;
-using System.Data.Linq;
-using Model;
-using IDAL;
 
 namespace DAL
 {
@@ -118,6 +115,14 @@ namespace DAL
             DataContext ctx = new DataContext(connection);
             ITable<challengeRecord> record = ctx.GetTable<challengeRecord>();
             Model.challengeRecord newRecord = new Model.challengeRecord();
+
+            IQueryable<challengeRecord> query = from a in record
+                                                where a.challengeId == challengeId &&
+                                                      a.coderEmail == coderEmail
+                                                select a;
+
+            if (query.Count() > 0)
+                return false;
 
             newRecord.challengeId = challengeId;
             newRecord.coderEmail = coderEmail;

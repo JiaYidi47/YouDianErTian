@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Model;
 using System.Threading.Tasks;
-using Model;
 
 namespace IDAL
 {

@@ -4,11 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Data.Linq;
 using IDAL;
-using Model;
 using System.Threading.Tasks;
-using IDAL;
 using Model;
-using System.Data.Linq;
 using Tools;
 
 namespace DAL
@@ -168,16 +165,6 @@ namespace DAL
             {
                 return false;
             }
-        }
-
-        enterprise IEnterprise.getEnterpriseByEmail(string email)
-        {
-            DataContext ctx = new DataContext(connection);
-            ITable<enterprise> enterpriseItems = ctx.GetTable<enterprise>();
-            IQueryable<enterprise> query = from o in enterpriseItems
-                                      where o.email == email
-                                      select o;
-            return query.FirstOrDefault<enterprise>();
         }
 
         bool IEnterprise.modifyEnterprise(enterprise enterpriseItem)

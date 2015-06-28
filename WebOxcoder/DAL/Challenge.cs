@@ -22,6 +22,20 @@ namespace DAL
                                         select o;
             return query.ToList<challenge>();
         }
+
+        challenge IChallenge.getEnterpriseUpToDateChallenge(String enterpriseEmail)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<challenge> searchReult = ctx.GetTable<challenge>();
+            IQueryable<challenge> query = from o in searchReult
+                                          where o.companyEmail == enterpriseEmail
+                                          orderby o.id descending
+                                          select o;
+
+            challenge c = query.FirstOrDefault<challenge>();
+            return c;
+        }
+
         //根据等级查询
         IList<challenge> IChallenge.searchChallengeByLevel(int level) {
             DataContext ctx = new DataContext(connection);
@@ -99,14 +113,6 @@ namespace DAL
             {
                 return false;
             }
-        }
-  IList<challenge> IChallenge.searchChallengeByTec(int tec) {
-            DataContext ctx = new DataContext(connection);
-            ITable<challenge> searchReult = ctx.GetTable<challenge>();
-            IQueryable<challenge> query=from o in searchReult 
-                                        where o.type == tec
-                                        select o;
-            return query.ToList<challenge>();
         }
 
         challenge IChallenge.getChallengeByID(int challengeId)

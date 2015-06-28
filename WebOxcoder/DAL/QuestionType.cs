@@ -6,9 +6,6 @@ using System.Data.Linq;
 using Model;
 using IDAL;
 using System.Threading.Tasks;
-using System.Data.Linq;
-using Model;
-using IDAL;
 
 namespace DAL
 {

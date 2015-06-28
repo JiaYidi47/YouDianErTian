@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Model;
 using System.Threading.Tasks;
-using Model;
 
 namespace IBLL
 {
@@ -20,6 +19,5 @@ namespace IBLL
         bool modifyEnterprise(enterprise enterpriseItem);
         bool checkEnterprise(String enterpriseEmail);
         bool addEnterprise(enterprise enterpriseItem);
-        enterprise getEnterpriseByEmail(String enterpriseEmail);
     }
 }

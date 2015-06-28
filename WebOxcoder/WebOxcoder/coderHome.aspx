@@ -148,7 +148,7 @@
         </a>
 
     </div>
-     <form id="Form1" runat="server">
+    
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-no-left-padding col-md-offset-2">
@@ -216,7 +216,7 @@
         
         <!-- /.row -->
     </div>
-    </form>
+  
     <!-- /.container -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">

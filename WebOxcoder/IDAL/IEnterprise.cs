@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Model;
 using System.Threading.Tasks;
-using Model;
 
 namespace IDAL
 {
@@ -12,7 +11,6 @@ namespace IDAL
     {
         IList<Model.enterprise> getCompanyByLoc(String loc);
         IList<Model.enterprise> getCompanyByName(String name);
-        enterprise getEnterpriseByEmail(string enterpriseEmail);
         bool changeEnterpriseInfo(enterprise thisEnterprise);
         int getCount();
         IList<enterprise> getNotCheckedEnterprise();

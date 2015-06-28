@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Model;
 using System.Threading.Tasks;
-using Model;
 
 namespace IBLL
 {
@@ -19,6 +18,5 @@ namespace IBLL
         type getQuestionTypeByID(int id);
         bool deleteQuestionType(type typeItem);
         bool modifyQuestionType(type typeItem);
-        type getChallengeType(int challengeType);
     }
 }

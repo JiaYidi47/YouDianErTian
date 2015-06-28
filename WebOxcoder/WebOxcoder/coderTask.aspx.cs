@@ -12,13 +12,11 @@ namespace WebOxcoder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (IsPostBack && !sqlOperation())
                 return;
 
             //String coderEmail = Session["coderemail"].ToString();
             String coderEmail = "12301060@bjtu.edu.cn";
-
-            sqlOperation();
             
             IBLL.ICoder icoder = BLLFactory.BLLAccess.CreateCoder();
             IBLL.IChallenge ichallenge = BLLFactory.BLLAccess.CreateChallenge();

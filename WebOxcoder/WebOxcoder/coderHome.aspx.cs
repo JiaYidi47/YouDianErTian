@@ -67,7 +67,7 @@ namespace WebOxcoder
                 IList<Model.challengeRecord> records = irecord.getRecordByChallenge(challengeShow.id);
 
                 string lable = company.label;
-                string[] subLable = lable.Split(new char[] { ',' });
+                string[] subLable = lable.Split(new char[] { ';' });
 
 
 
@@ -79,7 +79,10 @@ namespace WebOxcoder
                     "<div class=\"panel panel-default shadow-effect\">" +
                         "<div class=\"col-xs-12 panel-header\">" +
                                 "<div class=\"pull-left\">" +
-                                    "<h4 class=\"line-control\"><a href=\"\">" + challengeType.content + "</a></h4>" +
+                          
+       
+                                    "<h4 class=\"line-control\">"+
+                                 "<a href=\"coderTaskDetail.aspx?challengeId=" + challengeShow.id + "\">" + challengeType.content + "</a></h4>" +
                                     "<h4 class=\"line-control\"><a href=\"\">" + company.shortName + "</a></h4>" +
                                 "</div>" +
                                 "<div class=\"pull-right client-info\">" +
@@ -121,7 +124,7 @@ namespace WebOxcoder
                             "</div>" +
                             "<!-- /.panel-body -->" +
                             "<div class=\"panel-footer align-center\">" +
-                                "<a href=\"coderTaskDetail.aspx\">" +
+                               "<a href=\"coderTask.aspx?aId=" + challengeShow.id + "\">" +
                                     "<button class=\"btn btn-new1\">接受挑战</button>" +
                                 "</a>" +
                             "</div>" +

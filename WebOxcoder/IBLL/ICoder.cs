@@ -9,7 +9,6 @@ namespace IBLL
 {
     public interface ICoder
     {
-        Model.coder getCoderByEmail(string email);
         bool changeCoderInfo(coder c);
         int getCount();
         IList<coder> getCoderAll();
