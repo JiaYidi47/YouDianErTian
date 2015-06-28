@@ -25,8 +25,8 @@ namespace WebOxcoder
             System.Security.Cryptography.RNGCryptoServiceProvider rng = new System.Security.Cryptography.RNGCryptoServiceProvider();
             rng.GetBytes(rndBytes);
             return BitConverter.ToInt32(rndBytes, 0);
-        } 
-        
+        }
+
         static public string GetRandomString(int len)
         {
             string s = "123456789abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ";
@@ -61,16 +61,6 @@ namespace WebOxcoder
                 Response.Write("alert('添加失败!');location.href='adminRechargeCode.aspx';");
                 Response.Write("</script>");
             }
-
         }
-
-        
-
-        
-
-        
-
-
-        
     }
 }

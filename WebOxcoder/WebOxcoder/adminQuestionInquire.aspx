@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head runat="server">
     <meta charset="UTF-8">
     <title>猿圈</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -140,6 +140,7 @@
                 <h1>题库管理<small>查询题目</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -189,8 +190,10 @@
 
             </section>
             <!-- /.content -->
+            </form>
         </div>
         <!-- /.content-wrapper -->
+        
         <footer class="main-footer">
             <strong>Copyright &copy; 2015 <a href="#">有点儿甜</a>.</strong> All rights reserved.
         </footer>

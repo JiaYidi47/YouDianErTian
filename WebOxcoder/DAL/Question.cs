@@ -29,6 +29,13 @@ namespace DAL
             }
         }
 
+        IList<question> IQuestion.getQuestionAll()
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<question> questionItems = ctx.GetTable<question>();
+            return questionItems.ToList<question>();
+        }
+
         question IQuestion.getQuestionByID(int questionID)
         {
             DataContext ctx = new DataContext(connection);
@@ -47,16 +54,6 @@ namespace DAL
                                      where o.name == name
                                      select o;
             return query.ToList<question>();
-        }
-
-        question IQuestion.getQuestionByID(int id)
-        {
-            DataContext ctx = new DataContext(connection);
-            ITable<question> questionItems = ctx.GetTable<question>();
-            IQueryable<question> query = from o in questionItems
-                                     where o.id == id
-                                     select o;
-            return query.FirstOrDefault<question>();
         }
 
         bool IQuestion.deleteQuestion(question questionItem)
@@ -104,7 +101,5 @@ namespace DAL
                 return false;
             }
         }
-
-
     }
 }

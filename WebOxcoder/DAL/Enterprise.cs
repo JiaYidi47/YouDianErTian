@@ -68,6 +68,7 @@ namespace DAL
             {
                 return false;
             }
+        }
 
         bool IEnterprise.checkEnterprise(String enterpriseEmail)
         {

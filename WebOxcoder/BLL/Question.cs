@@ -19,6 +19,11 @@ namespace BLL
             return dal.addQuestion(questionItem);
         }
 
+        IList<question> IQuestion.getQuestionAll()
+        {
+            return dal.getQuestionAll();
+        }
+
         question IQuestion.getQuestionByID(int questionID)
         {
             return dal.getQuestionByID(questionID);
@@ -27,11 +32,6 @@ namespace BLL
         IList<question> IQuestion.searchQuestion(String name)
         {
             return dal.searchQuestion(name);
-        }
-
-        question IQuestion.getQuestionByID(int id)
-        {
-            return dal.getQuestionByID(id);
         }
 
         bool IQuestion.deleteQuestion(question questionItem)

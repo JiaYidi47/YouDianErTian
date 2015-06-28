@@ -12,7 +12,6 @@ namespace BLL
     {
         private static readonly IDAL.IQuestionType dal = DALFactory.DataAccess.CreateQuestionType();
 
-<<<<<<< HEAD
         bool IQuestionType.addQuestionType(type typeItem)
         {
             if (typeItem == null)
