@@ -5,6 +5,8 @@ using System.Text;
 using Model;
 using IBLL;
 using System.Threading.Tasks;
+using IBLL;
+using Model;
 
 namespace BLL
 {
@@ -14,6 +16,42 @@ namespace BLL
 
         IList<type> IQuestionType.getAll() {
             return dal.getAllItems();
+        }
+
+        bool IQuestionType.addQuestionType(type typeItem)
+        {
+            if (typeItem == null)
+                throw new Exception();
+            return dal.addQuestionType(typeItem);
+        }
+
+        IList<type> IQuestionType.getQuestionTypeAll()
+        {
+            return dal.getQuestionTypeAll();
+        }
+
+        IList<type> IQuestionType.searchQuestionType(String name)
+        {
+            return dal.searchQuestionType(name);
+        }
+
+        type IQuestionType.getQuestionTypeByID(int id)
+        {
+            return dal.getQuestionTypeByID(id);
+        }
+
+        bool IQuestionType.deleteQuestionType(type typeItem)
+        {
+            if (typeItem == null)
+                throw new Exception();
+            return dal.deleteQuestionType(typeItem);
+        }
+
+        bool IQuestionType.modifyQuestionType(type typeItem)
+        {
+            if (typeItem == null)
+                throw new Exception();
+            return dal.modifyQuestionType(typeItem);
         }
 
         type IQuestionType.getChallengeType(int challengeType)

@@ -19,7 +19,11 @@ namespace WebOxcoder
                 showData();
             }
 
-     
+            if (Request.Cookies["userEmail"] == null)
+            {
+                Response.Redirect("/signin.aspx");
+            }
+            LabelName.Text = Request.Cookies["userEmail"].Value;
         }
 
         //给所有下拉框赋值
@@ -204,6 +208,4 @@ namespace WebOxcoder
         }
       
         }
-     
-    
 }

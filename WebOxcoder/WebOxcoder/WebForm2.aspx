@@ -11,12 +11,13 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Button ID="Button1" runat="server" Text="Button" />
-    
-        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-        </asp:DropDownList>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     
     </div>
+        <asp:RadioButton ID="RadioButton1" runat="server" />
+        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+            <asp:ListItem Value="0">男</asp:ListItem>
+        </asp:RadioButtonList>
     </form>
 </body>
 </html>

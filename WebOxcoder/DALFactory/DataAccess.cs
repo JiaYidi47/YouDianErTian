@@ -71,5 +71,11 @@ namespace DALFactory
             string className = path + ".Order";
             return (IDAL.IOrder)Assembly.Load(path).CreateInstance(className);
         }
+
+        public static IDAL.IPromoCode CreatePromoCode()
+        {
+            string className = path + ".PromoCode";
+            return (IDAL.IPromoCode)Assembly.Load(path).CreateInstance(className);
+        }
     }
 }

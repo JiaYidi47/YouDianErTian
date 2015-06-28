@@ -16,5 +16,8 @@ namespace IDAL
         challenge searchById(int id);
         bool changeState(int id);
         bool addChallenge(challenge newChallenge);
+        challenge getEnterpriseUpToDateChallenge(String enterpriseEmail);
+        challenge getChallengeByID(int challengeId);
+        IList<challenge> searchChallengeByCoderEmail(String coderEmail);
     }
 }

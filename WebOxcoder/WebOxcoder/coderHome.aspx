@@ -93,7 +93,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">有点儿甜</span> <b class="caret"></b></a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><asp:Label ID="LabelName" runat="server" Text="" class="text"></asp:Label> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="coderChangePwd.aspx">修改密码</a>
                             </li>

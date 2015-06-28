@@ -140,13 +140,14 @@
                 <h1>购买管理<small>充值信息</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="input-group">
-                            <input type="text" name="message" placeholder="请输入企业名称/充值项..." class="form-control" />
+                            <asp:TextBox type="text" name="message" placeholder="请输入企业名称" class="form-control" runat="server" ID="orderCondition" OnTextChanged="orderCondition_TextChanged"/>
                             <span class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-flat">查询</button>
+                        <asp:Button type="button" class="btn btn-primary btn-flat" Text="查询" ID="search" runat="server"></asp:Button>
                       </span>
                         </div>
                     </div>
@@ -156,51 +157,28 @@
                     <div class="col-xs-12">
                         <div class="box box-info">
                             <div class="box-header">
-                                <li class="dropdown" style="display:inline-block;">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">充值记录<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">全部</a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">今日</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <div class="box-tools">
-                                    <ul class="pagination pagination-sm no-margin pull-right">
-                                        <li><a href="#">&laquo;</a>
-                                        </li>
-                                        <li><a href="#">1</a>
-                                        </li>
-                                        <li><a href="#">2</a>
-                                        </li>
-                                        <li><a href="#">3</a>
-                                        </li>
-                                        <li><a href="#">4</a>
-                                        </li>
-                                        <li><a href="#">&raquo;</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                 <asp:ScriptManager ID="ScriptManager1" runat="server">
+                                    </asp:ScriptManager>
+                                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                      <ContentTemplate>
+                                         <asp:DropDownList ID="orderRecord" runat="server" AutoPostBack="True" OnSelectedIndexChanged="orderRecord_SelectedIndexChanged">
+                                            <asp:ListItem Value="0">全部</asp:ListItem>
+                                            <asp:ListItem Value="1">今日</asp:ListItem>
+                                         </asp:DropDownList>
+                                     </ContentTemplate>
+                                    </asp:UpdatePanel>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <table class="table table-hover">
-                                    <tr>
-                                        <th>企业名称</th>
-                                        <th>充值项</th>
-                                        <th>金额</th>
-                                    </tr>
-                                    <tr>
-                                        <td>测试企业</td>
-                                        <td>邀请</td>
-                                        <td>100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>测试企业</td>
-                                        <td>挑战次数</td>
-                                        <td>100</td>
-                                    </tr>
-                                </table>
+                                <asp:GridView class="table table-hover" runat="server" ID="orderInformationGridView" AutoGenerateColumns="False" GridLines ="None" AllowPaging="true" OnPageIndexChanging="orderInformationGridView_PageIndexChanging" >
+                                    <Columns>
+                                        <asp:BoundField  DataField="companyEmail" HeaderText="企业名称" />
+                                        <asp:BoundField  DataField="type" HeaderText="充值项" />
+                                        <asp:BoundField  DataField="money" HeaderText="金额" />
+                                    
+                                    </Columns>
+                                    <PagerSettings Mode="NumericFirstLast" FirstPageText="首页" PreviousPageText ="上一页" NextPageText="下一页" LastPageText="尾页" />
+                                </asp:GridView>
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -208,6 +186,7 @@
                     </div>
                 </div>
             </section>
+            </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

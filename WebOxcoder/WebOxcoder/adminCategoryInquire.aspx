@@ -140,13 +140,14 @@
                 <h1>类别管理<small>查询类别</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="input-group">
-                            <input type="text" name="message" placeholder="请输入类别名称..." class="form-control" />
+                            <asp:TextBox type="text" name="message" placeholder="请输入类别名称" runat="server" ID="questionTypeCondition" class="form-control" />
                             <span class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-flat">查询</button>
+                        <asp:Button type="button" class="btn btn-primary btn-flat" runat="server" ID="search" Text="查询" OnClick="search_Click"></asp:Button>
                       </span>
                         </div>
                     </div>
@@ -176,84 +177,32 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <table class="table table-hover">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>类别名称</th>
-                                        <th>类别描述</th>
-                                        <th>操作</th>
-                                    </tr>
-                                    <tr>
-                                        <td>122</td>
-                                        <td>Java</td>
-                                        <td>22343435687发的方式的风格基金</td>
-                                        <td>                                    
-                                            <a class="btn btn-xs btn-warning btn-flat" data-toggle="modal" data-target="#category-modify-modal">修改</a>
+                                <asp:GridView class="table table-hover" runat="server" ID="typeInformationGridView" AutoGenerateColumns="False" GridLines ="None" AllowPaging="true" OnRowCommand="typeInformationGridView_RowCommand" OnPageIndexChanging="typeInformationGridView_PageIndexChanging">
+                                    <Columns>
+                                        <asp:BoundField  DataField="id" HeaderText="ID" />
+                                        <asp:BoundField  DataField="name" HeaderText="类别名称" />
+                                        <asp:BoundField  DataField="content" HeaderText="类别描述" />
 
-                                            <a class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#category-delete-modal">删除</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                                        <asp:TemplateField ShowHeader="False"> 
+                                            <ItemTemplate>  
+                                                <asp:LinkButton runat="server" CausesValidation="False" CommandName="Modify"  CommandArgument='<%#Eval("id")%>' 
+                                                  Text ="修改" class="btn btn-xs btn-warning btn-flat"></asp:LinkButton>
+                                                <asp:LinkButton runat="server" CausesValidation="False"  CommandName="Del"  CommandArgument='<%#Eval("id")%>' OnClientClick="javascript:return confirm('确定删除吗?')"
+                                                  Text ="删除" class="btn btn-xs btn-danger btn-flat"></asp:LinkButton>       
+                                           </ItemTemplate> 
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <PagerSettings Mode="NumericFirstLast" FirstPageText="首页" PreviousPageText ="上一页" NextPageText="下一页" LastPageText="尾页" />
+                                </asp:GridView>
                             </div>
                             <!-- /.box-body -->
                         </div>
                         <!-- /.box -->
                     </div>
                 </div>
-                <div class="modal modal-warning fade" id="category-modify-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">类别详细信息</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">类别名称&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" placeholder="请输入题目名称" value="计时器">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">类别描述&nbsp;&#58;</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="请输入题目简介">是多少多少多少的实打实的所得税的撒的撒旦是多少是多少多少多少多少多少多少多少多少多少</textarea>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-outline">确认</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <div class="modal modal-danger fade" id="category-delete-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">确认删除</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>是否确认删除该类别？</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-outline">确认</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
+                
             </section>
+            </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

@@ -233,7 +233,7 @@ function countDown() {
 
 			vm.projectInfo.countDown--;
 			if (vm.projectInfo.countDown <= 10) {
-				$("#count-down").css("color", "red");
+			    $("#countDown").css("color", "red");
 			}
 			console.log("调试信息：当前倒计时剩余" + vm.projectInfo.countDown + "秒");
 			if (vm.projectInfo.countDown <= 0) {
@@ -477,7 +477,7 @@ function countdownCompile(){
 function recoveryAll() {
 
 	// 恢复统计相关
-	$("#count-down").css("color", "black");
+    $("#countDown").css("color", "black");
 	/**
 	 * 思考时间
 	 */

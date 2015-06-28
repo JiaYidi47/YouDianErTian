@@ -140,6 +140,7 @@
                 <h1><small>首页</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
@@ -147,7 +148,7 @@
                         <!-- small box -->
                         <div class="small-box bg-aqua">
                             <div class="inner">
-                                <h3>150</h3>
+                                <h3><asp:Label runat="server" ID="coderNum"></asp:Label></h3>
                                 <p>程序员用户</p>
                             </div>
                             <div class="icon">
@@ -160,7 +161,7 @@
                         <!-- small box -->
                         <div class="small-box bg-green">
                             <div class="inner">
-                                <h3>53</h3>
+                                <h3><asp:Label runat="server" ID="enterpriseNum"></asp:Label></h3>
                                 <p>企业用户</p>
                             </div>
                             <div class="icon">
@@ -173,7 +174,7 @@
                         <!-- small box -->
                         <div class="small-box bg-yellow">
                             <div class="inner">
-                                <h3>44</h3>
+                                <h3><asp:Label runat="server" ID="userNum"></asp:Label></h3>
                                 <p>全部用户</p>
                             </div>
                             <div class="icon">
@@ -202,60 +203,17 @@
                         <div class="box">
                             <div class="box-header">
                                 <h3 class="box-title">今日新注册用户</h3>
-                                <div class="box-tools">
-                                    <ul class="pagination pagination-sm no-margin pull-right">
-                                        <li><a href="#">&laquo;</a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">&raquo;</a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <table class="table table-hover">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>注册邮箱</th>
-                                        <th>用户类型</th>
-                                        <th>姓名&nbsp;/&nbsp;公司全称</th>
-                                        <th>详细信息</th>
-                                    </tr>
-                                    <tr>
-                                        <td>183</td>
-                                        <td>1234567890@gmail.com</td>
-                                        <td>程序员</td>
-                                        <td>张三</td>
-                                        <td><a class="btn btn-xs btn-info btn-flat">详细</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>183</td>
-                                        <td>1234567890@gmail.com</td>
-                                        <td>程序员</td>
-                                        <td>张三</td>
-                                        <td><a class="btn btn-xs btn-info btn-flat">详细</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>183</td>
-                                        <td>1234567890@gmail.com</td>
-                                        <td>程序员</td>
-                                        <td>张三</td>
-                                        <td><a class="btn btn-xs btn-info btn-flat">详细</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>183</td>
-                                        <td>1234567890@gmail.com</td>
-                                        <td>程序员</td>
-                                        <td>张三</td>
-                                        <td><a class="btn btn-xs btn-info btn-flat">详细</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <asp:GridView class="table table-hover" runat="server" ID="userRegisterInformationGridView" AutoGenerateColumns="False" AllowPaging="true" GridLines ="None" OnPageIndexChanging="userRegisterInformationGridView_PageIndexChanging">
+                                    <Columns>
+                                        <asp:BoundField  DataField="email" HeaderText="注册邮箱" />
+                                        <asp:BoundField  DataField="type" HeaderText="用户类型" />
+
+                                    </Columns>
+                                    <PagerSettings Mode="NumericFirstLast" FirstPageText="首页" PreviousPageText ="上一页" NextPageText="下一页" LastPageText="尾页" />
+                                 </asp:GridView>
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -263,6 +221,7 @@
                     </div>
                 </div>
             </section>
+            </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

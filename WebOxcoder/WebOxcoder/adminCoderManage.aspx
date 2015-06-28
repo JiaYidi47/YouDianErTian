@@ -140,13 +140,14 @@
                 <h1>程序员管理</h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="input-group">
-                            <input type="text" name="message" placeholder="请输入姓名/邮箱/手机号..." class="form-control" />
+                            <asp:TextBox type="text" name="message" placeholder="请输入姓名" runat="server" ID="coderCondition" class="form-control" />
                             <span class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-flat">查询</button>
+                        <asp:Button type="button" runat="server" ID="search" class="btn btn-primary btn-flat" Text="查询" OnClick="search_Click"></asp:Button>
                       </span>
                         </div>
                     </div>
@@ -157,108 +158,35 @@
                         <div class="box box-info">
                             <div class="box-header">
                                 <h3 class="box-title">程序员信息</h3>
-                                <div class="box-tools">
-                                    <ul class="pagination pagination-sm no-margin pull-right">
-                                        <li><a href="#">&laquo;</a>
-                                        </li>
-                                        <li><a href="#">1</a>
-                                        </li>
-                                        <li><a href="#">2</a>
-                                        </li>
-                                        <li><a href="#">3</a>
-                                        </li>
-                                        <li><a href="#">4</a>
-                                        </li>
-                                        <li><a href="#">&raquo;</a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
-                                <table class="table table-hover">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>姓名</th>
-                                        <th>邮箱</th>
-                                        <th>手机号</th>
-                                        <th>年龄</th>
-                                        <th>性别</th>
-                                        <th>注册日期</th>
-                                        <th>操作</th>
-                                    </tr>
-                                    <tr>
-                                        <td>122</td>
-                                        <td>王瑞国</td>
-                                        <td>wangruiguo@outlook.com</td>
-                                        <td>18813091111</td>
-                                        <td>21</td>
-                                        <td>男</td>
-                                        <td>2015年1月1日</td>
-                                        <td><a class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#user-delete-modal">删除</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>122</td>
-                                        <td>王瑞国</td>
-                                        <td>wangruiguo@outlook.com</td>
-                                        <td>18813091111</td>
-                                        <td>21</td>
-                                        <td>男</td>
-                                        <td>2015年1月1日</td>
-                                        <td><a class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#user-delete-modal">删除</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>122</td>
-                                        <td>王瑞国</td>
-                                        <td>wangruiguo@outlook.com</td>
-                                        <td>18813091111</td>
-                                        <td>21</td>
-                                        <td>男</td>
-                                        <td>2015年1月1日</td>
-                                        <td><a class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#user-delete-modal">删除</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>122</td>
-                                        <td>王瑞国</td>
-                                        <td>wangruiguo@outlook.com</td>
-                                        <td>18813091111</td>
-                                        <td>21</td>
-                                        <td>男</td>
-                                        <td>2015年1月1日</td>
-                                        <td><a class="btn btn-xs btn-danger btn-flat" data-toggle="modal" data-target="#user-delete-modal">删除</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <asp:GridView class="table table-hover" runat="server" ID="coderInformationGridView" AutoGenerateColumns="False" GridLines ="None"  AllowPaging="true" OnRowCommand="coderInformationGridView_RowCommand" OnPageIndexChanging="coderInformationGridView_PageIndexChanging">
+                                    <Columns>
+                                        <asp:BoundField  DataField="name" HeaderText="姓名" />
+                                        <asp:BoundField  DataField="email" HeaderText="邮箱" />
+                                        <asp:BoundField  DataField="phone" HeaderText="手机号" />
+                                        <asp:BoundField  DataField="age" HeaderText="年龄" />
+                                        <asp:BoundField  DataField="sex" HeaderText="性别" />
+
+                                        <asp:TemplateField ShowHeader="False"> 
+                                            <ItemTemplate>  
+                                                <asp:LinkButton runat="server" CausesValidation="False" CommandName="Del"  CommandArgument='<%#Eval("email")%>' OnClientClick="javascript:return confirm('确定删除吗?')" 
+                                                  Text ="删除" class="btn btn-xs btn-danger btn-flat" ></asp:LinkButton>       
+                                           </ItemTemplate> 
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <PagerSettings Mode="NumericFirstLast" FirstPageText="首页" PreviousPageText ="上一页" NextPageText="下一页" LastPageText="尾页" />
+                                </asp:GridView>
                             </div>
                             <!-- /.box-body -->
                         </div>
                         <!-- /.box -->
                     </div>
                 </div>
-                <div class="modal modal-danger fade" id="user-delete-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">确认删除</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>是否确认删除该账号？</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-outline">确认</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
+                
             </section>
+            </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

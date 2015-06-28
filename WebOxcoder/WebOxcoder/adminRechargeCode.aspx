@@ -140,6 +140,7 @@
                 <h1>购买管理<small>优惠码</small></h1>
             </section>
             <!-- Main content -->
+            <form runat="server">
             <section class="content">
                 <div class="row">
                     <div class="col-xs-8">
@@ -153,23 +154,41 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">优惠码&nbsp;&#58;</label>
                                         <div class="col-sm-7">
-                                            <input type="text" class="form-control" value="">
+                                            <asp:TextBox type="text" class="form-control" runat="server" ID="promoCode" onfocus=this.blur()/>
                                         </div>
                                         <div class="col-sm-2">
-                                            <a class="btn btn-info btn-flat">生成优惠码</a>
+                                            <asp:Button class="btn btn-info btn-flat" Text="生成优惠码" runat="server" ID="generateCode" OnClick="generateCode_Click"></asp:Button>
                                         </div>
                                     </div>
+                                    <br />
+                                    <br />
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">邀请次数&nbsp;&#58;</label>
+                                        <div class="col-sm-7">
+                                            <asp:TextBox type="text" class="form-control" runat="server" ID="invite"/>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">挑战次数&nbsp;&#58;</label>
+                                        <div class="col-sm-7">
+                                            <asp:TextBox type="text" class="form-control" runat="server" ID="challenge"/>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">企业邮箱&nbsp;&#58;</label>
                                         <div class="col-sm-7">
-                                            <input type="text" class="form-control" value="">
+                                            <asp:TextBox type="email" class="form-control" runat="server" ID="enterpriseEmail"/>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-info btn-flat pull-right">发送</button>
+                                <asp:button type="submit" class="btn btn-info btn-flat pull-right" Text="发送" runat="server" ID="send" OnClick="send_Click" ></asp:button>
                             </div>
                             <!-- /.box-footer -->
                         </div>
@@ -177,6 +196,7 @@
                     </div>
                 </div>
             </section>
+            </form>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Model;
 using System.Threading.Tasks;
+using Model;
 
 namespace IBLL
 {
@@ -12,5 +13,12 @@ namespace IBLL
         IList<type> getAll();
         type getChallengeType(int challengeType);
        
+        bool addQuestionType(type typeItem);
+        IList<type> getQuestionTypeAll();
+        IList<type> searchQuestionType(String name);
+        type getQuestionTypeByID(int id);
+        bool deleteQuestionType(type typeItem);
+        bool modifyQuestionType(type typeItem);
+        type getChallengeType(int challengeType);
     }
 }

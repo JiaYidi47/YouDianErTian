@@ -19,6 +19,9 @@ namespace IBLL
         bool changeState(int id);
         bool addChallenge(int type,int level,int isPhoto,int isPublish,int question1, int question2,int question3,string email,int state,string duration);
 
-      
+        IList<challenge> searchBytec(int tec);
+        challenge getEnterpriseUpToDateChallenge(String enterpriseEmail);
+        challenge getChallengeByID(int challengeId);
+        IList<challenge> searchByCoderEmail(String coderEmail);
     }
 }

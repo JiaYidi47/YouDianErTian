@@ -155,7 +155,7 @@
                                 </dl>
                                 <dl class="dl-horizontal">
                                     <dt>职业素质评价</dt>
-                                    <dd>
+                                    <dd id="performance1" runat="server">
                                         <span class="pull-center label label-primary">1.04 </span> <span style="margin-left: 10px" class="label label-primary">战胜了
 											 
 												43.13
@@ -166,7 +166,7 @@
                                 <dl class="dl-horizontal">
                                     <dt>编程熟练度</dt>
                                     <!-- <dd>这里显示和代码敲击速度相关的数据，以及该项评价</dd> -->
-                                    <dd>
+                                    <dd id="performance2" runat="server">
                                         <span class="pull-middle label label-info">4.95 </span><span style="margin-left: 10px" class="label label-info">战胜了  
 												43.13
 											 %的人
@@ -176,7 +176,7 @@
                                 <dl class="dl-horizontal">
                                     <dt>编程专注值</dt>
                                     <!-- <dd>这里显示和 项目耗费时长/项目跨越长度/平均学习时长 综合分析后的相关数据，以及该项评价</dd> -->
-                                    <dd>
+                                    <dd id="performance3" runat="server">
                                         <span class="pull-middle label label-primary">1.28 </span><span style="margin-left: 10px" class="label label-primary">战胜了
 											 
 												29.41
@@ -187,7 +187,7 @@
                                 <dl class="dl-horizontal">
                                     <dt>偏差值</dt>
                                     <!-- <dd>这里显示和用户出错相关的数据（可能涉及与其他用户的出错率的比较），以及该项评价</dd> -->
-                                    <dd>
+                                    <dd id="performance4" runat="server">
                                         <span class="pull-middle label label-warning">4.35 </span> <span style="margin-left: 10px" class="label label-warning">战胜了
 											 
 												26.47
@@ -205,7 +205,7 @@
                                 <dl class="dl-horizontal">
                                     <dt>宅指数</dt>
                                     <!-- <dd>这里显示和ip地址切换频繁程度相关的数据，以及该项的评价</dd> -->
-                                    <dd>
+                                    <dd id="performance5" runat="server">
                                         <span class="pull-center label label-success">0.21 </span><span style="margin-left: 10px" class="label label-success">战胜了  
 												23.77
 											 %的人
@@ -225,12 +225,12 @@
                         <!-- <h3><i class="fa fa-money"></i> 我的身价</h3> -->
                         <span style="padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;">我的身价</span>
                         <div class="align-center">
-                            <h1 style="color: #3872a4; font-size: 48px;">
+                            <h1 style="color: #3872a4; font-size: 48px;"  id="price" runat="Server">
 								￥
 								7758
 							</h1>
                         </div>
-                        <span class="label label-warning">Lv.3</span>
+                        <span class="label label-warning" id="level" runat="Server">Lv.3</span>
                         <p class="help-block">
                             &#23567;&#29275;&#65306;&#20320;&#24050;&#32463;&#31934;&#36890;&#20102;&#19968;&#20123;&#27169;&#22359;&#65292;&#21487;&#20197;&#29420;&#31435;&#23436;&#25104;&#36739;&#22797;&#26434;&#24037;&#20316;&#65292;&#19988;&#28789;&#27963;&#36816;&#29992;&#26041;&#27861;&#35299;&#20915;&#38382;&#39064;&#65292;&#28176;&#28176;&#30340;&#25104;&#20026;&#39033;&#30446;&#30340;&#26680;&#24515;ing
                         </p>
@@ -241,34 +241,23 @@
                         <!-- <h3><i class="fa fa-money"></i> 我的身价</h3> -->
                         <span style="padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;">绑定信息</span>
                         <p></p>
-                        <div class="col-md-4 center">
-
-
+                        <div class="col-md-4 center" id="sinaWeibo" runat="Server">
                             <a href="#" id="sina" title="新浪微博" class="img-show"> <img src="img/sina2.png">
                             </a>
-
-
 
                             <div class="img-hide">
                                 <a target="_blank" href="https://api.weibo.com/oauth2/authorize?client_id=3064453059&response_type=code&forcelogin=true&redirect_uri=http://www.oxcoder.com/auth-sina.action">绑定</a>
 
                             </div>
-
                             <p class="text-muted">微博</p>
                         </div>
-                        <div class="col-md-4 center">
 
+                        <div class="col-md-4 center" id="git" runat="Server">
 
                             <a href="#" id="github" title="github" class="img-show"><img src="img/github2.png">
                             </a>
 
-
-
                             <div class="img-hide">
-                                <!-- 																	本地						  d1ca074d5dcc05ce594e -->
-                                <!-- 									<a -->
-                                <!-- 										href="https://github.com/login/oauth/authorize?client_id=d1ca074d5dcc05ce594e&redirect_uri=http://localhost:8080/Training/auth-github.action" -->
-                                <!-- 										target="_blank">绑定</a> -->
                                 <a href="https://github.com/login/oauth/authorize?client_id=cb26d4b4731db53e8a90&redirect_uri=http://www.oxcoder.com/auth-github.action" target="_blank">绑定</a>
                             </div>
 
@@ -326,10 +315,10 @@
                         </div>
                     </div>
                     <!-- /.panel-body -->
-                    <div class="panel-body shadow-effect" style="margin-top: 20px;">
+                    <div class="panel-body shadow-effect" style="margin-top: 20px;" id="personalInfo" runat="Server">
 
                         <!-- <h3><i class="fa fa-money"></i> 我的身价</h3> -->
-                        <span style="padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;">基本资料</span>
+                        <span style="padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;" >基本资料</span>
                         <h3>有点甜</h3>
                         <p>
                             <span class="resume-label">性别:男</span>
@@ -359,7 +348,7 @@
     <!-- /.container -->
 
 
-    <form>
+    <form id="performanceDiagram" runat="server">
         <input id="input-speed-all" type="hidden" value="9.57" />
         <input id="input-manito-all" type="hidden" value="2.29" />
         <input id="input-error-all" type="hidden" value="5.27" />

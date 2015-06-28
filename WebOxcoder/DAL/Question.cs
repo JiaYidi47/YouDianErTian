@@ -29,6 +29,13 @@ namespace DAL
             }
         }
 
+        IList<question> IQuestion.getQuestionAll()
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<question> questionItems = ctx.GetTable<question>();
+            return questionItems.ToList<question>();
+        }
+
         question IQuestion.getQuestionByID(int questionID)
         {
             DataContext ctx = new DataContext(connection);
@@ -48,6 +55,60 @@ namespace DAL
             return query.ToList();
         }
 
-       
+        IList<question> IQuestion.searchQuestion(String name)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<question> questionItems = ctx.GetTable<question>();
+            IQueryable<question> query = from o in questionItems
+                                     where o.name == name
+                                     select o;
+            return query.ToList<question>();
+        }
+
+        bool IQuestion.deleteQuestion(question questionItem)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable questionItems = ctx.GetTable<question>();
+            questionItems.Attach(questionItem);
+            questionItems.DeleteOnSubmit(questionItem);
+            try
+            {
+                ctx.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        bool IQuestion.modifyQuestion(question questionItem)
+        {
+            DataContext ctx = new DataContext(connection);
+            ITable<question> questionItems = ctx.GetTable<question>();
+            IQueryable<question> query = from o in questionItems
+                                     where o.id == questionItem.id
+                                     select o;
+            foreach (question o in query)
+            {
+                o.name = questionItem.name;
+                o.intro = questionItem.intro;
+                o.knowledge = questionItem.knowledge;
+                o.questionLevel = questionItem.questionLevel;
+                o.tecnology = questionItem.tecnology;
+                o.questionContent = questionItem.questionContent;
+                o.answer = questionItem.answer;
+                o.typeId = questionItem.typeId;
+            }
+            try
+            {
+                ctx.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
