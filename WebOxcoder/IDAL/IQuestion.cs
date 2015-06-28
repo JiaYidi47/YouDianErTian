@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Model;
-
 using System.Threading.Tasks;
 
 namespace IDAL
@@ -11,5 +10,7 @@ namespace IDAL
     public interface IQuestion
     {
         bool addQuestion(question questionItem);
+        question getQuestionByID(int questionID);
+        IList<question> getQuestions(int tec, int level);
      }
 }

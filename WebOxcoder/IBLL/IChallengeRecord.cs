@@ -8,5 +8,7 @@ namespace IBLL
 {
     public interface IChallengeRecord
     {
+        IList<Model.challengeRecord> getRecordByChallenge(int id);
+
     }
 }

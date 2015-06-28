@@ -8,5 +8,6 @@ namespace IDAL
 {
     public interface ICoder
     {
+        Model.coder getCoderById(string id);
     }
 }

@@ -97,6 +97,7 @@
             }
         }
     </script>
+    <form id="Form3" runat="server">
     <div class="container">
         <div class="row">
 
@@ -121,13 +122,8 @@
                                             </a>
                                         </section>
                                         <!-- /.page-header -->
-                                        <div id="Div1">
-                                            <div class="row">
-
-                                                <div class="alert alert-info" style="text-align: center" role="alert">没有建立任何挑战</div>
-
-
-                                            </div>
+                                        <div  id="historyTask" runat="server">
+                                           
                                             <!-- /.row -->
                                         </div>
                                         <!-- /#content -->
@@ -279,7 +275,7 @@
         <!-- /.row -->
     </div>
     <!-- /.container -->
-
+    </form>
     <!-- jQuery -->
     <script src="js/libs/jquery-1.11.0.min.js"></script>
 

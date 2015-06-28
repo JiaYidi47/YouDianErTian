@@ -30,9 +30,6 @@ namespace Model
 		
     #region 可扩展性方法定义
     partial void OnCreated();
-    partial void Insertchallenge(challenge instance);
-    partial void Updatechallenge(challenge instance);
-    partial void Deletechallenge(challenge instance);
     partial void InsertchallengeRecord(challengeRecord instance);
     partial void UpdatechallengeRecord(challengeRecord instance);
     partial void DeletechallengeRecord(challengeRecord instance);
@@ -51,16 +48,13 @@ namespace Model
     partial void Inserttype(type instance);
     partial void Updatetype(type instance);
     partial void Deletetype(type instance);
-    partial void Insertuser(user instance);
-    partial void Updateuser(user instance);
-    partial void Deleteuser(user instance);
+    partial void Insertusers(users instance);
+    partial void Updateusers(users instance);
+    partial void Deleteusers(users instance);
+    partial void Insertchallenge(challenge instance);
+    partial void Updatechallenge(challenge instance);
+    partial void Deletechallenge(challenge instance);
     #endregion
-		
-		public DataClassesDataContext() : 
-				base(global::Model.Properties.Settings.Default.oxcoderConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
 		
 		public DataClassesDataContext(string connection) : 
 				base(connection, mappingSource)
@@ -84,14 +78,6 @@ namespace Model
 				base(connection, mappingSource)
 		{
 			OnCreated();
-		}
-		
-		public System.Data.Linq.Table<challenge> challenge
-		{
-			get
-			{
-				return this.GetTable<challenge>();
-			}
 		}
 		
 		public System.Data.Linq.Table<challengeRecord> challengeRecord
@@ -118,11 +104,11 @@ namespace Model
 			}
 		}
 		
-		public System.Data.Linq.Table<order> order
+		public System.Data.Linq.Table<orders> orders
 		{
 			get
 			{
-				return this.GetTable<order>();
+				return this.GetTable<orders>();
 			}
 		}
 		
@@ -150,265 +136,19 @@ namespace Model
 			}
 		}
 		
-		public System.Data.Linq.Table<user> user
+		public System.Data.Linq.Table<users> users
 		{
 			get
 			{
-				return this.GetTable<user>();
+				return this.GetTable<users>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.challenge")]
-	public partial class challenge : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private int _type;
-		
-		private int _chanllengeLevel;
-		
-		private System.Nullable<int> _isPhoto;
-		
-		private System.Nullable<int> _isPublished;
-		
-		private string _question;
-		
-		private string _companyEmail;
-		
-		private System.Nullable<int> _state;
-		
-		private System.Data.Linq.Binary _publishTime;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OntypeChanging(int value);
-    partial void OntypeChanged();
-    partial void OnchanllengeLevelChanging(int value);
-    partial void OnchanllengeLevelChanged();
-    partial void OnisPhotoChanging(System.Nullable<int> value);
-    partial void OnisPhotoChanged();
-    partial void OnisPublishedChanging(System.Nullable<int> value);
-    partial void OnisPublishedChanged();
-    partial void OnquestionChanging(string value);
-    partial void OnquestionChanged();
-    partial void OncompanyEmailChanging(string value);
-    partial void OncompanyEmailChanged();
-    partial void OnstateChanging(System.Nullable<int> value);
-    partial void OnstateChanged();
-    partial void OnpublishTimeChanging(System.Data.Linq.Binary value);
-    partial void OnpublishTimeChanged();
-    #endregion
-		
-		public challenge()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
-		public int id
+		public System.Data.Linq.Table<challenge> challenge
 		{
 			get
 			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int type
-		{
-			get
-			{
-				return this._type;
-			}
-			set
-			{
-				if ((this._type != value))
-				{
-					this.OntypeChanging(value);
-					this.SendPropertyChanging();
-					this._type = value;
-					this.SendPropertyChanged("type");
-					this.OntypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chanllengeLevel", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int chanllengeLevel
-		{
-			get
-			{
-				return this._chanllengeLevel;
-			}
-			set
-			{
-				if ((this._chanllengeLevel != value))
-				{
-					this.OnchanllengeLevelChanging(value);
-					this.SendPropertyChanging();
-					this._chanllengeLevel = value;
-					this.SendPropertyChanged("chanllengeLevel");
-					this.OnchanllengeLevelChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isPhoto", DbType="Int", UpdateCheck=UpdateCheck.Never)]
-		public System.Nullable<int> isPhoto
-		{
-			get
-			{
-				return this._isPhoto;
-			}
-			set
-			{
-				if ((this._isPhoto != value))
-				{
-					this.OnisPhotoChanging(value);
-					this.SendPropertyChanging();
-					this._isPhoto = value;
-					this.SendPropertyChanged("isPhoto");
-					this.OnisPhotoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isPublished", DbType="Int", UpdateCheck=UpdateCheck.Never)]
-		public System.Nullable<int> isPublished
-		{
-			get
-			{
-				return this._isPublished;
-			}
-			set
-			{
-				if ((this._isPublished != value))
-				{
-					this.OnisPublishedChanging(value);
-					this.SendPropertyChanging();
-					this._isPublished = value;
-					this.SendPropertyChanged("isPublished");
-					this.OnisPublishedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_question", DbType="NVarChar(20) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string question
-		{
-			get
-			{
-				return this._question;
-			}
-			set
-			{
-				if ((this._question != value))
-				{
-					this.OnquestionChanging(value);
-					this.SendPropertyChanging();
-					this._question = value;
-					this.SendPropertyChanged("question");
-					this.OnquestionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_companyEmail", DbType="NVarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string companyEmail
-		{
-			get
-			{
-				return this._companyEmail;
-			}
-			set
-			{
-				if ((this._companyEmail != value))
-				{
-					this.OncompanyEmailChanging(value);
-					this.SendPropertyChanging();
-					this._companyEmail = value;
-					this.SendPropertyChanged("companyEmail");
-					this.OncompanyEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_state", DbType="Int", UpdateCheck=UpdateCheck.Never)]
-		public System.Nullable<int> state
-		{
-			get
-			{
-				return this._state;
-			}
-			set
-			{
-				if ((this._state != value))
-				{
-					this.OnstateChanging(value);
-					this.SendPropertyChanging();
-					this._state = value;
-					this.SendPropertyChanged("state");
-					this.OnstateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_publishTime", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary publishTime
-		{
-			get
-			{
-				return this._publishTime;
-			}
-			set
-			{
-				if ((this._publishTime != value))
-				{
-					this.OnpublishTimeChanging(value);
-					this.SendPropertyChanging();
-					this._publishTime = value;
-					this.SendPropertyChanged("publishTime");
-					this.OnpublishTimeChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<challenge>();
 			}
 		}
 	}
@@ -421,7 +161,7 @@ namespace Model
 		
 		private int _id;
 		
-		private int _chanllengeId;
+		private int _challengeId;
 		
 		private string _coderEmail;
 		
@@ -431,9 +171,15 @@ namespace Model
 		
 		private string _time;
 		
-		private string _subTime;
+		private System.Nullable<int> _subTime1;
+		
+		private System.Nullable<int> _subTime2;
+		
+		private System.Nullable<int> _subTime3;
 		
 		private System.Nullable<int> _isInvited;
+		
+		private string _ideoneID;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -441,8 +187,8 @@ namespace Model
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnchanllengeIdChanging(int value);
-    partial void OnchanllengeIdChanged();
+    partial void OnchallengeIdChanging(int value);
+    partial void OnchallengeIdChanged();
     partial void OncoderEmailChanging(string value);
     partial void OncoderEmailChanged();
     partial void OnresultChanging(string value);
@@ -451,10 +197,16 @@ namespace Model
     partial void OnsubResultChanged();
     partial void OntimeChanging(string value);
     partial void OntimeChanged();
-    partial void OnsubTimeChanging(string value);
-    partial void OnsubTimeChanged();
+    partial void OnsubTime1Changing(System.Nullable<int> value);
+    partial void OnsubTime1Changed();
+    partial void OnsubTime2Changing(System.Nullable<int> value);
+    partial void OnsubTime2Changed();
+    partial void OnsubTime3Changing(System.Nullable<int> value);
+    partial void OnsubTime3Changed();
     partial void OnisInvitedChanging(System.Nullable<int> value);
     partial void OnisInvitedChanged();
+    partial void OnideoneIDChanging(string value);
+    partial void OnideoneIDChanged();
     #endregion
 		
 		public challengeRecord()
@@ -482,22 +234,22 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chanllengeId", DbType="Int NOT NULL")]
-		public int chanllengeId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_challengeId", DbType="Int NOT NULL")]
+		public int challengeId
 		{
 			get
 			{
-				return this._chanllengeId;
+				return this._challengeId;
 			}
 			set
 			{
-				if ((this._chanllengeId != value))
+				if ((this._challengeId != value))
 				{
-					this.OnchanllengeIdChanging(value);
+					this.OnchallengeIdChanging(value);
 					this.SendPropertyChanging();
-					this._chanllengeId = value;
-					this.SendPropertyChanged("chanllengeId");
-					this.OnchanllengeIdChanged();
+					this._challengeId = value;
+					this.SendPropertyChanged("challengeId");
+					this.OnchallengeIdChanged();
 				}
 			}
 		}
@@ -562,7 +314,7 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_time", DbType="NVarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_time", DbType="NVarChar(20)")]
 		public string time
 		{
 			get
@@ -582,22 +334,62 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subTime", DbType="NVarChar(30)")]
-		public string subTime
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subTime1", DbType="Int")]
+		public System.Nullable<int> subTime1
 		{
 			get
 			{
-				return this._subTime;
+				return this._subTime1;
 			}
 			set
 			{
-				if ((this._subTime != value))
+				if ((this._subTime1 != value))
 				{
-					this.OnsubTimeChanging(value);
+					this.OnsubTime1Changing(value);
 					this.SendPropertyChanging();
-					this._subTime = value;
-					this.SendPropertyChanged("subTime");
-					this.OnsubTimeChanged();
+					this._subTime1 = value;
+					this.SendPropertyChanged("subTime1");
+					this.OnsubTime1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subTime2", DbType="Int")]
+		public System.Nullable<int> subTime2
+		{
+			get
+			{
+				return this._subTime2;
+			}
+			set
+			{
+				if ((this._subTime2 != value))
+				{
+					this.OnsubTime2Changing(value);
+					this.SendPropertyChanging();
+					this._subTime2 = value;
+					this.SendPropertyChanged("subTime2");
+					this.OnsubTime2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subTime3", DbType="Int")]
+		public System.Nullable<int> subTime3
+		{
+			get
+			{
+				return this._subTime3;
+			}
+			set
+			{
+				if ((this._subTime3 != value))
+				{
+					this.OnsubTime3Changing(value);
+					this.SendPropertyChanging();
+					this._subTime3 = value;
+					this.SendPropertyChanged("subTime3");
+					this.OnsubTime3Changed();
 				}
 			}
 		}
@@ -618,6 +410,26 @@ namespace Model
 					this._isInvited = value;
 					this.SendPropertyChanged("isInvited");
 					this.OnisInvitedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ideoneID", DbType="NVarChar(50)")]
+		public string ideoneID
+		{
+			get
+			{
+				return this._ideoneID;
+			}
+			set
+			{
+				if ((this._ideoneID != value))
+				{
+					this.OnideoneIDChanging(value);
+					this.SendPropertyChanging();
+					this._ideoneID = value;
+					this.SendPropertyChanged("ideoneID");
+					this.OnideoneIDChanged();
 				}
 			}
 		}
@@ -659,9 +471,17 @@ namespace Model
 		
 		private string _phone;
 		
-		private string _performance;
+		private System.Nullable<int> _price;
 		
-		private string _performanceperccent;
+		private System.Nullable<double> _performance0;
+		
+		private System.Nullable<double> _performance1;
+		
+		private System.Nullable<double> _performance2;
+		
+		private System.Nullable<double> _performance3;
+		
+		private System.Nullable<double> _performance4;
 		
 		private string _bindinginfo;
 		
@@ -679,10 +499,18 @@ namespace Model
     partial void OnsexChanged();
     partial void OnphoneChanging(string value);
     partial void OnphoneChanged();
-    partial void OnperformanceChanging(string value);
-    partial void OnperformanceChanged();
-    partial void OnperformanceperccentChanging(string value);
-    partial void OnperformanceperccentChanged();
+    partial void OnpriceChanging(System.Nullable<int> value);
+    partial void OnpriceChanged();
+    partial void Onperformance0Changing(System.Nullable<double> value);
+    partial void Onperformance0Changed();
+    partial void Onperformance1Changing(System.Nullable<double> value);
+    partial void Onperformance1Changed();
+    partial void Onperformance2Changing(System.Nullable<double> value);
+    partial void Onperformance2Changed();
+    partial void Onperformance3Changing(System.Nullable<double> value);
+    partial void Onperformance3Changed();
+    partial void Onperformance4Changing(System.Nullable<double> value);
+    partial void Onperformance4Changed();
     partial void OnbindinginfoChanging(string value);
     partial void OnbindinginfoChanged();
     #endregion
@@ -792,42 +620,122 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_performance", DbType="VarChar(30)")]
-		public string performance
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Int")]
+		public System.Nullable<int> price
 		{
 			get
 			{
-				return this._performance;
+				return this._price;
 			}
 			set
 			{
-				if ((this._performance != value))
+				if ((this._price != value))
 				{
-					this.OnperformanceChanging(value);
+					this.OnpriceChanging(value);
 					this.SendPropertyChanging();
-					this._performance = value;
-					this.SendPropertyChanged("performance");
-					this.OnperformanceChanged();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_performanceperccent", DbType="NVarChar(40)")]
-		public string performanceperccent
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_performance0", DbType="Float")]
+		public System.Nullable<double> performance0
 		{
 			get
 			{
-				return this._performanceperccent;
+				return this._performance0;
 			}
 			set
 			{
-				if ((this._performanceperccent != value))
+				if ((this._performance0 != value))
 				{
-					this.OnperformanceperccentChanging(value);
+					this.Onperformance0Changing(value);
 					this.SendPropertyChanging();
-					this._performanceperccent = value;
-					this.SendPropertyChanged("performanceperccent");
-					this.OnperformanceperccentChanged();
+					this._performance0 = value;
+					this.SendPropertyChanged("performance0");
+					this.Onperformance0Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_performance1", DbType="Float")]
+		public System.Nullable<double> performance1
+		{
+			get
+			{
+				return this._performance1;
+			}
+			set
+			{
+				if ((this._performance1 != value))
+				{
+					this.Onperformance1Changing(value);
+					this.SendPropertyChanging();
+					this._performance1 = value;
+					this.SendPropertyChanged("performance1");
+					this.Onperformance1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_performance2", DbType="Float")]
+		public System.Nullable<double> performance2
+		{
+			get
+			{
+				return this._performance2;
+			}
+			set
+			{
+				if ((this._performance2 != value))
+				{
+					this.Onperformance2Changing(value);
+					this.SendPropertyChanging();
+					this._performance2 = value;
+					this.SendPropertyChanged("performance2");
+					this.Onperformance2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_performance3", DbType="Float")]
+		public System.Nullable<double> performance3
+		{
+			get
+			{
+				return this._performance3;
+			}
+			set
+			{
+				if ((this._performance3 != value))
+				{
+					this.Onperformance3Changing(value);
+					this.SendPropertyChanging();
+					this._performance3 = value;
+					this.SendPropertyChanged("performance3");
+					this.Onperformance3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_performance4", DbType="Float")]
+		public System.Nullable<double> performance4
+		{
+			get
+			{
+				return this._performance4;
+			}
+			set
+			{
+				if ((this._performance4 != value))
+				{
+					this.Onperformance4Changing(value);
+					this.SendPropertyChanging();
+					this._performance4 = value;
+					this.SendPropertyChanged("performance4");
+					this.Onperformance4Changed();
 				}
 			}
 		}
@@ -1199,19 +1107,23 @@ namespace Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[order]")]
-	public partial class order
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.orders")]
+	public partial class orders
 	{
 		
 		private int _id;
 		
-		private string _company;
+		private string _companyEmail;
 		
 		private System.Nullable<int> _type;
 		
-		private string _money;
+		private System.Nullable<int> _number;
 		
-		public order()
+		private System.Nullable<double> _money;
+		
+		private string _time;
+		
+		public orders()
 		{
 		}
 		
@@ -1231,18 +1143,18 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_company", DbType="NVarChar(50)")]
-		public string company
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_companyEmail", DbType="NVarChar(50)")]
+		public string companyEmail
 		{
 			get
 			{
-				return this._company;
+				return this._companyEmail;
 			}
 			set
 			{
-				if ((this._company != value))
+				if ((this._companyEmail != value))
 				{
-					this._company = value;
+					this._companyEmail = value;
 				}
 			}
 		}
@@ -1263,8 +1175,24 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_money", DbType="NVarChar(30)")]
-		public string money
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_number", DbType="Int")]
+		public System.Nullable<int> number
+		{
+			get
+			{
+				return this._number;
+			}
+			set
+			{
+				if ((this._number != value))
+				{
+					this._number = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_money", DbType="Float")]
+		public System.Nullable<double> money
 		{
 			get
 			{
@@ -1275,6 +1203,22 @@ namespace Model
 				if ((this._money != value))
 				{
 					this._money = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_time", DbType="NVarChar(20)")]
+		public string time
+		{
+			get
+			{
+				return this._time;
+			}
+			set
+			{
+				if ((this._time != value))
+				{
+					this._time = value;
 				}
 			}
 		}
@@ -1313,7 +1257,7 @@ namespace Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get
@@ -1778,8 +1722,8 @@ namespace Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[user]")]
-	public partial class user : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.users")]
+	public partial class users : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1789,6 +1733,8 @@ namespace Model
 		private string _password;
 		
 		private int _type;
+		
+		private System.Data.Linq.Binary _registerTime;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -1800,14 +1746,16 @@ namespace Model
     partial void OnpasswordChanged();
     partial void OntypeChanging(int value);
     partial void OntypeChanged();
+    partial void OnregisterTimeChanging(System.Data.Linq.Binary value);
+    partial void OnregisterTimeChanged();
     #endregion
 		
-		public user()
+		public users()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
 		public string email
 		{
 			get
@@ -1827,7 +1775,7 @@ namespace Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="NVarChar(30) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string password
 		{
 			get
@@ -1843,6 +1791,152 @@ namespace Model
 					this._password = value;
 					this.SendPropertyChanged("password");
 					this.OnpasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int type
+		{
+			get
+			{
+				return this._type;
+			}
+			set
+			{
+				if ((this._type != value))
+				{
+					this.OntypeChanging(value);
+					this.SendPropertyChanging();
+					this._type = value;
+					this.SendPropertyChanged("type");
+					this.OntypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_registerTime", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary registerTime
+		{
+			get
+			{
+				return this._registerTime;
+			}
+			set
+			{
+				if ((this._registerTime != value))
+				{
+					this.OnregisterTimeChanging(value);
+					this.SendPropertyChanging();
+					this._registerTime = value;
+					this.SendPropertyChanged("registerTime");
+					this.OnregisterTimeChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.challenge")]
+	public partial class challenge : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private int _type;
+		
+		private int _challengeLevel;
+		
+		private System.Nullable<int> _isPhoto;
+		
+		private System.Nullable<int> _isPublished;
+		
+		private int _question1ID;
+		
+		private int _question2ID;
+		
+		private int _question3ID;
+		
+		private string _companyEmail;
+		
+		private System.Nullable<int> _state;
+		
+		private string _duration;
+		
+		private string _title;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OntypeChanging(int value);
+    partial void OntypeChanged();
+    partial void OnchallengeLevelChanging(int value);
+    partial void OnchallengeLevelChanged();
+    partial void OnisPhotoChanging(System.Nullable<int> value);
+    partial void OnisPhotoChanged();
+    partial void OnisPublishedChanging(System.Nullable<int> value);
+    partial void OnisPublishedChanged();
+    partial void Onquestion1IDChanging(int value);
+    partial void Onquestion1IDChanged();
+    partial void Onquestion2IDChanging(int value);
+    partial void Onquestion2IDChanged();
+    partial void Onquestion3IDChanging(int value);
+    partial void Onquestion3IDChanged();
+    partial void OncompanyEmailChanging(string value);
+    partial void OncompanyEmailChanged();
+    partial void OnstateChanging(System.Nullable<int> value);
+    partial void OnstateChanged();
+    partial void OndurationChanging(string value);
+    partial void OndurationChanged();
+    partial void OntitleChanging(string value);
+    partial void OntitleChanged();
+    #endregion
+		
+		public challenge()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
 				}
 			}
 		}
@@ -1863,6 +1957,206 @@ namespace Model
 					this._type = value;
 					this.SendPropertyChanged("type");
 					this.OntypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_challengeLevel", DbType="Int NOT NULL")]
+		public int challengeLevel
+		{
+			get
+			{
+				return this._challengeLevel;
+			}
+			set
+			{
+				if ((this._challengeLevel != value))
+				{
+					this.OnchallengeLevelChanging(value);
+					this.SendPropertyChanging();
+					this._challengeLevel = value;
+					this.SendPropertyChanged("challengeLevel");
+					this.OnchallengeLevelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isPhoto", DbType="Int")]
+		public System.Nullable<int> isPhoto
+		{
+			get
+			{
+				return this._isPhoto;
+			}
+			set
+			{
+				if ((this._isPhoto != value))
+				{
+					this.OnisPhotoChanging(value);
+					this.SendPropertyChanging();
+					this._isPhoto = value;
+					this.SendPropertyChanged("isPhoto");
+					this.OnisPhotoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isPublished", DbType="Int")]
+		public System.Nullable<int> isPublished
+		{
+			get
+			{
+				return this._isPublished;
+			}
+			set
+			{
+				if ((this._isPublished != value))
+				{
+					this.OnisPublishedChanging(value);
+					this.SendPropertyChanging();
+					this._isPublished = value;
+					this.SendPropertyChanged("isPublished");
+					this.OnisPublishedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_question1ID", DbType="Int NOT NULL")]
+		public int question1ID
+		{
+			get
+			{
+				return this._question1ID;
+			}
+			set
+			{
+				if ((this._question1ID != value))
+				{
+					this.Onquestion1IDChanging(value);
+					this.SendPropertyChanging();
+					this._question1ID = value;
+					this.SendPropertyChanged("question1ID");
+					this.Onquestion1IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_question2ID", DbType="Int NOT NULL")]
+		public int question2ID
+		{
+			get
+			{
+				return this._question2ID;
+			}
+			set
+			{
+				if ((this._question2ID != value))
+				{
+					this.Onquestion2IDChanging(value);
+					this.SendPropertyChanging();
+					this._question2ID = value;
+					this.SendPropertyChanged("question2ID");
+					this.Onquestion2IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_question3ID", DbType="Int NOT NULL")]
+		public int question3ID
+		{
+			get
+			{
+				return this._question3ID;
+			}
+			set
+			{
+				if ((this._question3ID != value))
+				{
+					this.Onquestion3IDChanging(value);
+					this.SendPropertyChanging();
+					this._question3ID = value;
+					this.SendPropertyChanged("question3ID");
+					this.Onquestion3IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_companyEmail", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string companyEmail
+		{
+			get
+			{
+				return this._companyEmail;
+			}
+			set
+			{
+				if ((this._companyEmail != value))
+				{
+					this.OncompanyEmailChanging(value);
+					this.SendPropertyChanging();
+					this._companyEmail = value;
+					this.SendPropertyChanged("companyEmail");
+					this.OncompanyEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_state", DbType="Int")]
+		public System.Nullable<int> state
+		{
+			get
+			{
+				return this._state;
+			}
+			set
+			{
+				if ((this._state != value))
+				{
+					this.OnstateChanging(value);
+					this.SendPropertyChanging();
+					this._state = value;
+					this.SendPropertyChanged("state");
+					this.OnstateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_duration", DbType="NVarChar(25)")]
+		public string duration
+		{
+			get
+			{
+				return this._duration;
+			}
+			set
+			{
+				if ((this._duration != value))
+				{
+					this.OndurationChanging(value);
+					this.SendPropertyChanging();
+					this._duration = value;
+					this.SendPropertyChanged("duration");
+					this.OndurationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="NVarChar(50)")]
+		public string title
+		{
+			get
+			{
+				return this._title;
+			}
+			set
+			{
+				if ((this._title != value))
+				{
+					this.OntitleChanging(value);
+					this.SendPropertyChanging();
+					this._title = value;
+					this.SendPropertyChanged("title");
+					this.OntitleChanged();
 				}
 			}
 		}

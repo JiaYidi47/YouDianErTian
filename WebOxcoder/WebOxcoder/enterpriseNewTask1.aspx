@@ -155,14 +155,11 @@
                                         <div style="text-align: center; margin-bottom: 20px;">
                                             <img src="img/new_c1.png">
                                         </div>
-                                        <form id="defaultForm" method="post" class="form-horizontal" action="hr-sub-new-recruit.action" onsubmit="return checkForm()">
-                                            <input type="hidden" name="relevel" value="1" id="input-relevel" />
-                                            <input type="hidden" name="retype" value="0" id="input-retype" />
-                                            <input type="hidden" name="republic" value="1" id="input-republic" />
-                                            <input type="hidden" name="recamera" value="0" id="input-recamera" />
+                                        <form id="defaultForm" class="form-horizontal" runat="server">
+                                            <asp:TextBox type="hidden" runat="server" ID="challengeType" />
                                             <h4 class="col-md-12 col-no-left-padding">请选择挑战类型</h4>
                                             <div class="fivecolumns">
-                                                <div class="col-md-3 col-no-left-padding test">
+                                                <div id="java" class="col-md-3 col-no-left-padding test">
                                                     <a id="a-java" href="#j2-messages" data-toggle="pill">
                                                         <div class="panel panel-default shadow-effect ">
                                                             <div class="panel-body">
@@ -176,35 +173,7 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-md-3 col-no-left-padding test">
-                                                    <a id="a-android" href="#j2-messages" data-toggle="pill">
-                                                        <div class="panel panel-default shadow-effect">
-                                                            <div class="panel-body">
-                                                                <div class="row" style="text-align: center;">
-                                                                    <h3>
-																		<img src="img/android.png">
-																		Android
-																	</h3>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-3 col-no-left-padding test">
-                                                    <a id="a-ios" href="#j2-messages" data-toggle="pill">
-                                                        <div class="panel panel-default shadow-effect">
-                                                            <div class="panel-body">
-                                                                <div class="row" style="text-align: center;">
-                                                                    <h3>
-																		<img src="img/apple.png">
-																		iOS
-																	</h3>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-3 col-no-left-padding test">
+                                                <div id="c" class="col-md-3 col-no-left-padding test">
                                                     <a id="a-c" href="#j2-messages" data-toggle="pill">
                                                         <div class="panel panel-default shadow-effect ">
                                                             <div class="panel-body">
@@ -218,7 +187,7 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-md-3 col-no-left-padding test">
+                                                <div id="cpp" class="col-md-3 col-no-left-padding test">
                                                     <a id="a-cpp" href="#j2-messages" data-toggle="pill">
                                                         <div class="panel panel-default shadow-effect ">
                                                             <div class="panel-body">
@@ -232,51 +201,26 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-md-3 col-no-left-padding test">
-                                                    <a id="a-php" href="#j2-messages" data-toggle="pill">
-                                                        <div class="panel panel-default shadow-effect ">
-                                                            <div class="panel-body">
-                                                                <div class="row" style="text-align: center;">
-                                                                    <h3>
-																		<img src="img/php.png">
-																		PHP(BETA)
-																	</h3>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-3 col-no-left-padding test">
-                                                    <a id="a-python" href="#j2-messages" data-toggle="pill">
-                                                        <div class="panel panel-default shadow-effect ">
-                                                            <div class="panel-body">
-                                                                <div class="row" style="text-align: center;">
-                                                                    <h3>
-																		<img src="img/python.png"/>
-																		Python(BETA)
-																	</h3>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
+                                          
+                                             
 
                                             </div>
 
                                             <h4 class="col-md-12 col-no-left-padding">请选择挑战等级(按薪资划分）</h4>
-
+                                            <asp:TextBox type="hidden" runat="server" ID="challengeLevel" />
                                             <ul class="nav nav-pills nav-justified col-md-12 col-no-left-padding">
-                                                <li class="level-tag" relevel="1"><a href="#j2-profile" data-toggle="pill">2k~5k</a>
+                                                <li id="first" class="level-tag" relevel="1"><a href="#j2-profile" data-toggle="pill">2k~5k</a>
                                                 </li>
-                                                <li class="level-tag" relevel="2"><a href="#j2-messages" data-toggle="pill">5k~8k</a>
+                                                <li id="second"  class="level-tag" relevel="2"><a href="#j2-messages" data-toggle="pill">5k~8k</a>
                                                 </li>
-                                                <li class="level-tag" relevel="3"><a href="#j2-settings" data-toggle="pill">8k~10k</a>
+                                                <li id="three"  class ="level-tag" relevel="3"><a href="#j2-settings" data-toggle="pill">8k~10k</a>
                                                 </li>
-                                                <li class="level-tag" relevel="4"><a href="#j2-settings" data-toggle="pill">10k~12k</a>
+                                                <li  id="four
+                                                    " class="level-tag" relevel="4"><a href="#j2-settings" data-toggle="pill">10k~12k</a>
                                                 </li>
-                                                <li class="level-tag" relevel="5"><a href="#j2-settings" data-toggle="pill">12k~15k</a>
+                                                <li  id="five" class="level-tag" relevel="5"><a href="#j2-settings" data-toggle="pill">12k~15k</a>
                                                 </li>
-                                                <li class="level-tag" relevel="6"><a href="#j2-settings" data-toggle="pill">15k以上</a>
+                                                <li id="six"  class="level-tag" relevel="6"><a href="#j2-settings" data-toggle="pill">15k以上</a>
                                                 </li>
                                             </ul>
                                             <h4 class="col-md-12 col-no-left-padding"><input name="" value="1" id="check-camera" type="checkbox">使用随机拍照功能</h4>
@@ -292,7 +236,7 @@
 													<small class="help-block">请选择挑战类型及等级</small>
 												</span>
                                                 <div class="align-center">
-                                                    <button id="nextStep" class="btn btn-new1" onclick="window.location.href='enterpriseNewTask3.aspx'">保存&下一步
+                                                    <button id="nextStep" runat="server"  onServerClick="nextStep_ServerClick" class="btn btn-new1" >保存&下一步
                                                     </button>
 
                                                     <!--  <button type="reset" class="btn btn-warning">重置 <i class="fa fa-repeat"></i></button>-->
@@ -511,49 +455,37 @@
         }
 
         //这里设置项目的类型
-        $('#a-java').click(function () {
-            $("#input-retype").val("1");
+        $("#java").click(function(){
+            $("#challengeType").val(1);
         });
-        $('#a-android').click(function () {
-            $("#input-retype").val("2");
+        $("#c").click(function () {
+            $("#challengeType").val(2);
         });
-        $('#a-ios').click(function () {
-            $("#input-retype").val("3");
-        });
-        $('#a-c').click(function () {
-            $("#input-retype").val("4");
-        });
-        $('#a-cpp').click(function () {
-            $("#input-retype").val("5");
-        });
-        $('#a-php').click(function () {
-            $("#input-retype").val("6");
-        });
-        $('#a-python').click(function () {
-            $("#input-retype").val("7");
-        });
-        $('#a-ruby').click(function () {
-            $("#input-retype").val("8");
+        $("#cpp").click(function () {
+            $("#challengeType").val(3);
         });
 
-        $(".level-tag").click(function () {
-            $("#input-relevel").val($(this).attr("relevel"));
+        $("#first").click(function () {
+            $("#challengeLevel").val(1);
+        });
+        $("#second").click(function () {
+            $("#challengeLevel").val(2);
+        });
+        $("#three").click(function () {
+            $("#challengeLevel").val(3);
+        });
+        $("#four").click(function () {
+            $("#challengeLevel").val(4);
+        });
+        $("#five").click(function () {
+            $("#challengeLevel").val(5);
+        });
+        $("#six").click(function () {
+            $("#challengeLevel").val(6);
         });
 
-        $("#check-public").click(function () {
-            if (document.getElementById("check-public").checked) {
-                $("#input-republic").val("1");
-            } else {
-                $("#input-republic").val("0");
-            }
-        });
-        $("#check-camera").click(function () {
-            if (document.getElementById("check-camera").checked) {
-                $("#input-recamera").val("1");
-            } else {
-                $("#input-recamera").val("0");
-            }
-        });
+       
+
     </script>
 
 

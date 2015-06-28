@@ -112,17 +112,16 @@
 
                                 <p class="text-muted">您可以邀请其他渠道获取的人才到oxcoder，通过挑战来识别他们的能力。</p>
 
-                                <form id="defaultForm" class="form-vertical bv-form" novalidate="novalidate" enctype="multipart/form-data">
+                                <form id="defaultForm" runat="server" class="form-vertical bv-form" novalidate="novalidate" enctype="multipart/form-data">
                                     <input type="hidden" name="reid" value="883">
                                     <button type="submit" class="bv-hidden-submit" disabled="disabled" style="display: none; width: 0px; height: 0px;"></button>
                                     <div class="form-group" id="one">
 
 
-                                        <input type="hidden" id="inviteNumVal" name="inviteNumVal" value="0">
-                                        <label><span class="grey">输入邮箱地址(剩余邀请数：0)
-										</span>
-                                        </label>
-                                        <input type="email" name="oneEmail" id="oneEmail" class="form-control" placeholder="多个邮件地址请用','分隔" onBlur="checkInviteNum()"> <span class="text-muted">邮件将会单独发送给多个候选人。候选人很多？<a
+                                       <div id="restNum" runat="server">
+                                      
+                                        </div>
+                                        <input id="emailAddress" runat="server" type="email" name="oneEmail"  class="form-control" placeholder="多个邮件地址请用','分隔" onBlur="checkInviteNum()"> <span class="text-muted">邮件将会单独发送给多个候选人。候选人很多？<a
 											href="#" onclick="change1()">批量上传</a></span> <span class="help-block" id="hint1" />
                                         <!-- 										<div class="alert alert-danger" id="invitehint" -->
                                         <!-- 											style="text-align: center; display: none" role="alert"> -->
@@ -144,13 +143,15 @@
                                     <div class="form-group">
                                         <label><span class="grey">邮件主题</span>
                                         </label>
-                                        <input readonly type="text" name="subject" class="form-control" value=".NET&#26377;&#28857;&#20799;&#29980;&#23567;&#32452;-在线笔试邀请函"> <span class="text-danger" id="error1" style="display: none;">请输入公司简称</span>
+                                        <div id="inviteTitle" runat="server">
+                                         </div>
+                                         <span class="text-danger" id="error1" style="display: none;">请输入公司简称</span>
                                         <span class="help-block" id="hint3" />
                                     </div>
                                     <div class="form-group">
                                         <label><span class="grey">邮件内容</span>
                                         </label>
-                                        <textarea readonly name="content" rows="9" class="form-control">您好：
+                                        <textarea  name="content" rows="9" class="form-control">您好：
                                             <br>我们非常高兴地通知您，您已通过了我们的简历筛选，为了评估您的真实编程能力，我们准备了[[职位]]的在线编程挑战，希望您能完成！
                                             <br>点击下面的链接进入在线编程挑战:
                                             <br>[链接]
@@ -165,7 +166,7 @@
 
                                     <div class="form-group pull-right">
                                         <div class="form-group form-actions pull-right">
-                                            <button class="btn btn-new1">邀请</button>
+                                            <button  id="sendEmail" runat="server" onServerclick="sendEmail_ServerClick" class ="btn btn-new1">邀请</button>
 
 
 

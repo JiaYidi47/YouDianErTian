@@ -10,5 +10,7 @@ namespace IBLL
     public interface IQuestion
     {
         bool addQuestion(question questionItem);
+        question getQuestionByID(int questionID);
+        IList<question> getQuestion(int tec, int level);
     }
 }

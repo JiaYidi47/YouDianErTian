@@ -148,100 +148,41 @@
         </a>
 
     </div>
+     <form id="Form1" runat="server">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-no-left-padding col-md-offset-2">
                
                 <section class="middle">
-                     <form id="Form1" runat="server">
+                 
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
                         <select id="select1" class="form-control" runat="server">
-                            <option selected value="0">技术方向</option>
-                            <option value="1">Java</option>
-                            <option value="2">Android</option>
-                            <option value="3">iOS</option>
-                            <option value="4">C语言</option>
-                            <option value="5">C++</option>
-                            <option value="6">php</option>
-                            <option value="7">python</option>
-
                         </select>
                     </div>
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
                         <select id="select2" class="form-control" runat="server">
-                            <option selected value="0">起始薪资</option>
-                            <option value="1">2k~5k</option>
-                            <option value="2">5k~8k</option>
-                            <option value="3">8k~10k</option>
-                            <option value="4">10k~12k</option>
-                            <option value="5">12k~15k</option>
-                            <option value="6">15k以上</option>
                         </select>
                     </div>
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
                         <select id="province" class="form-control" runat="server">
-                            <option value="0">全部地区</option>
-                            <option value="北京">北京</option>
-                            <option value="天津">天津</option>
-                            <option value="河北">河北</option>
-                            <option value="山西">山西</option>
-                            <option value="内蒙古">内蒙古</option>
-                            <option value="辽宁">辽宁</option>
-                            <option value="吉林">吉林</option>
-                            <option value="黑龙江">黑龙江</option>
-                            <option value="上海">上海</option>
-                            <option value="江苏">江苏</option>
-                            <option value="浙江">浙江</option>
-                            <option value="安徽">安徽</option>
-                            <option value="福建">福建</option>
-                            <option value="江西">江西</option>
-                            <option value="山东">山东</option>
-                            <option value="河南">河南</option>
-                            <option value="湖北">湖北</option>
-                            <option value="湖南">湖南</option>
-                            <option value="广东">广东</option>
-                            <option value="广西">广西</option>
-                            <option value="海南">海南</option>
-                            <option value="重庆">重庆</option>
-                            <option value="四川">四川</option>
-                            <option value="贵州">贵州</option>
-                            <option value="云南">云南</option>
-                            <option value="西藏">西藏</option>
-                            <option value="陕西">陕西</option>
-                            <option value="甘肃">甘肃</option>
-                            <option value="青海">青海</option>
-                            <option value="宁夏">宁夏</option>
-                            <option value="新疆">新疆</option>
-                            <option value="台湾">台湾</option>
-                            <option value="香港">香港</option>
-                            <option value="澳门">澳门</option>
-                            <option value="海外">海外</option>
                         </select>
                     </div>
-                     </form>
+                 
                     <div style="col-md-6">
-                        <form class="input-group">
-                            <input name="salary" id="input-salary" type="hidden" value="0" />
-                            <input name="province" id="input-province" type="hidden" value="" />
-                            <input name="retype" id="input-retype" type="hidden" value="0" />
-                            <input name="flag" id="input-flag" type="hidden" value="0" />
-                            <input name="selectedProvince" id="input-selected-province" type="hidden" value="14" />
-                            <input name="selectedCity" id="input-selected-city" type="hidden" value="1401" />
-                            <input name="searchCondition" class="form-control" placeholder="请输入关键词，如公司名称等" value="" />
-                            <span class="input-group-btn"><button class="btn"><i class="fa fa-search"></i></button></span>
-                        </form>
+                        <div class="input-group">
+                            <input id="searchCondition" runat="server" name="searchCondition" class="form-control" placeholder="请输入关键词，如公司名称等" value="" />
+                            <span class="input-group-btn"><button id="search" runat="server" onServerClick="search_ServerClick" class="btn" ><i class="fa fa-search"></i></button></span>
+                        </div>
                     </div>
                 </section>
                 
             </div>
             <div class="col-md-4 col-no-left-padding col-md-offset-8" style="margin-top: 20px;">
-                <section id="middle" style="margin-bottom: 20px;">
-                    排序： <a href="" class="btn btn-order" id="btn-order-on">时间</a> <a href="" class="btn btn-order">热度</a> <a href="" class="btn btn-order">薪资</a>
-                </section>
+                
                 <!--  排序这边默认什么都不选。默认排序按推荐、热度、时间搞一个算法，推荐一直在最前
                     筛选地区那边默认为用户的期望工作地点 -->
             </div>
-
+             
             <div class="row">
                 <div id="content" class="col-md-12">
 
@@ -256,200 +197,26 @@
                         <div class="woo-swb">
                             <!-- data-totalunits is set here, then pager nums would be fixed -->
                             <!-- It would have been Hasnext Mode if you didn't do it -->
-                            <div class="woo-pcont woo-masned" data-totalunits="600">
+                            <div id="challengeItem" runat="server" class="woo-pcont woo-masned" data-totalunits="600">
                                 <!-- .woo-pcont 节点内可预先放好若干个单元(个数没有限制) -->
                                 <!-- 预先放置的会被当做第一子页数据，后面会直接从第二子页开始 -->
                                 <!-- 可以选择不放置 -->
-                                <div class="col-xs-12 col-lg-3 col-md-4 woo co0" data-ht="456" data-idx="0" style="top: 0px; left: 0px;">
-                                    <section id="Section1">
-                                        <div class="panel panel-default shadow-effect">
-                                            <div class="col-xs-12 panel-header">
-                                                <div class="pull-left">
-                                                    <h4 title="[高级]Java工程师" class="line-control"><a href="coderTaskDetail.aspx">[高级]Java工程师</a></h4>
-                                                    <h4 title="金融界 | 爱投顾" class="line-control"><a href="">金融界 | 爱投顾</a></h4> </div>
-                                                <div class="pull-right client-info hidden-md"> <span class="percent text-danger"><img class="img-circle" style="width:60px;height:60px" src="logo/829.jpg"></span> </div> <span class="hot-tag">推荐</span> </div>
-                                            <div class="panel-body ">
-                                                <ul class="list-unstyled">
-                                                    <li>月薪： 12k~15k</li>
-                                                    <li>职位诱惑：</li>
-                                                    <li>
-                                                        <ul class="companyTags">
-                                                            <li>五险一金</li>
-                                                            <li>弹性工作</li>
-                                                            <li>年终分红</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>挑战项目：</li>
-                                                    <li>
-                                                        <ul>
-                                                            <li><a href="coderTaskDetail.aspx">多线程</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">适配器模式</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">组合模式</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>难度： <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </li>
-                                                    <li><i class="fa fa-calendar"></i>2015-04-24~2015-06-23</li>
-                                                    <li><i class="fa fa-user"></i>27人已接受挑战</li>
-                                                </ul>
-                                            </div>
-                                            <!-- /.panel-body -->
-                                            <div class="panel-footer align-center">
-                                                <a href="coderTask.aspx">
-                                                    <button class="btn btn-new1">接受挑战</button>
-                                                </a>
-                                            </div>
-                                            <!-- /.panel-footer -->
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="col-xs-12 col-lg-3 col-md-4 woo co1" data-ht="456" data-idx="1" style="top: 0px; left: 290px;">
-                                    <section id="Section2">
-                                        <div class="panel panel-default shadow-effect">
-                                            <div class="col-xs-12 panel-header">
-                                                <div class="pull-left">
-                                                    <h4 title="[高级]iOS工程师" class="line-control"><a href="coderTaskDetail.aspx">[高级]iOS工程师</a></h4>
-                                                    <h4 title="金融界 | 爱投顾" class="line-control"><a href="">金融界 | 爱投顾</a></h4> </div>
-                                                <div class="pull-right client-info hidden-md"> <span class="percent text-danger"><img class="img-circle" style="width:60px;height:60px" src="logo/829.jpg"></span> </div> <span class="hot-tag">推荐</span> </div>
-                                            <div class="panel-body ">
-                                                <ul class="list-unstyled">
-                                                    <li>月薪： 15k以上</li>
-                                                    <li>职位诱惑：</li>
-                                                    <li>
-                                                        <ul class="companyTags">
-                                                            <li>五险一金</li>
-                                                            <li>弹性工作</li>
-                                                            <li>年终分红</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>挑战项目：</li>
-                                                    <li>
-                                                        <ul>
-                                                            <li><a href="coderTaskDetail.aspx">二维码</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">渐进加载大图片</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">自动化生成描述</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>难度： <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </li>
-                                                    <li><i class="fa fa-calendar"></i>2015-04-16~2015-06-15</li>
-                                                    <li><i class="fa fa-user"></i>22人已接受挑战</li>
-                                                </ul>
-                                            </div>
-                                            <!-- /.panel-body -->
-                                            <div class="panel-footer align-center">
-                                                <a href="coderTask.aspx">
-                                                    <button class="btn btn-new1">接受挑战</button>
-                                                </a>
-                                            </div>
-                                            <!-- /.panel-footer -->
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="col-xs-12 col-lg-3 col-md-4 woo co2" data-ht="456" data-idx="2" style="top: 0px; left: 580px;">
-                                    <section id="Section3">
-                                        <div class="panel panel-default shadow-effect">
-                                            <div class="col-xs-12 panel-header">
-                                                <div class="pull-left">
-                                                    <h4 title="[高级]Android工程师" class="line-control"><a href="coderTaskDetail.aspx">[高级]Android工程师</a></h4>
-                                                    <h4 title="金融界 | 爱投顾" class="line-control"><a href="coderTaskDetail.aspx">金融界 | 爱投顾</a></h4> </div>
-                                                <div class="pull-right client-info hidden-md"> <span class="percent text-danger"><img class="img-circle" style="width:60px;height:60px" src="logo/829.jpg"></span> </div> <span class="hot-tag">推荐</span> </div>
-                                            <div class="panel-body ">
-                                                <ul class="list-unstyled">
-                                                    <li>月薪： 15k以上</li>
-                                                    <li>职位诱惑：</li>
-                                                    <li>
-                                                        <ul class="companyTags">
-                                                            <li>五险一金</li>
-                                                            <li>弹性工作</li>
-                                                            <li>年终分红</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>挑战项目：</li>
-                                                    <li>
-                                                        <ul>
-                                                            <li><a href="coderTaskDetail.aspx">多线程下载</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">多人通话</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">AndroidSqlite</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>难度： <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </li>
-                                                    <li><i class="fa fa-calendar"></i>2015-04-16~2015-06-15</li>
-                                                    <li><i class="fa fa-user"></i>27人已接受挑战</li>
-                                                </ul>
-                                            </div>
-                                            <!-- /.panel-body -->
-                                            <div class="panel-footer align-center">
-                                                <a href="coderTask.aspx">
-                                                    <button class="btn btn-new1">接受挑战</button>
-                                                </a>
-                                            </div>
-                                            <!-- /.panel-footer -->
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="col-xs-12 col-lg-3 col-md-4 woo co3" data-ht="456" data-idx="3" style="top: 0px; left: 870px;">
-                                    <section id="Section4">
-                                        <div class="panel panel-default shadow-effect">
-                                            <div class="col-xs-12 panel-header">
-                                                <div class="pull-left">
-                                                    <h4 title="[高级]php工程师" class="line-control"><a href="coderTaskDetail.aspx">[高级]php工程师</a></h4>
-                                                    <h4 title="金融界 | 爱投顾" class="line-control"><a href="">金融界 | 爱投顾</a></h4> </div>
-                                                <div class="pull-right client-info hidden-md"> <span class="percent text-danger"><img class="img-circle" style="width:60px;height:60px" src="logo/829.jpg"></span> </div> <span class="hot-tag">推荐</span> </div>
-                                            <div class="panel-body ">
-                                                <ul class="list-unstyled">
-                                                    <li>月薪： 15k以上</li>
-                                                    <li>职位诱惑：</li>
-                                                    <li>
-                                                        <ul class="companyTags">
-                                                            <li>五险一金</li>
-                                                            <li>弹性工作</li>
-                                                            <li>年终分红</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>挑战项目：</li>
-                                                    <li>
-                                                        <ul>
-                                                            <li><a href="coderTaskDetail.aspx">数字汉化</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">美猴王</a>
-                                                            </li>
-                                                            <li><a href="coderTaskDetail.aspx">排列组合</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>难度： <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </li>
-                                                    <li><i class="fa fa-calendar"></i>2015-04-16~2015-06-15</li>
-                                                    <li><i class="fa fa-user"></i>25人已接受挑战</li>
-                                                </ul>
-                                            </div>
-                                            <!-- /.panel-body -->
-                                            <div class="panel-footer align-center">
-                                                <a href="coderTask.aspx">
-                                                    <button class="btn btn-new1">接受挑战</button>
-                                                </a>
-                                            </div>
-                                            <!-- /.panel-footer -->
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
+                               
+                              
+                                
+                                 </div>
+                          </div>
                             <!-- <div class="col-md-12 woo-pager"></div> -->
                         </div>
                     </div>
                     <!-- Woo holder over -->
                 </div>
             </div>
-        </div>
+          
+        
         <!-- /.row -->
     </div>
+    </form>
     <!-- /.container -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">

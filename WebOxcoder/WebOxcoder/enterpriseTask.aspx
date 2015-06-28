@@ -98,6 +98,7 @@
             }
         }
     </script>
+    
     <div class="container">
         <div class="row">
 
@@ -121,167 +122,10 @@
                                                 <button class="btn btn-new1 pull-right" style="margin-top: 20px;">新增挑战邀请</button>
                                             </a>
                                         </section>
+                                        <form id="Form1" runat="server">
                                         <!-- /.page-header -->
-                                        <div id="Div1">
-                                            <div class="row">
-
-
-
-                                                <div class="col-md-12">
-                                                    <div class="panel panel-default project ">
-                                                        <div class="panel-body">
-                                                            <div class="row">
-                                                                <!-- new start-->
-                                                                <div class="col-md-5">
-                                                                    <h2 style="margin: 12px 0 2px 0;">
-																				<a href="enterpriseTaskSift.aspx">[&#20013;&#32423;]Java&#24037;&#31243;&#24072;</a>
-																			</h2>
-                                                                    <div style="width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                                                        <small>[2015/04/23]
-																						&#27721;&#35834;&#22612;&#38382;&#39064;
-																					
-																						&#32452;&#21512;&#27169;&#24335;
-																					
-																						&#39072;&#20498;&#26632;
-																					</small>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 7px 0;">
-                                                                        <li><span class="badge badge-info">0</span>个新接受</li>
-                                                                        <li><span class="badge badge-danger">0</span>个新完成</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 20px 0;">
-                                                                        <li><span class="red">0.0</span>%已合格</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <a href="enterpriseTaskSift.aspx">
-                                                                        <button type="button" class="btn btn-new1">去筛选</button>
-                                                                    </a>
-                                                                    <a href="enterpriseInvite.aspx">
-                                                                        <button type="button" class="btn btn-new1" style="margin: 16px 5px;">邀请</button>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- new end-->
-                                                            </div>
-                                                            <!-- /.row -->
-
-
-                                                        </div>
-                                                        <!-- /.panel-footer -->
-                                                    </div>
-                                                    <!-- /.panel -->
-
-                                                </div>
-
-                                                <div class="col-md-12">
-                                                    <div class="panel panel-default project ">
-                                                        <div class="panel-body">
-                                                            <div class="row">
-                                                                <!-- new start-->
-                                                                <div class="col-md-5">
-                                                                    <h2 style="margin: 12px 0 2px 0;">
-																				<a href="enterpriseTaskSift.aspx">[&#21021;&#32423;]Java&#24037;&#31243;&#24072;</a>
-																			</h2>
-                                                                    <div style="width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                                                        <small>[2015/04/23]
-																						&#22823;&#23567;&#20889;&#36716;&#25442;
-																					
-																						&#20844;&#32422;&#25968;&#21644;&#20844;&#20493;&#25968;
-																					
-																						&#35745;&#31639;&#23383;&#31526;&#25968;
-																					</small>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 7px 0;">
-                                                                        <li><span class="badge badge-info">0</span>个新接受</li>
-                                                                        <li><span class="badge badge-danger">0</span>个新完成</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 20px 0;">
-                                                                        <li><span class="red">0.0</span>%已合格</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <a href="enterpriseTaskSift.aspx">
-                                                                        <button type="button" class="btn btn-new1">去筛选</button>
-                                                                    </a>
-                                                                    <a href="enterpriseInvite.aspx">
-                                                                        <button type="button" class="btn btn-new1" style="margin: 16px 5px;">邀请</button>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- new end-->
-                                                            </div>
-                                                            <!-- /.row -->
-
-
-                                                        </div>
-                                                        <!-- /.panel-footer -->
-                                                    </div>
-                                                    <!-- /.panel -->
-
-                                                </div>
-
-                                                <div class="col-md-12">
-                                                    <div class="panel panel-default project ">
-                                                        <div class="panel-body">
-                                                            <div class="row">
-                                                                <!-- new start-->
-                                                                <div class="col-md-5">
-                                                                    <h2 style="margin: 12px 0 2px 0;">
-																				<a href="enterpriseTaskSift.aspxs">[&#21021;&#32423;]Java&#24037;&#31243;&#24072;</a>
-																			</h2>
-                                                                    <div style="width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                                                        <small>[2015/04/23]
-																						&#22823;&#23567;&#20889;&#36716;&#25442;
-																					
-																						&#26085;&#26399;&#27604;&#36739;
-																					
-																						&#36882;&#24402;&#36816;&#31639;&#38454;&#20056;
-																					</small>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 7px 0;">
-                                                                        <li><span class="badge badge-info">0</span>个新接受</li>
-                                                                        <li><span class="badge badge-danger">0</span>个新完成</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 20px 0;">
-                                                                        <li><span class="red">0.0</span>%已合格</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <a href="enterpriseTaskSift.aspx">
-                                                                        <button type="button" class="btn btn-new1">去筛选</button>
-                                                                    </a>
-                                                                    <a href="enterpriseInvite.aspx">
-                                                                        <button type="button" class="btn btn-new1" style="margin: 16px 5px;">邀请</button>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- new end-->
-                                                            </div>
-                                                            <!-- /.row -->
-
-
-                                                        </div>
-                                                        <!-- /.panel-footer -->
-                                                    </div>
-                                                    <!-- /.panel -->
-
-                                                </div>
-
-
-                                            </div>
+                                        <div  id="task" runat="server" >
+                                           
                                             <!-- /.row -->
                                         </div>
                                         <!-- /#content -->
@@ -453,6 +297,7 @@
         </div>
         <!-- /.row -->
     </div>
+     </form>
     <!-- /.container -->
 
     <!-- jQuery -->

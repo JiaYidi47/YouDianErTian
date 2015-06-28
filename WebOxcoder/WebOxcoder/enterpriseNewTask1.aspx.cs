@@ -13,5 +13,14 @@ namespace WebOxcoder
         {
 
         }
+
+        protected void nextStep_ServerClick(object sender, EventArgs e)
+        {
+            int tec = Int32.Parse(challengeType.Text);
+            int level = Int32.Parse(challengeLevel.Text);
+            string url = "/enterpriseNewTask2.aspx?tec=" + tec + "&level=" + level;
+            Response.Redirect(url);
+
+        }
     }
 }

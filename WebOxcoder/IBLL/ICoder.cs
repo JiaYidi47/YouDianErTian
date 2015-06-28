@@ -8,5 +8,6 @@ namespace IBLL
 {
     public interface ICoder
     {
+        Model.coder getCoderByEmail(string email);
     }
 }

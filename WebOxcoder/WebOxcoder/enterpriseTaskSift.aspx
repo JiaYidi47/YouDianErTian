@@ -95,43 +95,24 @@
             }
         }
     </script>
+  
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-xs-12 col-no-left-padding">
-                    <h1 class="pull-left">
-						[&#20013;&#32423;]Java&#24037;&#31243;&#24072;
-						挑战的筛选页面
-					</h1>
-
-                    <a href="enterpriseTask.aspx">
-                        <button class="btn btn-new1 pull-right" style="margin-top: 20px;">关闭该挑战</button>
-                    </a>
-
-
+                <div id="title" runat="server" class="col-xs-12 col-no-left-padding">
                 </div>
                 <small> <a href="enterpriseTask.aspx"><i
 							class="imoon imoon-arrow-left2"></i> 返回 </a>
 					</small>
             </div>
 
-            <div class="col-md-12">
-                <div class="challenge-simple-desc">
-                    <span class="desc-label">发起时间：2015-04-23</span> <span class="desc-label">接受挑战：0</span>
-                    <span class="desc-label">完成挑战：0</span> <span class="desc-label">所选项目： 
-							&#27721;&#35834;&#22612;&#38382;&#39064;&nbsp;&nbsp;
-	                        
-							&#32452;&#21512;&#27169;&#24335;&nbsp;&nbsp;
-	                        
-							&#39072;&#20498;&#26632;&nbsp;&nbsp;
-	                        
-					</span>
-                </div>
+            <div id="challengeDetail" runat="server" class="col-md-12">
+              
             </div>
 
 
-            <div class="col-md-12" style="margin-bottom: 20px;">
-                <div class="alert alert-info" style="text-align: center" role="alert">当前分类下还没有人才报告</div>
+            <div id="coderTable" runat="server" class="col-md-12" style="margin-bottom: 20px;">
+           
             </div>
 
 
@@ -141,6 +122,7 @@
         </div>
         <!-- /.row -->
     </div>
+   
     <!-- /.container -->
 
     <!-- jQuery -->
